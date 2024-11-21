@@ -3,10 +3,15 @@
 }
 
 html, body {
-    /* background-color: pink; */
     margin: 0;
+    padding: 0;
     height: 100%;
     width: 100%;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
 }
 
 h2 {
@@ -21,8 +26,6 @@ p {
 }
 
 .main {
-    /* background-color: blue; */
-    /* align-items: center; */
     display: flex;
     flex-direction: column;
 }
@@ -51,14 +54,13 @@ p {
 
 .team {
     background-color: aqua;
-    width: 100%;
 }
 
 .team__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px 38px;
+    gap: 18px 38px;
     background-color: pink;
     padding: 12px 18px;
 }
@@ -69,22 +71,23 @@ p {
     }
 
 .team__container {
-    /* background-color: rgb(110, 87, 56); */
     display: flex;
     flex-direction: column;
-    justify-items: flex-start;
-    width: 100%;
+    align-items: center;
     margin: 32px;
-}
+    height: 100%;
+} 
 
-    
+    .team__item {
+        background-color: yellow;
+        display: flex;
+        flex-direction: column;
+        padding: 12px;
+        width: 60%;
+    }
 
-    .team__person {
-        /* background-color: red; */
-        /* display: flex;
-        flex-direction: column; */
-        padding: 6px;
-        width: 70%;
+    .person {
+        background-color: palevioletred;
     }
 
         .team__title-name {
