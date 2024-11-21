@@ -47,11 +47,6 @@ body {
     left: 8vw;
 }
 
-.header-selected-element {
-    color: var(--color-darkbeige) !important;
-    border-bottom: 2px solid var(--color-darkbeige);
-}
-
 .header-nav-bar {
     display: flex;
     justify-content: space-between;
@@ -62,8 +57,32 @@ body {
 }
 
 .header-nav-bar a {
+    position: relative;
     text-decoration: none;
     color: var(--color-darkblue);
+    font-weight: bold;
+    padding: 0.3rem 0;
+    transition: color 0.3s ease;
+}
+
+.header-nav-bar a:hover {
+    color: var(--color-darkbeige); 
+}
+
+.header-nav-bar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px; 
+    background-color: var(--color-darkbeige);
+    transition: width 0.3s ease;
+}
+
+.header-nav-bar a:hover::after,
+.header-nav-bar a.selected::after {
+    width: 100%;
 }
 
 .header-searchbar {
@@ -81,6 +100,14 @@ body {
     color: var(--color-text);
     border: none;
     cursor: pointer;
+}
+
+.header-searchbar button:hover {
+    background-color: var(--color-darkgreen);
+    background-color: #a18c2f; 
+    /*
+    I temporarily added a second bg to change color when a person is hovering the button.
+    */
 }
 
 .header-searchbar input {
