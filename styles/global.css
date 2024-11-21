@@ -1,0 +1,94 @@
+:root {
+    --color-blue: #7388A0;
+    --color-darkblue: #313640;
+    --color-lightbeige: #FAF2E6;
+    --color-darkbeige: #DAA46D;
+    --color-brown: #9C4F20;
+    --color-darkgreen: #766621;
+    --font-size-text: 1.2rem;
+    --color-text: white;
+    font-family: "Roboto";
+    /*To get this font on each page you need to insert this into head of every html page.
+        <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    */
+}
+
+div {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100dvh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    position: fixed;
+    background-color: var(--color-lightbeige);
+    height: 10vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
+    -moz-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
+    box-shadow: 0px 1px 5px 0px var(--color-lightbeige)
+}
+
+.header-logotype {
+    position: absolute;
+    height: 100%;
+    left: 8vw;
+}
+
+.header-selected-element {
+    color: var(--color-darkbeige) !important;
+    border-bottom: 2px solid var(--color-darkbeige);
+}
+
+.header-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    min-width: 400px;
+    /*This min-width is to meak sure that the nav-bar anchor tags dont crash into eachother.*/
+    font-weight: bold;
+}
+
+.header-nav-bar a {
+    text-decoration: none;
+    color: var(--color-darkblue);
+}
+
+.header-searchbar {
+    width: 20%;
+    display: flex;
+    position: absolute;
+    gap: 1rem;
+    right: 5%
+}
+
+.header-searchbar button {
+    width: 30%;
+    padding: 0.3rem;
+    background-color: var(--color-darkgreen);
+    color: var(--color-text);
+    border: none;
+    cursor: pointer;
+}
+
+.header-searchbar input {
+    padding: 0.5rem;
+    color: var(--color-text);
+    border: 1px solid var(--color-darkblue);
+}
+
+.header-searchbar input::placeholder {
+    color: var(--color-darkblue);
+}
