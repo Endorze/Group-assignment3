@@ -12,7 +12,7 @@ const animals = [
         length: ["76cm"],
         weight: ["10kg"],
         found: ["Throughout Australia"],
-        image: "./assets/images/mammals/mammal-echidna.jpg"
+        image: "./assets/images/mammals/mammal-echidna.jpg",
       },
       {
         name: "Tasmanian Devil",
@@ -24,7 +24,7 @@ const animals = [
         length: ["70cm"],
         weight: ["10kg"],
         found: ["Tasmania"],
-        image: "./assets/images/mammals/mammal-tasmanian-devil.jpeg"
+        image: "./assets/images/mammals/mammal-tasmanian-devil.jpeg",
       },
       {
         name: "Quokka",
@@ -36,7 +36,7 @@ const animals = [
         length: ["50cm"],
         weight: ["3kg"],
         found: ["Rottnest Island", "Mainland Western Australia"],
-        image: "./assets/images/mammals/mammal-quokka.jpg"
+        image: "./assets/images/mammals/mammal-quokka.jpg",
       },
       {
         name: "Koala",
@@ -48,7 +48,7 @@ const animals = [
         length: ["80cm"],
         weight: ["12kg"],
         found: ["Eastern Australia", "Southeastern Australia"],
-        image: "./assets/images/mammals/mammal-koala.jpg"
+        image: "./assets/images/mammals/mammal-koala.jpg",
       },
       {
         name: "Wombat",
@@ -60,7 +60,7 @@ const animals = [
         length: ["1m"],
         weight: ["33kg"],
         found: ["Southeastern Australia", "Tasmania"],
-        image: "./assets/images/mammals/mammal-wombat.jpeg"
+        image: "./assets/images/mammals/mammal-wombat.jpeg",
       },
       {
         name: "Bilby",
@@ -72,7 +72,7 @@ const animals = [
         length: ["45cm"],
         weight: ["2.5kg"],
         found: ["Central Australia"],
-        image: "./assets/images/mammals/mammal-bilby.jpg"
+        image: "./assets/images/mammals/mammal-bilby.jpg",
       },
     ],
   },
@@ -89,7 +89,7 @@ const animals = [
         length: ["90cm"],
         weight: ["1kg"],
         found: ["Northern Australia"],
-        image: "./assets/images/reptiles/reptile-frill-necked-lizard.jpeg"
+        image: "./assets/images/reptiles/reptile-frill-necked-lizard.jpeg",
       },
       {
         name: "Hawks Bill Turtle",
@@ -105,7 +105,7 @@ const animals = [
           "Northern Territory",
           "Western Australia",
         ],
-        image: "./assets/images/reptiles/reptile-hawks-bill-turtle.jpg"
+        image: "./assets/images/reptiles/reptile-hawks-bill-turtle.jpg",
       },
       {
         name: "Perentie",
@@ -117,7 +117,7 @@ const animals = [
         length: ["2.5m"],
         weight: ["20kg"],
         found: ["Deserts"],
-        image: "./assets/images/reptiles/reptile-perentie.png"
+        image: "./assets/images/reptiles/reptile-perentie.png",
       },
       {
         name: "Inland Taipan",
@@ -129,7 +129,7 @@ const animals = [
         length: ["1.8-2.5m"],
         weight: ["2-3kg"],
         found: ["Central Australia", "Eastern Australia"],
-        image: "./assets/images/reptiles/reptile-inland-taipan.jpg"
+        image: "./assets/images/reptiles/reptile-inland-taipan.jpg",
       },
       {
         name: "Thorny Devil",
@@ -141,7 +141,7 @@ const animals = [
         length: ["20cm"],
         weight: ["70-95g"],
         found: ["Central Australia", "Western Australia"],
-        image: "./assets/images/reptiles/reptile-thorny-devil.jpeg"
+        image: "./assets/images/reptiles/reptile-thorny-devil.jpeg",
       },
       {
         name: "Salt Water Crocodile",
@@ -153,7 +153,7 @@ const animals = [
         length: ["4-7m"],
         weight: ["400-900kg"],
         found: ["Northern Australia", "coastal rivers", "estuaries"],
-        image: "./assets/images/reptiles/reptile-salt-water-crocodile.jpeg"
+        image: "./assets/images/reptiles/reptile-salt-water-crocodile.jpeg",
       },
     ],
   },
@@ -174,7 +174,7 @@ const animals = [
         length: ["1.7m"],
         weight: ["44kg"],
         found: ["Queensland"],
-        image: "./assets/images/birds/bird-cassowary.jpg"
+        image: "./assets/images/birds/bird-cassowary.jpg",
       },
       {
         name: "Kookaburra",
@@ -186,7 +186,7 @@ const animals = [
         length: ["43cm"],
         weight: ["300g"],
         found: ["Australia wide"],
-        image: "./assets/images/birds/bird-kookaburra.jpeg"
+        image: "./assets/images/birds/bird-kookaburra.jpeg",
       },
       {
         name: "Yellow Tailed Black Cockatoo",
@@ -198,7 +198,7 @@ const animals = [
         length: ["65cm"],
         weight: ["900g"],
         found: ["Southeastern Australia"],
-        image: "./assets/images/birds/bird-yellow-tailed-black-cockatoo.jpeg"
+        image: "./assets/images/birds/bird-yellow-tailed-black-cockatoo.jpeg",
       },
       {
         name: "Superb Lyre Bird",
@@ -210,7 +210,7 @@ const animals = [
         length: ["80-100cm"],
         weight: ["1kg"],
         found: ["Southeastern Australia"],
-        image: "./assets/images/birds/bird-superb-lyrebird.jpg"
+        image: "./assets/images/birds/bird-superb-lyrebird.jpg",
       },
       {
         name: "Emu",
@@ -222,7 +222,7 @@ const animals = [
         length: ["1.3-1.9m"],
         weight: ["30-55kg"],
         found: ["Mainland Australia"],
-        image: "./assets/images/birds/bird-emu.jpeg"
+        image: "./assets/images/birds/bird-emu.jpeg",
       },
       {
         name: "Gouldian Finch",
@@ -234,7 +234,7 @@ const animals = [
         length: ["12-14cm"],
         weight: ["15g"],
         found: ["Northern Australia"],
-        image: "./assets/images/birds/bird-gouldian-finch.jpg"
+        image: "./assets/images/birds/bird-gouldian-finch.jpg",
       },
     ],
   },
