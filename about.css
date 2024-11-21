@@ -5,6 +5,8 @@
 html, body {
     /* background-color: pink; */
     margin: 0;
+    height: 100%;
+    width: 100%;
 }
 
 h2 {
@@ -52,21 +54,26 @@ p {
     width: 100%;
 }
 
-.team__name-list {
+.team__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px 32px;
-    background-color: blue;
+    gap: 12px 38px;
+    background-color: pink;
     padding: 12px 18px;
 }
+
+    .team__list-name {
+        padding: 0;
+        margin: 0;
+    }
 
 .team__container {
     /* background-color: rgb(110, 87, 56); */
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    align-items: center;
+    justify-items: flex-start;
+    width: 100%;
     margin: 32px;
 }
 
@@ -74,10 +81,10 @@ p {
 
     .team__person {
         /* background-color: red; */
-        display: flex;
-        flex-direction: column;
+        /* display: flex;
+        flex-direction: column; */
         padding: 6px;
-        width: 45%;
+        width: 70%;
     }
 
         .team__title-name {
