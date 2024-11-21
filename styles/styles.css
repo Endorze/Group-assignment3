@@ -10,7 +10,7 @@ footer {
 }
 
 .brand-logo {
-    width: 200px;
+    width: 12rem;
 }
 
 .logo-div {
@@ -25,26 +25,26 @@ footer {
 
 .social-icons a {
     text-decoration: none;
-    padding: 10px;
+    padding: 0.5rem;
     background-color: white;
-    margin: 10px;
+    margin: 0.5rem;
     border-radius: 50%;
 }
 
 .social-icons a i {
     font-size: 1.5rem;
     color: black;
-    opacity: .8;
+    opacity: 0.8;
 }
 
 .social-icons a:hover {
     background-color: #333;
-    transition: .5;
+    transition: 0.5;
 }
 
 .social-icons a:hover i {
     color: white;
-    transition: .5;
+    transition: 0.5;
 }
 
 .footer-nav {
@@ -62,17 +62,20 @@ footer {
     margin: 20px;
     text-decoration: none;
     font-size: 1.2rem;
-    opacity: .7;
-    transform: .5;
+    opacity: 0.7;
 }
 
 .footer-nav ul li a:hover {
     opacity: 1;
 }
 
+ul {
+    padding-inline-start: 0px;
+}
+
 .footer-bottom {
     background-color: white;
-    padding: 20px;
+    padding: 0.75rem;
     text-align: center;
 }
 
@@ -90,11 +93,7 @@ footer {
         margin: 0;
     }
 
-    ul {
-        padding-inline-start: 0px;
-    }
-
     .brand-logo {
-        margin-left: 5px;
+        margin-left: 0.25rem;
     }
 }
