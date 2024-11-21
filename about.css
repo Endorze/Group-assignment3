@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    /* background-color: pink; */
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+}
+p {
+    margin: 0;
+}
+
+.about {
+    /* background-color: blue; */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 32px 10% 0 10%;
+}
+
+.about__page-title {
+    /* background-color: green; */
+    font-size: 2rem;
+    margin: 0;
+    width: max-content;
+}
+
+.about__info {
+    font-size: 1rem;
+    padding: 32px;
+    text-align: center;
+}
+
+.team__container {
+    /* background-color: rgb(110, 87, 56); */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin: 32px;
+}
+
+    .team__item {
+        /* background-color: red; */
+        display: flex;
+        flex-direction: column;
+        padding: 6px;
+        width: 45%;
+    }
+
+        .team__title-name {
+            padding: 6px;
+        }
+
+        .team__about-text {
+            padding: 6px;
+        }
