@@ -1,0 +1,100 @@
+/* Footer */
+
+footer {
+    background-color: white;
+}
+
+.footer-container {
+    width: 100%;
+    padding: 70px 0px 20px;
+}
+
+.brand-logo {
+    width: 200px;
+}
+
+.logo-div {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.social-icons a i {
+    font-size: 1.5rem;
+    color: black;
+    opacity: .8;
+}
+
+.social-icons a:hover {
+    background-color: #333;
+    transition: .5;
+}
+
+.social-icons a:hover i {
+    color: white;
+    transition: .5;
+}
+
+.footer-nav {
+    margin: 30px 0;
+}
+
+.footer-nav ul, li {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.footer-nav ul li a {
+    color: #333;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    opacity: .7;
+    transform: .5;
+}
+
+.footer-nav ul li a:hover {
+    opacity: 1;
+}
+
+.footer-bottom {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsivness */
+
+@media screen and (max-width: 555px) {
+    
+    .footer-nav ul {
+        flex-direction: column;
+    }
+
+    .footer-nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    ul {
+        padding-inline-start: 0px;
+    }
+
+    .brand-logo {
+        margin-left: 5px;
+    }
+}
