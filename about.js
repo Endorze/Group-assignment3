@@ -32,24 +32,20 @@ const createTabs = (members) => {
     });
 };
 
-// Function to set active tab
+
 const setActiveTab = (activeTab) => {
-    // Remove active class from all tabs
     document.querySelectorAll(".tab").forEach((tab) => tab.classList.remove("active"));
-    // Add active class to the clicked tab
     activeTab.classList.add("active");
 };
 
-// Function to update team content dynamically
 const updateTeamContent = (person) => {
     document.querySelector(".team__title-name").textContent = person.name;
     document.querySelector(".team__about-text").textContent = person.aboutText;
 };
 
-// Initialize the tabs and set default content
 createTabs(teamMembers);
 
-// Set the first tab as active and display its content by default
+
 if (teamMembers.length > 0) {
     document.querySelectorAll(".tab")[0].classList.add("active");
     updateTeamContent(teamMembers[0]);
