@@ -7,11 +7,20 @@ function Person(name, aboutText, tab) {
 
 
 const teamMembers = [
+    new Person(" ", "Read more about what each team member blah blah blah.", "the team"),
+
     new Person("Emelie B. Silfverberg", 
         "Emelie is uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..", "Emelie"),
-    new Person("Jordan B. Smith", "Jordan is an expert in backend systems.", "Jordan"),
-    new Person("Alex T. Lee", "Alex specializes in frontend and UI/UX design.", "Alex"),
+
+    new Person("Jordan B. Smith", 
+        "Jordan is an expert in backend systems.", "Jordan"),
+        
+    new Person("Rex T. Lee", "Rex specializes in frontend and UI/UX design.", "Rex"),
 ];
+
+// testing
+
+let animalTabs = Array.from(document.querySelectorAll(".tab"));
 
 
 const createTabs = (members) => {
@@ -39,6 +48,7 @@ const setActiveTab = (activeTab) => {
 };
 
 const updateTeamContent = (person) => {
+    document.querySelector(".tab").textContent = person.tab;
     document.querySelector(".team__title-name").textContent = person.name;
     document.querySelector(".team__about-text").textContent = person.aboutText;
 };

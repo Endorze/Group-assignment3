@@ -1,3 +1,9 @@
+:root {
+    --background-color: #FAF2E6;
+    --text-color: #313640;
+    --feature-color: #7388A0;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -26,12 +32,13 @@ p {
 }
 
 .main {
+    background-color: var(--color-background);
     display: flex;
     flex-direction: column;
 }
 
 .about {
-    background-color: aquamarine;
+    background-color: var(--background-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,12 +47,14 @@ p {
 
 .about__page-title {
     /* background-color: green; */
+    color: var(--feature-color);
     font-size: 2rem;
     margin: 0;
     padding: 12px;
 }
 
 .about__info {
+    color: var(--text-color);
     font-size: 1rem;
     /* padding: 32px; */
     text-align: center;
@@ -53,15 +62,15 @@ p {
 }
 
 .team {
-    background-color: aqua;
+    background-color: var(--background-color);
 }
 
 .team-tabs {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 18px 38px;
-    background-color: pink;
+    background-color: var(--feature-color);
     padding: 12px 18px;
 }
 
@@ -84,16 +93,14 @@ p {
 } 
 
     .team__item {
-        background-color: yellow;
+        /* background-color: yellow; */
         display: flex;
         flex-direction: column;
         padding: 12px;
         width: 60%;
     }
 
-    .person {
-        background-color: palevioletred;
-    }
+
 
         .team__title-name {
             padding: 6px;
