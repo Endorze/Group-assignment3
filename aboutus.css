@@ -36,17 +36,28 @@ p {
 }
 
 .nav__sidebar {
-    grid-area: menu;
     background-color: #313640;
     height: 100%;
+    /* width: 150px; Fixed width */
+    overflow-y: auto; /* Allow scrolling for longer content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
 }
 
 .main {
     background-color: var(--color-background);
-    display: grid;
-    grid-template-areas:
-    'menu main main main main main';
     height: 100%;
+    margin: 0 0 0 160px;
+    /* width: 100%; */
 }
 
 .footer {
@@ -55,59 +66,51 @@ p {
 
 
 
-.about {
-    background-color: var(--background-color);
-    display: flex;
-    flex-direction: column;
-    padding: 32px;
-    grid-area: main;
-    height: 100%;
-}
-
-.about__page-title {
-    /* background-color: green; */
-    color: var(--feature-color);
-    font-size: 2rem;
-    margin: 0;
-    padding: 12px;
-}
-
-.about__info {
-    color: var(--text-color);
-    font-size: 1rem;
-    /* padding: 32px; */
-    text-align: left;
-    width: 75%;
-}
 
 .team {
     background-color: var(--background-color);
+    display: flex;
 }
 
 .team-tabs {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 18px 38px;
-    background-color: var(--feature-color);
-    padding: 12px 18px;
+    flex-direction: column;
+    gap: 12px;
+    /* gap: 18px; */
 }
 
     .tab {
-        padding: 0;
-        margin: 0;
+        
+        /* text-align: center; */
+        color: white;
+        font-size: 1rem;
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
     }
+    .tab,
+    .tab.active {
+        margin: 0; /* Ensure no added margins */
+        font-size: 1rem; /* Keep font size consistent */
+}   
 
     .tab:hover {
         color: aqua;
         cursor: pointer;
+        transition: color 0.3s ease, color 0.3s ease;
     }
+
+.img {
+    width: 100px;
+    height: 100px;
+    
+}
 
 .team__container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 32px;
     height: 100%;
 } 
 
@@ -116,16 +119,21 @@ p {
         display: flex;
         flex-direction: column;
         padding: 12px;
-        width: 60%;
+        width: 100%;
     }
 
 
 
         .team__title-name {
             padding: 6px;
+            color: var(--feature-color);
+            font-size: 2rem;
+            margin: 0;
+            padding: 12px;
         }
 
         .team__about-text {
             padding: 6px;
+            width: 100%;
             color: var(--text-color);
         }
