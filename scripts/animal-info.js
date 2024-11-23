@@ -1,4 +1,4 @@
-const animals = [
+export const animals = [
   {
     category: "Mammals",
     animals: [
