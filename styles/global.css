@@ -5,7 +5,6 @@
     --color-darkbeige: #DAA46D;
     --color-brown: #9C4F20;
     --color-darkgreen: #766621;
-    --font-size-text: 1.2rem;
     --color-text: white;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     /*To get this font on each page you need to insert this into head of every html page.
@@ -30,6 +29,7 @@ body {
 
 .header {
     position: fixed;
+    top: 0;
     background-color: var(--color-lightbeige);
     height: 10vh;
     min-width: 100vw;
