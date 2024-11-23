@@ -304,11 +304,11 @@ ul {
 }
 
 .welcome-card-background {
-  background-image: url("../assets/giraffe.jpg");
+  background-image: url("../assets/homepage/giraffe.jpg");
 }
 
 .welcome-card-gradient-pawprints {
-  background-image: url("../assets/veilpaw.svg");
+  background-image: url("../assets/homepage/veilpaw.svg");
 }
 
 .welcome-card-text-container {
