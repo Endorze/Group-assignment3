@@ -31,7 +31,7 @@ body {
     position: fixed;
     top: 0;
     background-color: var(--color-lightbeige);
-    height: 10vh;
+    height: 6rem;
     min-width: 100vw;
     display: flex;
     align-items: center;
@@ -103,15 +103,14 @@ body {
     width: 30%;
     padding: 0.3rem;
     min-width: 100px;
-    background-color: var(--color-darkgreen);
+    background-color: var(--color-darkblue);
     color: var(--color-text);
     border: none;
     cursor: pointer;
 }
 
 .header-searchbar button:hover {
-    background-color: var(--color-darkgreen);
-    background-color: #a18c2f; 
+    background-color: var(--color-blue);
     /*
     I temporarily added a second bg to change color when a person is hovering the button.
     */
