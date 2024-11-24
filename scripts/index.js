@@ -165,7 +165,6 @@ animals.forEach((animal) => {
   animalCardContainer.appendChild(animalCard);
 });
 
-
 // add and remove active
 const sidebarItems = document.querySelectorAll(".animal-name-sidebar");
 const animalCardsAll = document.querySelectorAll(".animal-card");
@@ -173,8 +172,17 @@ const exploreButton = document.querySelector(".button-explore");
 
 sidebarItems.forEach((item, index) => {
   item.addEventListener("click", () => {
-    animalCardsAll.forEach((card) => card.classList.remove("active"));
-    animalCardsAll[index].classList.add("active");
+    if (animalCardsAll[index].classList.contains("active")) {
+      animalCardsAll[index].classList.remove("active");
+      item.classList.remove("clicked");
+    } else {
+      animalCardsAll.forEach((card) => {
+        card.classList.remove("active");
+      });
+      sidebarItems.forEach((i) => i.classList.remove("clicked"));
+      animalCardsAll[index].classList.add("active");
+      item.classList.add("clicked");
+    }
   });
 });
 
