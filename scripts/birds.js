@@ -11,7 +11,9 @@ const zooBirds = {
         length: "1.7m",
         weight: "44kg",
         found: ["Queensland"],
-        image: "./assets/images/birds/bird-cassowary.jpg",
+        image: "./assets/images/birds-html-images/cassowary.png",
+        videoTag: "cassowary.mp4",
+        sound: "cassowary.mp3",
     },
 
     kookaburra: {
@@ -24,61 +26,156 @@ const zooBirds = {
         length: "43cm",
         weight: "300g",
         found: ["Australia wide"],
-        image: "./assets/images/birds/bird-kookaburra.jpeg",
+        image: "./assets/images/birds-html-images/kookaburra.png",
+        videoTag: "kookaburra.mp4",
+        sound: "kookaburra.mp3",
     },
     yellowtailedblackcockatoo: {
-        name: "Yellow Tailed Black Cockatoo",
+        name: "YellowTailedBlackCockatoo",
         lifespan: "41 years",
         group: "bird",
         food: ["fruit", "seeds", "plant material"],
         description:
-          "It has a short crest on the top of its head. Its plumage is mostly brownish black and it has prominent yellow cheek patches and a yellow tail band. The body feathers are edged with yellow giving a scalloped appearance. The adult male has a black beak and pinkish-red eye-rings, and the female has a bone-coloured beak and grey eye-rings. In flight, yellow-tailed black cockatoos flap deeply and slowly, with a peculiar heavy fluid motion. Their loud, wailing calls carry for long distances. The whiteae is found south of Victoria to the East of South Australia and is smaller in size. The yellow-tailed black cockatoo is found in temperate forests and forested areas across south and central eastern Queensland to southeastern South Australia, including a very small population persisting in the Eyre Peninsula. Two subspecies are recognised, although Tasmanian and southern mainland populations of the southern subspecies xanthanotus may be distinct enough from each other to bring the total to three. Birds of subspecies funereus (Queensland to eastern Victoria) have longer wings and tails and darker plumage overall, while those of xanthanotus (western Victoria, South Australia and Tasmania) have more prominent scalloping.",
+            "It has a short crest on the top of its head. Its plumage is mostly brownish black and it has prominent yellow cheek patches and a yellow tail band. The body feathers are edged with yellow giving a scalloped appearance. The adult male has a black beak and pinkish-red eye-rings, and the female has a bone-coloured beak and grey eye-rings. In flight, yellow-tailed black cockatoos flap deeply and slowly, with a peculiar heavy fluid motion. Their loud, wailing calls carry for long distances. The whiteae is found south of Victoria to the East of South Australia and is smaller in size.",
         length: "65cm",
         weight: "900g",
         found: ["Southeastern Australia"],
-        image: "./assets/images/birds/bird-yellow-tailed-black-cockatoo.jpeg",
+        image: "./assets/images/birds-html-images/cockatoo.png",
+        videoTag: "yellowcockatoo.mp4",
+        sound: "yellowblack.mp3",
     },
-    superblyrebird: {
-        name: "Superb Lyre Bird",
-        lifespan: "10-15 years",
-        group: "bird",
-        food: ["insects", "spiders", "worms"],
+    seagull: {
+        name: "Seagull",
+        lifespan: "F-ing forever",
+        group: "Devilspawn",
+        food: ["Fries", "Dreams", "Hopes"],
         description:
-          "The Superb Lyrebird is one of Australia’s most iconic birds, known for its extraordinary ability to mimic natural and artificial sounds, including other bird calls, camera shutters, and chainsaws. Males are famous for their spectacular courtship displays, where they fan out their lyre-shaped tail feathers and perform complex songs. Found in dense forests, these ground-dwelling birds are shy and prefer to forage among leaf litter for invertebrates. Their incredible vocal abilities make them one of the most fascinating birds in the world.",
-        length: "80-100cm",
-        weight: "1kg",
-        found: ["Southeastern Australia"],
-        image: "./assets/images/birds/bird-superb-lyrebird.jpg",
+            "Behold the Devilspawn Seagull: A Winged Menace In the shadowed corners of seaside towns and urban jungles alike, a sinister presence lurks—the Devilspawn Seagull.This unholy creature, a mutation of chaos and avarice, thrives not on the usual spoils of fish and crumbs but on something far more sinister: hopes, dreams, and...McDonald's fries.",
+        length: "1.4m-10.5m",
+        weight: "About 500kg of fries",
+        found: ["Everywhere, but preferably close to gas-stations, harbors and Mcdonalds, and perhaps even IN THE WALLS :("],
+        image: "./assets/images/birds-html-images/seagull.gif",
+        videoTag: "seagull.mp4",
+        sound: "seagull.mp3",
     },
-    emu: {
-        name: "Emu",
+    flamingo: {
+        name: "Flamingo",
         lifespan: "10-20 years",
         group: "bird",
         food: ["seeds", "fruits", "flowers", "insects"],
         description:
-          "The Emu is Australia's largest bird and the second-largest bird in the world, standing up to 1.9 meters tall. Though flightless, it has powerful legs that allow it to run at speeds of up to 50 km/h. Emus are highly adaptive and found in various habitats across Australia. They are curious birds and have a diet that varies widely, including plants, seeds, and insects. Emus are also known for their unique breeding behavior, where males incubate the eggs and care for the chicks.",
+            "The Emu is Australia's largest bird and the second-largest bird in the world, standing up to 1.9 meters tall. Though flightless, it has powerful legs that allow it to run at speeds of up to 50 km/h. Emus are highly adaptive and found in various habitats across Australia. They are curious birds and have a diet that varies widely, including plants, seeds, and insects. Emus are also known for their unique breeding behavior, where males incubate the eggs and care for the chicks.",
         length: "1.3-1.9m",
         weight: "30-55kg",
         found: ["Mainland Australia"],
-        image: "./assets/images/birds/bird-emu.jpeg",
+        image: "./assets/images/birds-html-images/flamingo.gif",
+        videoTag: "flamingo.mp4",
+        sound: "flamingo.mp3",
     },
-    gouldianfinch: {
-        name: "Gouldian Finch",
+    colibri: {
+        name: "Colibri",
         lifespan: "7 years",
         group: "bird",
         food: ["grass seeds", "insects"],
         description:
-          "The Gouldian Finch is a brightly colored and striking bird, often called the 'rainbow finch' due to its vibrant plumage in shades of red, yellow, green, blue, and black. Native to the savannahs of northern Australia, these finches are highly social and live in flocks. They primarily feed on grass seeds but will also consume insects during the breeding season. Unfortunately, habitat loss and other factors have made them a threatened species, and conservation efforts are underway to protect their populations.",
+            "The Gouldian Finch is a brightly colored and striking bird, often called the 'rainbow finch' due to its vibrant plumage in shades of red, yellow, green, blue, and black. Native to the savannahs of northern Australia, these finches are highly social and live in flocks. They primarily feed on grass seeds but will also consume insects during the breeding season. Unfortunately, habitat loss and other factors have made them a threatened species, and conservation efforts are underway to protect their populations.",
         length: "12-14cm",
         weight: "15g",
         found: ["Northern Australia"],
-        image: "./assets/images/birds/bird-gouldian-finch.jpg",
+        image: "./assets/images/birds-html-images/colibri.gif",
+        videoTag: "colibri.mp4",
+        sound: "hummingbird.mp3",
+
+    },
+    pigeon: {
+        name: "Pigeon",
+        lifespan: "7 years",
+        group: "bird",
+        food: ["grass seeds", "insects"],
+        description:
+            "The Gouldian Finch is a brightly colored and striking bird, often called the 'rainbow finch' due to its vibrant plumage in shades of red, yellow, green, blue, and black. Native to the savannahs of northern Australia, these finches are highly social and live in flocks. They primarily feed on grass seeds but will also consume insects during the breeding season. Unfortunately, habitat loss and other factors have made them a threatened species, and conservation efforts are underway to protect their populations.",
+        length: "12-14cm",
+        weight: "15g",
+        found: ["Northern Australia"],
+        image: "./assets/images/birds-html-images/pigeon.png",
+        videoTag: "pigeon.mp4",
+        sound: "pigeon.mp3",
     }
 }
 
+const birdInfoContainer = document.querySelector(".bird-information-container")
+birdInfoContainer.style.display = "none"
+
+const birdAudio = document.getElementById("bird-audio");
+const playAudioButton = document.getElementById("play-audio-btn");
+
+const setShortBirdInformation = (key) => {
+    const readMoreButton = document.getElementById("read-more-btn")
+    const bird = zooBirds[key];
+    if (!bird) {
+        console.error(`Bird with key "${key}" not found.`);
+        return;
+    }
+
+    document.querySelector(".bird-name").textContent = "Name: " + bird.name;
+    document.getElementById("bird-image").src = bird.image;
+    document.querySelector(".bird-desc").textContent = bird.description.substring(0, 200) + "...";
+    document.querySelector(".bird-group").textContent = `Group: ${bird.group}`;
+    document.querySelector(".bird-food").textContent = `Food: ${bird.food.join(", ")}`;
+
+    const birdVideo = document.getElementById("bird-video");
+    if (birdVideo) {
+        birdVideo.src = `./assets/bird-videos/${bird.videoTag}`;
+        birdVideo.load();
+        birdInfoContainer.style.display = null
+        readMoreButton.style.display = "block";
+    }
+    birdAudio.src = `./assets/bird-sounds/${bird.sound}`;
+    birdAudio.load();
+};
 
 
+const setBirdInformation = (key) => {
 
-const displayBirdInformation = (animalList) => {
+    const bird = zooBirds[key];
+    if (!bird) {
+        console.error(`Bird with key "${key}" not found.`);
+        return;
+    }
+
+    document.querySelector(".bird-name").textContent = "Name: " + bird.name;
+    document.querySelector(".bird-lifespan").textContent = `Lifespan: ${bird.lifespan}`;
+    document.querySelector(".bird-group").textContent = `Group: ${bird.group}`;
+    document.querySelector(".bird-food").textContent = `Food: ${bird.food.join(", ")}`;
+    document.querySelector(".bird-desc").textContent = bird.description;
+    document.querySelector(".bird-length").textContent = `Length: ${bird.length}`;
+    document.querySelector(".bird-weight").textContent = `Weight: ${bird.weight}`;
+    document.querySelector(".bird-found").textContent = `Found in: ${bird.found.join(", ")}`;
+
+    const birdVideo = document.getElementById("bird-video")
+    if (birdVideo) {
+        birdVideo.src = `./assets/bird-videos/${bird.videoTag}`
+    }
+    birdAudio.src = `./assets/bird-sounds/${bird.sound}`;
+    birdAudio.load();
+};
+
+playAudioButton.addEventListener("click", () => {
+    birdAudio.currentTime = 0;
+    birdAudio.play();
 
 }
+);
+
+document.querySelectorAll(".bird-button-text-container img").forEach((img) => {
+    const birdKey = img.id;
+    img.addEventListener("click", () => {
+        setShortBirdInformation(birdKey);
+        document.getElementById("navigate-space").scrollIntoView({ behavior: "smooth" });
+    });
+});
+
+document.getElementById("read-more-btn").addEventListener("click", () => {
+    const activeBirdKey = document.querySelector(".bird-name").textContent.split(": ")[1].toLowerCase();
+    setBirdInformation(activeBirdKey);
+});
