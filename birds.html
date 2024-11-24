@@ -13,7 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-    <script src="/scripts/birds.js"></script>
+    <script src="/scripts/birds.js" defer></script>
 </head>
 
 <body>
@@ -31,23 +31,28 @@
                 </div>
 
                 <div class="bird-button-text-container">
-                    <img src="/assets/images/birds-html-images/cockatoo.png" alt="" id="yellow-tailed-black-cockatoo">
-                    <p>Cassowary</p>
+                    <img src="/assets/images/birds-html-images/cockatoo.png" alt="" id="yellowtailedblackcockatoo">
+                    <p>Yellow Tailed Black Cockatoo</p>
                 </div>
 
                 <div class="bird-button-text-container">
-                    <img src="/assets/images/birds-html-images/seagul.png" alt="" id="seagull">
+                    <img src="/assets/images/birds-html-images/seagull.png" alt="" id="seagull">
                     <p>Seagull</p>
                 </div>
 
                 <div class="bird-button-text-container">
-                    <img src="/assets/images/birds-html-images/tankybirb.png" alt="" id="hotwheels-avian">
-                    <p>Hotwheels Avian</p>
+                    <img src="/assets/images/birds-html-images/flamingo.png" alt="" id="flamingo">
+                    <p>Flamingo</p>
                 </div>
 
                 <div class="bird-button-text-container">
                     <img src="/assets/images/birds-html-images/colibri.png" alt="" id="colibri">
                     <p>Colibri</p>
+                </div>
+
+                <div class="bird-button-text-container">
+                    <img src="/assets/images/birds-html-images/pigeon.png" alt="" id="pigeon">
+                    <p>Pigeon</p>
                 </div>
             </div>
         </div>
@@ -57,24 +62,41 @@
                 <div class="main-section-hero">
                     <img src="/assets/images/birds-html-images/pappegoja.png" id="hero-parrot-image">
                     <div class="hero-call-to-action">
-                        <h2>Our Avians are <br>government <span class="planes-text">DRONES</span></h2>
+                        <h2>Our Avians are <br>government<br> <span class="planes-text">DRONES</span></h2>
                         <h3>They might explode on launch<br>Find out why.</h3>
-                        <p>Tweet ipsum dolor chirp amet, flocketur adipiscing elit. Cras at peckus turpis, sit amet
-                            facilisis wingspread. Quisque songbird sapien ac ornitho malesuada ornare. Warble suscipit
-                            finch vel consectetur avian tristique. Nullam perches ligula, bibendum at feather fringilla,
-                            cursus quis canopy.</p>
+                        <p>Why does the Pigeons in my area keep blowing up? <br>And what are these Kookaburras doing
+                            with all that ammunition?</p>
                         <div class="hero-section-buttons">
-                            <button id="pidgeon-button">Lets blow up a pidgeon</button>
-                            <button id="hawk-button">Contact our Hawk</button>
+                            <button id="pidgeon-button">Protect yourself today</button>
+                            <button id="hawk-button">Nearest bombshelter</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="bird-information-container">
-                <div class="bird-information">
-                    <div class="bird-image-container">
-                        <img src="/assets/images/birds-html-images/kookaburra.png">
-                        <p></p>
+            <div id="navigate-space"></div>
+            <div class="bird-information-container" id="navigate-birds">
+                <div class="bird-information-video">
+                    <video id="bird-video" autoplay muted loop>
+                        <source src="assets/bird-videos/.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="bird-info-text-section">
+                    <img src="" id="bird-image">
+                    <p class="bird-name"></p>
+                    <p class="bird-lifespan"></p>
+                    <p class="bird-group"></p>
+                    <p class="bird-food"></p>
+                    <p class="bird-desc"></p>
+                    <p class="bird-length"></p>
+                    <p class="bird-weight"></p>
+                    <p class="bird-found"></p>
+                    <div class="bird-info-buttons">
+                        <div class="audio-player">
+                            <audio id="bird-audio" src="./assets/audio/birdsong.mp3"></audio>
+                            <button id="play-audio-btn">Play animal noise</button>
+                        </div>
+                        <button id="read-more-btn">Read More</button>
                     </div>
                 </div>
             </div>
@@ -118,7 +140,7 @@
                         <img
                             src="https://www.ivelvalleybirdfood.co.uk/wp/wp-content/uploads/2023/06/most-endangered-birds-uk-1.png" />
                         <div class="grid-text-container">
-                            <div class="grid-text-container-title">Hawks only eat fresh code</div>
+                            <div class="grid-text-container-title">Hawks only eat fresh tuah</div>
                             <div class="grid-text-container-description">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis
                                 minus quos a maiores distinctio, quod beatae corrupti tenetur.
@@ -190,7 +212,7 @@
     <footer>
         <div class="footer-container">
             <div class="logo-div">
-                <img class="brand-logo" src="./img/capyzoo-logo.png" alt="capyzoo-logo">
+                <img class="brand-logo" src="./assets/footer/capyzoo-logo.png" alt="capyzoo-logo">
             </div>
             <div class="footer-nav">
                 <ul>
