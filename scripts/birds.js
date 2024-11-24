@@ -122,6 +122,10 @@ const setShortBirdInformation = (key) => {
     document.querySelector(".bird-desc").textContent = bird.description.substring(0, 200) + "...";
     document.querySelector(".bird-group").textContent = `Group: ${bird.group}`;
     document.querySelector(".bird-food").textContent = `Food: ${bird.food.join(", ")}`;
+    document.querySelector(".bird-length").textContent = ""
+    document.querySelector(".bird-weight").textContent = "";
+    document.querySelector(".bird-found").textContent = ""
+
 
     const birdVideo = document.getElementById("bird-video");
     if (birdVideo) {
