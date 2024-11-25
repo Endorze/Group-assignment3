@@ -199,13 +199,8 @@ body {
 
 .bird-information-container img {
   height: 20%;
-.bird-information-container img {
-  height: 20%;
 }
 
-.bird-information-video {
-  position: relative;
-  height: 100%;
 .bird-information-video {
   position: relative;
   height: 100%;
@@ -219,11 +214,7 @@ body {
 .bird-info-text-section {
   width: 50%;
   height: 100%;
-
   margin-left: 5%;
-.bird-information-video video {
-  max-width: 800px;
-  width: 100%;
 }
 
 .bird-info-text-section {
