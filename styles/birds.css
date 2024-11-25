@@ -444,6 +444,7 @@ body {
     opacity: 0;
     transition: all .3s ease;
     text-align: justify;
+    pointer-events: none;
   }
   
 
