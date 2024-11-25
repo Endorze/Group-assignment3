@@ -131,6 +131,7 @@ body {
 .sidebar {
     position: relative;
     top: 0;
+    margin-top: 10vh;
     left: -250px;
     width: 250px;
     height: 100vh;
