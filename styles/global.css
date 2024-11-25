@@ -137,14 +137,6 @@ body {
   grid-template-columns: 1fr 6fr;
 }
 
-.sidebar-container {
-  color: black;
-  background-color: beigh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
 .welcome-card-container,
 .display-info-container {
   height: 100vh;
