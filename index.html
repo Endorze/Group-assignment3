@@ -6,6 +6,7 @@
     <title>Document</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./styles/global.css">
+    <script src="scripts/index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -27,6 +28,27 @@
                 <input placeholder="Search...">
         </div>
     </header>
+    <input type="checkbox" id="sidebarToggle" class="sidebar-checkbox">
+    <label for="sidebarToggle" class="sidebar-toggle-label">
+        <i class="bx bx-menu"></i>
+    </label>
+
+    <div class="sidebar">
+        <nav class="sidebar-menu">
+            <ul>
+                <li><a href="index.html" class="selected"><i class="bx bx-home"></i> Home</a></li>
+                <li><a href="reptiles.html">Reptiles</a></li>
+                <li><a href="mammals.html">Mammals</a></li>
+                <li><a href="birds.html">Birds</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="content">
+        <h1>Welcome to Capyzoo!</h1>
+    </div>
+
     <footer>
         <div class="footer-container">
             <div class="logo-div">
