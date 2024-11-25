@@ -28,17 +28,18 @@ body {
 }
 
 .header {
-    position: fixed;
-    top: 0;
-    background-color: var(--color-lightbeige);
-    height: 6rem;
-    min-width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    -webkit-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
-    -moz-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
-    box-shadow: 0px 1px 5px 0px var(--color-lightbeige)
+  position: fixed;
+  top: 0;
+  background-color: var(--color-lightbeige);
+  height: 10vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
+  -moz-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
+  box-shadow: 0px 1px 5px 0px var(--color-lightbeige);
+  z-index: 100;
 }
 
 .header-logotype {
@@ -215,6 +216,14 @@ ul {
   padding-top: 10vh;
   display: grid;
   grid-template-columns: 1fr 6fr;
+}
+
+.sidebar {
+  color: black;
+  background-color: beigh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .welcome-card-container,
