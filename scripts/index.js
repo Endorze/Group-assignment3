@@ -138,7 +138,8 @@ animals.forEach((animal, index) => {
 
 const animalCardContainer = document.querySelector(".animal-card-container");
 animals.forEach((animal) => {
-  const animalCard = document.querySelector(".animal-card")
+  const animalCard = document.createElement("div");
+  animalCard.classList.add("animal-card");
   const animalImage = document.createElement("img");
   const animalName = document.createElement("h2");
   const animalDescription = document.createElement("p");
