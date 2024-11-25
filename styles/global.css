@@ -128,87 +128,7 @@ body {
   color: var(--color-darkblue);
 }
 
-/* Footer */
-
-footer {
-  background-color: var(--color-lightbeige);
-}
-
-.footer-container {
-  width: 100%;
-  padding: 70px 0px 20px;
-}
-
-.brand-logo {
-  width: 12rem;
-}
-
-.logo-div {
-  display: flex;
-  justify-content: center;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-}
-
-.social-icons a {
-  text-decoration: none;
-  padding: 0.5rem;
-  background-color: white;
-  margin: 0.5rem;
-  border-radius: 50%;
-}
-
-.social-icons a i {
-  font-size: 1.5rem;
-  color: var(--color-darkblue);
-  opacity: 0.8;
-}
-
-.social-icons a:hover {
-  background-color: var(--color-darkblue);
-  transition: 0.5;
-}
-
-.social-icons a:hover i {
-  color: white;
-  transition: 0.5;
-}
-
-.footer-nav {
-  margin: 30px 0;
-}
-
-.footer-nav ul,
-li {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-}
-
-.footer-nav ul li a {
-  color: var(--color-darkblue);
-  margin: 20px;
-  text-decoration: none;
-  font-size: 1.2rem;
-  opacity: 0.7;
-}
-
-.footer-nav ul li a:hover {
-  opacity: 1;
-}
-
-ul {
-  padding-inline-start: 0px;
-}
-
-.footer-bottom {
-  background-color: var(--color-darkbeige);
-  padding: 0.75rem;
-  text-align: center;
-}
+/* Home page: welcome & animal card */
 
 /* home page */
 .main-container {
@@ -264,35 +184,35 @@ ul {
   );
 
   /* background: rgb(45, 64, 16);
-    background: linear-gradient(
-      90deg,
-      rgba(45, 64, 16, 0) 33%,
-      rgba(45, 64, 16, 0.4192270658263305) 54%,
-      rgba(45, 64, 16, 0.5340730042016807) 58%,
-      rgba(45, 64, 16, 0.7161458333333333) 63%,
-      rgba(45, 64, 16, 0.8534007352941176) 70%,
-      rgba(45, 64, 16, 1) 91%
-    ); */
+      background: linear-gradient(
+        90deg,
+        rgba(45, 64, 16, 0) 33%,
+        rgba(45, 64, 16, 0.4192270658263305) 54%,
+        rgba(45, 64, 16, 0.5340730042016807) 58%,
+        rgba(45, 64, 16, 0.7161458333333333) 63%,
+        rgba(45, 64, 16, 0.8534007352941176) 70%,
+        rgba(45, 64, 16, 1) 91%
+      ); */
 
   /* background: rgb(89, 43, 17);
-    background: linear-gradient(
-      90deg,
-      rgba(89, 43, 17, 0.17833070728291311) 42%,
-      rgba(89, 43, 17, 0.5844931722689075) 52%,
-      rgba(89, 43, 17, 0.836594012605042) 64%,
-      rgba(89, 43, 17, 0.9486388305322129) 78%,
-      rgba(89, 43, 17, 1) 85%
-    ); */
+      background: linear-gradient(
+        90deg,
+        rgba(89, 43, 17, 0.17833070728291311) 42%,
+        rgba(89, 43, 17, 0.5844931722689075) 52%,
+        rgba(89, 43, 17, 0.836594012605042) 64%,
+        rgba(89, 43, 17, 0.9486388305322129) 78%,
+        rgba(89, 43, 17, 1) 85%
+      ); */
 
   /* background: rgb(107, 143, 61);
-    background: linear-gradient(
-      90deg,
-      rgba(107, 143, 61, 0.03267244397759106) 42%,
-      rgba(107, 143, 61, 0.6181066176470589) 54%,
-      rgba(107, 143, 61, 0.8702074579831933) 62%,
-      rgba(107, 143, 61, 1) 78%,
-      rgba(107, 143, 61, 1) 85%
-    ); */
+      background: linear-gradient(
+        90deg,
+        rgba(107, 143, 61, 0.03267244397759106) 42%,
+        rgba(107, 143, 61, 0.6181066176470589) 54%,
+        rgba(107, 143, 61, 0.8702074579831933) 62%,
+        rgba(107, 143, 61, 1) 78%,
+        rgba(107, 143, 61, 1) 85%
+      ); */
 }
 
 .welcome-card-background,
@@ -384,8 +304,90 @@ ul {
   z-index: 20;
 }
 
-/* Responsivness */
+/* Footer */
+footer {
+  background-color: var(--color-lightbeige);
+}
 
+.footer-container {
+  width: 100%;
+  padding: 70px 0px 20px;
+}
+
+.brand-logo {
+  width: 12rem;
+}
+
+.logo-div {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons a {
+  text-decoration: none;
+  padding: 0.5rem;
+  background-color: white;
+  margin: 0.5rem;
+  border-radius: 50%;
+}
+
+.social-icons a i {
+  font-size: 1.5rem;
+  color: var(--color-darkblue);
+  opacity: 0.8;
+}
+
+.social-icons a:hover {
+  background-color: var(--color-darkblue);
+  transition: 0.5;
+}
+
+.social-icons a:hover i {
+  color: white;
+  transition: 0.5;
+}
+
+.footer-nav {
+  margin: 30px 0;
+}
+
+.footer-nav ul,
+li {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.footer-nav ul li a {
+  color: var(--color-darkblue);
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+.footer-nav ul li a:hover {
+  opacity: 1;
+}
+
+ul {
+  padding-inline-start: 0px;
+}
+
+.footer-bottom {
+  background-color: var(--color-darkbeige);
+  padding: 0.75rem;
+  text-align: center;
+}
+
+
+
+/* Responsivness */
 @media screen and (max-width: 555px) {
   .footer-nav ul {
     flex-direction: column;
