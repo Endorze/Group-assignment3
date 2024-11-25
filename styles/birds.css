@@ -12,7 +12,7 @@
 
 body {
     overflow-x: hidden;
-    background-color: var();
+    font-size: 100%;
 }
 
 .main-section-hero-container {
@@ -46,7 +46,8 @@ body {
 }
 
 .hero-call-to-action h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    color: var(--color-lightbeige);
 }
 
 .hero-call-to-action h3 {
@@ -59,8 +60,8 @@ body {
 }
 
 .planes-text {
-    font-size: 5rem;
-    color: var(--color-darkgreen);
+    font-size: 6rem;
+    color: var(--color-darkblue);
 }
 
 #hero-parrot-image {
@@ -72,13 +73,22 @@ body {
 }
 
 .main-section-sidebar {
-    margin-top: 5%;
+    margin-top: 6rem;
     background-color: var(--color-blue);
     min-height: 100vh;
     display: flex;
     justify-content: center;
+    border-right: 1px solid var(--color-lightbeige);
     max-width: 250px;
     width: 100%;
+    
+}
+
+#navigate-space {
+  scroll-margin-top: 10vh;
+  height: 6rem;
+  width: 100%;
+  background-color: var(--color-lightbeige);
 }
 
 .bird-buttons {
@@ -115,7 +125,7 @@ body {
 }
 
 #hawk-button {
-    background-color: var(--color-brown);
+    background-color: var(--color-blue);
 }
 
 #hawk-button:hover {
@@ -157,38 +167,46 @@ body {
 }
 
 .bird-information-container {
+    position: relative;
+    display: none;
     height: 80vh;
+    padding: 5%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--color-lightbeige);
 }
 
-.bird-information {
-    background-image: url("https://images.pexels.com/photos/2775196/pexels-photo-2775196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
-    width: 96%;
-    height: 90%;
-    display: flex;
+.bird-information-container img {
+  height: 20%;
 }
 
-.bird-image-container {
-    max-width: 40%;
-    position: relative;
+.bird-information-video {
+  position: relative;
+  height: 100%;
 }
 
-.bird-image-container img {
-    position: absolute;
-    height: 40%;
-    bottom: 0;
-    transform: translateX(100%);
-    object-fit: contain;
+.bird-information-video video {
+  max-width: 800px;
+  width: 100%;
 }
+
+.bird-info-text-section {
+  width: 50%;
+  height: 100%;
+
+  margin-left: 5%;
+}
+
 
 .bird-button-text-container img:hover {
     height: 120%;
+}
+
+.bird-info-buttons {
+  display: flex;
+  gap: 3%;
 }
 
 .flying-birds {
@@ -213,7 +231,7 @@ body {
     position: absolute;
     top: 100%;
     right: 100%;
-    animation: birds-jumpscare 1.5s ease-in;
+    animation: birds-jumpscare 2.5s ease-in;
     pointer-events: none;
 }
   
@@ -239,6 +257,25 @@ body {
     max-width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  #read-more-btn {
+    display: none;
+    padding: 1.5%;
+    min-width: 20%;
+    background-color: var(--color-blue);
+    color: var(--color-lightbeige);
+    border: none;
+    cursor: pointer;
+  }
+
+  #play-audio-btn {
+    padding: 1.5%;
+    min-width: 25%;
+    background-color: var(--color-blue);
+    color: var(--color-lightbeige);
+    border: none;
+    cursor: pointer;
   }
   
   .grid-container-1 {
