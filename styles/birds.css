@@ -1,5 +1,5 @@
 .main-section-container {
-    min-height: 100vh;
+    height: 100%;
     width: 100%;
     overflow: hidden;
     display: flex;
@@ -13,11 +13,12 @@
 body {
     overflow-x: hidden;
     font-size: 100%;
+    background-color: var(--color-midbeige);
 }
 
 .main-section-hero-container {
     position: relative;
-    height: 90vh;
+    height: 100vh;
     background-image: url("/assets/images/birds-html-images/junglebg.jpg");
     background-size: cover;
     background-position: top;
@@ -65,7 +66,7 @@ body {
     font-size: 6rem;
     color: var(--color-darkblue);
     font-size: 6rem;
-    color: var(--color-darkblue);
+    color: #FA8072;
 }
 
 #hero-parrot-image {
@@ -79,7 +80,7 @@ body {
 .main-section-sidebar {
     margin-top: 6rem;
     margin-top: 6rem;
-    background-color: var(--color-blue);
+    background-color: var(--color-darkblue);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -90,7 +91,7 @@ body {
     
 }
 
-#navigate-space {
+#navigate-birds {
   scroll-margin-top: 10vh;
   height: 6rem;
   width: 100%;
@@ -98,17 +99,13 @@ body {
     
 }
 
-#navigate-space {
+#navigate-birds {
   scroll-margin-top: 10vh;
-  height: 6rem;
-  width: 100%;
-  background-color: var(--color-lightbeige);
 }
 
 .bird-buttons {
     position: absolute;
     height: 100%;
-    gap: 0.3%;
     flex-direction: column;
     display: flex;
     align-items: center;
@@ -116,7 +113,7 @@ body {
 
 .hero-section-buttons {
     display: flex;
-    gap: 2.5%;
+    gap: 5%;
 }
 
 #pidgeon-button,
@@ -130,8 +127,70 @@ body {
 }
 
 #pidgeon-button {
-    background-color: var(--color-lightbeige);
-    color: var(--dark-blue);
+    background-color: #FA8072;
+
+}
+
+.chat-with-bird-container {
+  margin-top: 2%;
+  height: 60vh;
+  margin-bottom: 2%;
+  min-width: 25vw;
+  display: flex;
+  align-items: center;
+
+}
+
+.bird-chat-window {
+  width: 28vw;
+  height: 100%;
+
+}
+
+.bird-chat-window-header {
+  height: 15%;
+  background-color: #FA8072;
+  color: var(--color-lightbeige);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.bird-chat-messagelog {
+  height: 70%;
+  padding: 2%;
+  background-color: var(--color-lightbeige);
+}
+
+.bird-chat-input {
+  height: 15%;
+  display: flex;
+  background-color: lightgray;
+}
+
+.bird-chat-input button img {
+  width: 40%;
+}
+.bird-chat-input button {
+  width: 20%;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.bird-chat-input input {
+  width: 100%;
+  border: none;
+  font-size: 1.5rem;
+  padding-left: 5%;
+}
+
+.bird-chat-input input:focus {
+  outline: none;
+}
+
+.bird-chat-window-header img {
+  height: 60%;
 }
 
 #pidgeon-button:hover {
@@ -160,7 +219,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 2px solid var(--color-lightbeige);
+    border-bottom: 2px solid var(--color-lightbeige);
 }
 
 .bird-button-text-container p {
@@ -176,7 +235,7 @@ body {
     object-fit: contain;
     overflow: hidden;
     border: none;
-    background-color: var(--color-blue);
+    background-color: var(--color-darkblue);
     cursor: pointer;
     height: 2s;
 }
@@ -193,8 +252,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-lightbeige);
-    background-color: var(--color-lightbeige);
+    background-color: var(--color-midbeige);
 }
 
 .bird-information-container img {
@@ -215,16 +273,24 @@ body {
   width: 50%;
   height: 100%;
   margin-left: 5%;
+  font-weight: 350;
 }
 
 .bird-info-text-section {
   width: 50%;
   height: 100%;
-
   margin-left: 5%;
+  font-weight: 350;
 }
 
 
+.phone-nav-bar {
+  background-color: var(--color-lightbeige);
+  margin-top: 5%;
+  width: 100%;
+  height: 20vh;
+  display: none;
+}
 
 .bird-button-text-container img:hover {
     height: 120%;
@@ -237,31 +303,65 @@ body {
 
 .bird-info-buttons {
   display: flex;
-  gap: 3%;
+  height: 40px;
   max-width: 250px;
   width: 100%;
   justify-content: space-between;
 }
 #read-more-btn {
-  padding: 1.5%;
+  padding: 2.5%;
   height: 100%;
   max-width: 150px;
   width: 100%;
-  background-color: var(--color-blue);
+  background-color: var(--color-darkblue);
   color: var(--color-lightbeige);
   border: none;
   cursor: pointer;
 }
 
 #play-audio-btn {
-  padding: 1.5%;
+  padding: 2.5%;
   height: 100%;
   max-width: 150px;
   width: 100%;
   background-color: var(--color-blue);
   color: var(--color-lightbeige);
   border: none;
+  margin-right: 2%;
   cursor: pointer;
+}
+
+.chat-container {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 2%;
+}
+
+.chat-info-section {
+  width: 60%;
+  background-color: var(--color-lightbeige);
+  height: 60vh;
+}
+
+.chat-info-header {
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FA8072;
+  color: var(--color-lightbeige);
+}
+
+.chat-info-text {
+  padding: 2%;
+  width: 100%;
+  height: 100%;
+}
+
+.display-horizontal {
+  display: flex;
 }
 
 .flying-birds {
@@ -290,14 +390,11 @@ body {
     animation: birds-jumpscare 2.5s ease-in;
     pointer-events: none;
 }
-  
-  .image-section {
-    min-height: 50vh;
-  }
-  
+
   .image-section-content {
     display: grid;
     width: 100%;
+    background-color: var(--color-lightbeige);
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 20px;
@@ -315,24 +412,6 @@ body {
     object-fit: cover;
   }
 
-  #read-more-btn {
-    display: none;
-    padding: 1.5%;
-    min-width: 20%;
-    background-color: var(--color-blue);
-    color: var(--color-lightbeige);
-    border: none;
-    cursor: pointer;
-  }
-
-  #play-audio-btn {
-    padding: 1.5%;
-    min-width: 25%;
-    background-color: var(--color-blue);
-    color: var(--color-lightbeige);
-    border: none;
-    cursor: pointer;
-  }
 
 
   
@@ -402,6 +481,7 @@ body {
     opacity: 0;
     transition: all .3s ease;
     text-align: justify;
+    pointer-events: none;
   }
   
 
@@ -434,3 +514,154 @@ body {
         height: 120%
     }
 }
+
+
+@media (max-width: 1024px) {
+
+  .bird-information-container {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .bird-info-text-section {
+    margin-top: 10%;
+    margin-left: 0;
+    font-size: 0.8rem;
+  }
+
+  #bird-video {
+    display: none;
+  }
+
+  .main-section-container {
+    padding: 2%;
+  }
+
+  .main-section-sidebar {
+      display: none;
+  }
+
+  .image-section-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .chat-container {
+    margin-top: 10%;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .chat-info-section {
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  .phone-nav-bar {
+    display: flex;
+  }
+
+  .bird-buttons {
+    padding: 3%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 3%;
+    background-color: #FA8072;
+  }
+
+  .bird-button-text-container {
+    max-width: 24.5%;
+    font-size: 0.8rem;
+  }
+
+  .bird-button-text-container p {
+    pointer-events: none;
+  }
+  
+  .bird-chat-window {
+    min-width: 92vw;
+  }
+  
+  .main-section-hero-container {
+    margin-top: 2rem;
+    height: 50vh;
+  }
+
+  .main-section-hero {
+    height: 70%;
+    left: 10%;
+    min-width: 80%;
+  }
+
+  .hero-call-to-action {
+    width: 100%;
+  }
+
+  .main-section-hero img {
+    transform: translateX(-20%)!important;
+  }
+
+  .hero-section-buttons {
+    width: 70%;
+  }
+
+  .hero-call-to-action h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-call-to-action h3 {
+    font-size: 1.2rem;
+  }
+
+  .hero-call-to-action p {
+    display: none;
+  }
+
+  .planes-text {
+    font-size: 2rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .main-section-hero img {
+    display: none;
+  }
+
+  .jumpscare-birds {
+    display: none;
+  }
+
+  .phone-nav-bar {
+    display: flex;
+  }
+
+  .main-section-hero {
+    --blur-size: 3px;
+  }
+
+  .bird-buttons {
+    padding: 3%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+  }
+
+  .bird-button-text-container {
+    max-width: 24.5%;
+    font-size: 0.8rem;
+  }
+}
+
