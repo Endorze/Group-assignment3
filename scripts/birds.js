@@ -122,6 +122,10 @@ const setShortBirdInformation = (key) => {
     document.querySelector(".bird-desc").textContent = bird.description.substring(0, 200) + "...";
     document.querySelector(".bird-group").textContent = `Group: ${bird.group}`;
     document.querySelector(".bird-food").textContent = `Food: ${bird.food.join(", ")}`;
+    document.querySelector(".bird-length").textContent = ""
+    document.querySelector(".bird-weight").textContent = "";
+    document.querySelector(".bird-found").textContent = ""
+
 
     const birdVideo = document.getElementById("bird-video");
     if (birdVideo) {
@@ -171,7 +175,7 @@ document.querySelectorAll(".bird-button-text-container img").forEach((img) => {
     const birdKey = img.id;
     img.addEventListener("click", () => {
         setShortBirdInformation(birdKey);
-        document.getElementById("navigate-space").scrollIntoView({ behavior: "smooth" });
+        document.getElementById("navigate-birds").scrollIntoView({ behavior: "smooth" });
     });
 });
 
