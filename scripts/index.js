@@ -127,7 +127,7 @@ const animals = [
   },
 ];
 
-const sideBar = document.querySelector(".sidebar");
+const sideBar = document.querySelector(".sidebar-may");
 animals.forEach((animal, index) => {
   console.log(`${animal.name} at ${index}`);
   const animalName = document.createElement("button");
