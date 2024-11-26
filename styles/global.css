@@ -373,10 +373,22 @@ ul {
 }
 
 .animal-card {
-  background-color: blue;
   height: 100%;
   position: absolute;
   display: none;
+  padding: 3rem;
+}
+
+.animal-card.group-mammal {
+  background-color: green;
+}
+
+.animal-card.group-reptile {
+  background-color: brown;
+}
+
+.animal-card.group-bird {
+  background-color: blue;
 }
 
 .animal-card.active {

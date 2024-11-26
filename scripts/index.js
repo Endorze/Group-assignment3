@@ -12,7 +12,7 @@ const animals = [
   {
     name: "Echidna",
     lifespan: 50,
-    group: "mammals",
+    group: "mammal",
     food: ["ants", "termites", "beetle larvae", "worms"],
     description:
       "Echidnas, also called spiny anteaters, are walking contradictions. They are mammals, but they lay eggs. They are often classified as long- or short-beaked, but don't have beaks at all, in the traditional sense; they have fleshy noses that can be either on the long side or rather short. They don't really look like true anteaters (Myrmecophaga tridactyla), either, and they are not closely related to them. They are spiny, though; their bodies are covered with hollow, barbless quills. Echidnas are monotremes, egg-laying mammals. The only other living monotreme is the platypus.",
@@ -24,7 +24,7 @@ const animals = [
   {
     name: "Tasmanian Devil",
     lifespan: 5,
-    group: "mammals",
+    group: "mammal",
     food: ["meat from other animals", "wallabies", "wombats"],
     description:
       "The Tasmanian devil (Sarcophilus harrisii) is a carnivorous marsupial of the family Dasyuridae. Until recently, it was only found on the island state of Tasmania, but it has been reintroduced to New South Wales in mainland Australia, with a small breeding population. The size of a small dog, the Tasmanian devil became the largest carnivorous marsupial in the world, following the extinction of the thylacine in 1936. It is related to quolls, and distantly related to the thylacine. It is characterised by its stocky and muscular build, black fur, pungent odour, extremely loud and disturbing screech, keen sense of smell, and ferocity when feeding. The Tasmanian devil's large head and neck allow it to generate among the strongest bites per unit body mass of any extant predatory land mammal. It hunts prey and scavenges on carrion.",
@@ -36,7 +36,7 @@ const animals = [
   {
     name: "Quokka",
     lifespan: 10,
-    group: "mammals",
+    group: "mammal",
     food: ["shrubs", "grasses"],
     description:
       "The Quokka, Setonix brachyurus, was described by early Dutch explorer, Willem de Vlamingh, 'as a kind of rat as big as a common cat'. His first sighting of the Quokka was on an island off the mouth of the Swan River. He named the island Rottenest ('rat nest') in honour of this sighting. The island is now known as Rottnest Island. Essentially the Quokka looks very much like other wallabies. It has short, very coarse and thick grey-brown fur over most of the body with lighter parts underneath. Its facial features consist of a naked nose on a short, broad face with rounded furry ears. The tail is relatively short and mostly devoid of hair. In contrast, the hair on the feet extends to cover its claws.",
@@ -136,16 +136,33 @@ animals.forEach((animal, index) => {
   sideBar.appendChild(animalName);
 });
 
+
 const animalCardContainer = document.querySelector(".animal-card-container");
 animals.forEach((animal) => {
   const animalCard = document.createElement("div");
   animalCard.classList.add("animal-card");
+ if (animal.group === 'mammal') {
+    animalCard.classList.add("group-mammal");
+  } else if (animal.group ==='reptile') {
+    animalCard.classList.add("group-reptile");
+  } else {
+    animalCard.classList.add("group-bird");
+  }
+  const animalCardInner = document.createElement("div");
+  animalCardInner.classList.add("animal-card-inner");
+
   const animalImage = document.createElement("img");
+  animalImage.classList.add("animal-image")
   const animalName = document.createElement("h2");
+  animalName.classList.add("animal-name");
   const animalDescription = document.createElement("p");
+  animalDescription.classList.add("animal-description");
   const animalLength = document.createElement("p");
+  animalLength.classList.add("animal-length");
   const animalWeight = document.createElement("p");
+  animalWeight.classList.add("animal-weight");
   const animalFound = document.createElement("div");
+  animalFound.classList.add("animal-found");
 
   animalImage.src = animal.image;
   animalImage.alt = `${animal.name}`;
@@ -155,13 +172,14 @@ animals.forEach((animal) => {
   animalWeight.textContent = `Weight: ${animal.weight}`;
   animalFound.textContent = `Found in: ${animal.found}`;
 
-  animalCard.appendChild(animalImage);
-  animalCard.appendChild(animalName);
-  animalCard.appendChild(animalDescription);
-  animalCard.appendChild(animalLength);
-  animalCard.appendChild(animalWeight);
-  animalCard.appendChild(animalFound);
+  animalCardInner.appendChild(animalImage);
+  animalCardInner.appendChild(animalName);
+  animalCardInner.appendChild(animalDescription);
+  animalCardInner.appendChild(animalLength);
+  animalCardInner.appendChild(animalWeight);
+  animalCardInner.appendChild(animalFound);
 
+  animalCard.appendChild(animalCardInner);
   animalCardContainer.appendChild(animalCard);
 });
 
