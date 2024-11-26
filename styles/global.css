@@ -376,24 +376,27 @@ ul {
   height: 100%;
   position: absolute;
   display: none;
-  padding: 3rem;
-}
-
-.animal-card.group-mammal {
-  background-color: green;
-}
-
-.animal-card.group-reptile {
-  background-color: brown;
-}
-
-.animal-card.group-bird {
-  background-color: blue;
+  padding: 2rem;
 }
 
 .animal-card.active {
   display: block;
   z-index: 20;
+}
+
+.animal-card-inner {
+  background-color: var(--color-lightbeige);
+  height: 100%;
+  border-radius: 24px;
+  padding: 1rem;
+}
+
+.animal-image {
+  width: 20rem;
+  aspect-ratio: 1;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+  background-position: center;
+  object-fit: cover;
 }
 
 /* Responsivness */
