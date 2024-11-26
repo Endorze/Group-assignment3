@@ -175,7 +175,7 @@ document.querySelectorAll(".bird-button-text-container img").forEach((img) => {
     const birdKey = img.id;
     img.addEventListener("click", () => {
         setShortBirdInformation(birdKey);
-        document.getElementById("navigate-space").scrollIntoView({ behavior: "smooth" });
+        document.getElementById("navigate-birds").scrollIntoView({ behavior: "smooth" });
     });
 });
 

@@ -42,6 +42,25 @@ body {
     box-shadow: 0px 1px 5px 0px var(--color-lightbeige)
 }
 
+.phone-header {
+    position: fixed;
+    top: 0;
+    background-color: var(--color-lightbeige);
+    height: 6rem;
+    min-width: 100vw;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    -webkit-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
+    -moz-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
+    box-shadow: 0px 1px 5px 0px var(--color-lightbeige)
+}
+
+.header-nav-bar a img {
+    object-fit: contain;
+    height: 40px;
+}
+
 .header-logotype {
     position: absolute;
     height: 100%;
@@ -322,5 +341,23 @@ ul {
 
     .brand-logo {
         margin-left: 0.25rem;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .header {
+        display: none;
+    }
+
+    .phone-header {
+        display: flex;
+        width: 100%;
+    }
+
+    .header-nav-bar {
+        justify-content: space-evenly;
+        min-width: 320px;
+        width: 100%;
     }
 }
