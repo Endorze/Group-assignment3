@@ -136,23 +136,28 @@ animals.forEach((animal, index) => {
   sideBar.appendChild(animalName);
 });
 
-
 const animalCardContainer = document.querySelector(".animal-card-container");
 animals.forEach((animal) => {
   const animalCard = document.createElement("div");
   animalCard.classList.add("animal-card");
- if (animal.group === 'mammal') {
+  if (animal.group === "mammal") {
     animalCard.classList.add("group-mammal");
-  } else if (animal.group ==='reptile') {
+  } else if (animal.group === "reptile") {
     animalCard.classList.add("group-reptile");
   } else {
     animalCard.classList.add("group-bird");
   }
+
   const animalCardInner = document.createElement("div");
   animalCardInner.classList.add("animal-card-inner");
 
+  const animalCardInnerLeft = document.createElement("div");
+  animalCardInnerLeft.classList.add("animal-card-inner-left");
+  const animalCardInnerRight = document.createElement("div");
+  animalCardInnerRight.classList.add("animal-card-inner-right");
+
   const animalImage = document.createElement("img");
-  animalImage.classList.add("animal-image")
+  animalImage.classList.add("animal-image");
   const animalName = document.createElement("h2");
   animalName.classList.add("animal-name");
   const animalDescription = document.createElement("p");
@@ -163,23 +168,34 @@ animals.forEach((animal) => {
   animalWeight.classList.add("animal-weight");
   const animalFound = document.createElement("div");
   animalFound.classList.add("animal-found");
+  const animalFood = document.createElement("div");
+  animalFood.classList.add("animal-food");
+  const animalGroup = document.createElement("div");
+  animalGroup.classList.add("animal-group");
 
   animalImage.src = animal.image;
   animalImage.alt = `${animal.name}`;
   animalName.textContent = animal.name;
   animalDescription.textContent = animal.description;
+  animalFood.textContent = animal.food;
+  animalGroup.textContent = animal.group;
   animalLength.textContent = `Length: ${animal.length}`;
   animalWeight.textContent = `Weight: ${animal.weight}`;
   animalFound.textContent = `Found in: ${animal.found}`;
 
-  animalCardInner.appendChild(animalImage);
-  animalCardInner.appendChild(animalName);
-  animalCardInner.appendChild(animalDescription);
-  animalCardInner.appendChild(animalLength);
-  animalCardInner.appendChild(animalWeight);
-  animalCardInner.appendChild(animalFound);
+  animalCardInnerLeft.appendChild(animalGroup);
+  animalCardInnerLeft.appendChild(animalImage);
+  animalCardInnerLeft.appendChild(animalDescription);
+  animalCardInnerRight.appendChild(animalName);
+  animalCardInnerRight.appendChild(animalLength);
+  animalCardInnerRight.appendChild(animalWeight);
+  animalCardInnerRight.appendChild(animalFood);
+  animalCardInnerRight.appendChild(animalFound);
 
+  animalCardInner.appendChild(animalCardInnerLeft);
+  animalCardInner.appendChild(animalCardInnerRight);
   animalCard.appendChild(animalCardInner);
+
   animalCardContainer.appendChild(animalCard);
 });
 
