@@ -156,15 +156,20 @@ animals.forEach((animal) => {
   const animalCardInnerRight = document.createElement("div");
   animalCardInnerRight.classList.add("animal-card-inner-right");
 
+  const animalDescriptionContainer = document.createElement("div");
+  animalDescriptionContainer.classList.add("animal-description-container");
+  const readMoreButton = document.createElement("button");
+  readMoreButton.classList.add("button-readmore");;
+
   const animalImage = document.createElement("img");
   animalImage.classList.add("animal-image");
-  const animalName = document.createElement("h2");
+  const animalName = document.createElement("div");
   animalName.classList.add("animal-name");
-  const animalDescription = document.createElement("p");
+  const animalDescription = document.createElement("div");
   animalDescription.classList.add("animal-description");
-  const animalLength = document.createElement("p");
+  const animalLength = document.createElement("div");
   animalLength.classList.add("animal-length");
-  const animalWeight = document.createElement("p");
+  const animalWeight = document.createElement("div");
   animalWeight.classList.add("animal-weight");
   const animalFound = document.createElement("div");
   animalFound.classList.add("animal-found");
@@ -172,25 +177,34 @@ animals.forEach((animal) => {
   animalFood.classList.add("animal-food");
   const animalGroup = document.createElement("div");
   animalGroup.classList.add("animal-group");
+  const animalLifeSpan = document.createElement("div");
+  animalLifeSpan.classList.add("animal-lifespan");
 
   animalImage.src = animal.image;
   animalImage.alt = `${animal.name}`;
   animalName.textContent = animal.name;
   animalDescription.textContent = animal.description;
-  animalFood.textContent = animal.food;
+  animalLifeSpan.textContent = `Lifespan: ${animal.lifespan}`;
+  animalFood.textContent = `Food: ${animal.food}`;
   animalGroup.textContent = animal.group;
   animalLength.textContent = `Length: ${animal.length}`;
   animalWeight.textContent = `Weight: ${animal.weight}`;
   animalFound.textContent = `Found in: ${animal.found}`;
+  readMoreButton.textContent = `Read more`;
 
-  animalCardInnerLeft.appendChild(animalGroup);
   animalCardInnerLeft.appendChild(animalImage);
-  animalCardInnerLeft.appendChild(animalDescription);
+  animalCardInnerLeft.appendChild(animalGroup);
+  
   animalCardInnerRight.appendChild(animalName);
   animalCardInnerRight.appendChild(animalLength);
   animalCardInnerRight.appendChild(animalWeight);
+  animalCardInnerRight.appendChild(animalLifeSpan);
   animalCardInnerRight.appendChild(animalFood);
   animalCardInnerRight.appendChild(animalFound);
+  
+  animalCardInnerRight.appendChild(animalDescriptionContainer);
+  animalDescriptionContainer.appendChild(animalDescription);
+  animalDescriptionContainer.appendChild(readMoreButton);
 
   animalCardInner.appendChild(animalCardInnerLeft);
   animalCardInner.appendChild(animalCardInnerRight);
