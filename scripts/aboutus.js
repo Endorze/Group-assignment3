@@ -1,20 +1,20 @@
 
 function Person(name, aboutText, tab, image) {
-    this.name = name;
-    this.aboutText = aboutText;
-    this.tab = tab;
-    this.image = image;
+    this.name        =  name;
+    this.aboutText   =  aboutText;
+    this.tab         =  tab;
+    this.image       =  image;
 }
 
 
 const teamMembers = [
     new Person("Our Team!", 
         "information about the team, about the project, etc. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.", 
-        "The Team", "./images"),
+        "The Team", ""),
 
     new Person("Emelie B. Silfverberg", 
         "Emelie is uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..", 
-        "Emelie"),
+        "Emelie", "../assets/images/reptiles/reptile-hawksbill-turtle.jpg"),
 
     new Person("Jordan B. Smith", 
         "Jordan is an expert in backend systems.", 
@@ -85,22 +85,22 @@ const updateTeamContent = (person) => {
     memberWrapper.classList.add("team__container");
 
    let imgContainer = document.createElement("img");
-   imgContainer.src ="./assets/images/reptiles/reptile-hawksbill-turtle-sketched.png"
-   imgContainer.alt="turtle picture"
+   imgContainer.src ="person.image"
+   imgContainer.alt="person.name picture"
 
    memberWrapper.appendChild(imgContainer);
 
-let teamName = document.createElement("h3")
-teamName.textContent = person.name;
+    let teamName = document.createElement("h3")
+    teamName.textContent = person.name;
 
     let teamSection = document.querySelector("team");
     teamSection.appendChild(memberWrapper);
 
 
 
-    document.querySelector(".team__title-name").textContent = person.name;
-    document.querySelector(".team__about-text").textContent = person.aboutText;
-    document.
+    // document.querySelector(".team__title-name").textContent = person.name;
+    // document.querySelector(".team__about-text").textContent = person.aboutText;
+    // document.
 };
 
 createTabs(teamMembers);

@@ -51,7 +51,7 @@ p {
     background-color: var(--color-background);
     height: 100%;
     display: flex;
-    margin: 32px 32px 0 32px;
+    margin: 200px 32px 0 32px;
     gap: 32px;
     /* width: 100%; */
 }
