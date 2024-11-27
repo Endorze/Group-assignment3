@@ -215,17 +215,17 @@ animals.forEach((animal) => {
   const fullDescription = animal.description;
   const truncatedDescription = fullDescription.substring(0, 200) + "...";
   animalDescription.textContent = truncatedDescription;
-  readMoreButton.textContent = "Read more";
-  const toggleDescription = () => {
-    if (animalDescription.textContent === truncatedDescription) {
-      animalDescription.textContent = fullDescription;
-      readMoreButton.textContent = "Read less";
-    } else {
-      animalDescription.textContent = truncatedDescription;
-      readMoreButton.textContent = "Read more";
-    }
-  };
-  readMoreButton.addEventListener("click", toggleDescription);
+  // readMoreButton.textContent = "Read more";
+  // const toggleDescription = () => {
+  //   if (animalDescription.textContent === truncatedDescription) {
+  //     animalDescription.textContent = fullDescription;
+  //     readMoreButton.textContent = "Read less";
+  //   } else {
+  //     animalDescription.textContent = truncatedDescription;
+  //     readMoreButton.textContent = "Read more";
+  //   }
+  // };
+  // readMoreButton.addEventListener("click", toggleDescription);
 });
 
 // add and remove active
