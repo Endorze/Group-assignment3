@@ -216,8 +216,6 @@ animals.forEach((animal) => {
   const truncatedDescription = fullDescription.substring(0, 200) + "...";
   animalDescription.textContent = truncatedDescription;
   readMoreButton.textContent = "Read more";
-
-  // Toggle function specific to this card
   const toggleDescription = () => {
     if (animalDescription.textContent === truncatedDescription) {
       animalDescription.textContent = fullDescription;
