@@ -386,14 +386,11 @@ ul {
 }
 
 .animal-card-inner {
-  padding: 2rem;
   min-height: 90%;
-  background-color: var(--color-lightbeige);
-  border-radius: 24px;
   display: grid;
   grid-template-columns: 2fr 3fr;
   font-family: "Roboto", sans-serif;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  
 }
 
 .animal-card-inner-left {
@@ -401,6 +398,12 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.animal-card-inner-right {
+  padding: 2rem;
+  border-radius: 24px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  background-color: var(--color-lightbeige);
 }
 
 .animal-name {
@@ -422,7 +425,7 @@ ul {
 
 
 .animal-image {
-  width: 20rem;
+  width: 25rem;
   aspect-ratio: 1;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   background-position: center;
