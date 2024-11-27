@@ -158,8 +158,8 @@ animals.forEach((animal) => {
 
   const animalDescriptionContainer = document.createElement("div");
   animalDescriptionContainer.classList.add("animal-description-container");
-  const readMoreButton = document.createElement("button");
-  readMoreButton.classList.add("button-readmore");;
+  const readMoreButton = document.createElement("div");
+  readMoreButton.classList.add("button-readmore");
 
   const animalImage = document.createElement("img");
   animalImage.classList.add("animal-image");
@@ -190,18 +190,17 @@ animals.forEach((animal) => {
   animalLength.textContent = `Length: ${animal.length}`;
   animalWeight.textContent = `Weight: ${animal.weight}`;
   animalFound.textContent = `Found in: ${animal.found}`;
-  readMoreButton.textContent = `Read more`;
 
   animalCardInnerLeft.appendChild(animalImage);
   animalCardInnerLeft.appendChild(animalGroup);
-  
+
   animalCardInnerRight.appendChild(animalName);
   animalCardInnerRight.appendChild(animalLength);
   animalCardInnerRight.appendChild(animalWeight);
   animalCardInnerRight.appendChild(animalLifeSpan);
   animalCardInnerRight.appendChild(animalFood);
   animalCardInnerRight.appendChild(animalFound);
-  
+
   animalCardInnerRight.appendChild(animalDescriptionContainer);
   animalDescriptionContainer.appendChild(animalDescription);
   animalDescriptionContainer.appendChild(readMoreButton);
@@ -211,6 +210,24 @@ animals.forEach((animal) => {
   animalCard.appendChild(animalCardInner);
 
   animalCardContainer.appendChild(animalCard);
+
+  // Truncated text: aniamal description
+  const fullDescription = animal.description;
+  const truncatedDescription = fullDescription.substring(0, 200) + "...";
+  animalDescription.textContent = truncatedDescription;
+  readMoreButton.textContent = "Read more";
+
+  // Toggle function specific to this card
+  const toggleDescription = () => {
+    if (animalDescription.textContent === truncatedDescription) {
+      animalDescription.textContent = fullDescription;
+      readMoreButton.textContent = "Read less";
+    } else {
+      animalDescription.textContent = truncatedDescription;
+      readMoreButton.textContent = "Read more";
+    }
+  };
+  readMoreButton.addEventListener("click", toggleDescription);
 });
 
 // add and remove active

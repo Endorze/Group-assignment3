@@ -387,7 +387,7 @@ ul {
 
 .animal-card-inner {
   padding: 2rem;
-  height: 90%;
+  min-height: 90%;
   background-color: var(--color-lightbeige);
   border-radius: 24px;
   display: grid;
@@ -416,10 +416,10 @@ ul {
 .animal-weight,
 .animal-food,
 .animal-lifespan,
-.animal-description,
 .animal-found {
-  padding: 0.3rem;
+  line-height: 2rem;
 }
+
 
 .animal-image {
   width: 20rem;
