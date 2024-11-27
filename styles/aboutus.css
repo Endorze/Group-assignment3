@@ -1,0 +1,135 @@
+:root {
+    --background-color: #FAF4E8;
+    --text-color: #382B22;
+    --feature-color: #34959E;
+    --footer-color: #9D6034;
+    --nav-bar: #DAA46D;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: var(--background-color);
+}
+
+h2 {
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+}
+p {
+    margin: 0;
+}
+
+.header {
+    
+}
+
+.nav-bar {
+    background-color: #313640;
+    background-color: var(--nav-bar);
+    border-radius: 25px 25px 0 0;
+    display: flex;
+    flex-direction: column;
+    /* margin: 32px 0 0 32px; */
+    overflow-x: hidden;
+    overflow-y: auto; 
+    padding-top: 32px;
+    width: 240px;
+}
+
+.main {
+    background-color: var(--color-background);
+    height: 100%;
+    display: flex;
+    margin: 32px 32px 0 32px;
+    gap: 32px;
+    /* width: 100%; */
+}
+
+.footer {
+    
+}
+
+
+
+
+.team {
+    background-color: var(--background-color);
+    display: flex;
+    width: 100%;
+}
+
+.team-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    /* gap: 18px; */
+}
+
+    .tab {
+        
+        
+    }
+    .tab,
+    .tab.active {
+        margin: 0;
+        font-size: 1rem;
+        text-align: center;
+        color: white;
+        font-size: 1rem;
+        gap: 32px;
+        text-decoration: none;
+        display: block;
+}   
+
+    .tab:hover {
+        color: var(--feature-color);
+        cursor: pointer;
+        transition: color 0.3s ease, color 0.3s ease;
+    }
+
+.img {
+    width: 300px;
+    height: 300px;
+    
+}
+
+.team__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+} 
+
+    .team__item {
+        /* background-color: yellow; */
+        display: flex;
+        flex-direction: column;
+        padding: 12px;
+        width: 100%;
+    }
+
+
+
+        .team__title-name {
+            padding: 6px;
+            color: var(--feature-color);
+            font-size: 2rem;
+            margin: 0;
+            padding: 12px;
+        }
+
+        .team__about-text {
+            padding: 6px;
+            width: 100%;
+            color: var(--text-color);
+        }
