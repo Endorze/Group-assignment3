@@ -359,6 +359,7 @@ ul {
 .animal-card-container {
   overflow: visible;
   position: relative;
+  min-height: 100dvh;
 }
 
 .animal-card {
@@ -375,7 +376,7 @@ ul {
 }
 
 .animal-card-inner {
-  min-height: 90%;
+  height: 100%;
   display: grid;
   grid-template-columns: 2fr 3fr;
   font-family: "Roboto", sans-serif;
@@ -468,9 +469,37 @@ ul {
   .welcome-card-gradient-veil {
     background: none;
   }
-  
+
   .welcome-card-text-subheader {
     color: var(--color-lightbeige);
+  }
+
+  .animal-card-inner {
+    display: block;
+  }
+
+  .animal-image {
+    width: 6rem;
+  }
+
+  .animal-card-inner-right {
+    padding: 1.5rem;
+  }
+
+  .animal-card-inner-right, .animal-description  {
+    font-size: 0.8rem;
+  }
+
+  .animal-name {
+    font-size: 1.5rem;
+  }
+
+  .animal-length,
+  .animal-weight,
+  .animal-food,
+  .animal-lifespan,
+  .animal-found, .animal-description{
+    line-height: 1.5rem;
   }
 
   /* Footer */
@@ -503,5 +532,30 @@ ul {
     justify-content: space-evenly;
     min-width: 320px;
     width: 100%;
+  }
+
+  /* Homepage */
+  .animal-card-inner {
+    display: block;
+  }
+
+  .animal-image {
+    max-width: 10rem;
+  }
+
+  .animal-card-inner-right, .animal-description  {
+    font-size: 1rem;
+  }
+
+  .animal-length,
+  .animal-weight,
+  .animal-food,
+  .animal-lifespan,
+  .animal-found {
+    line-height: 1.5rem;
+  }
+
+  .animal-card-inner-right {
+    padding: 1.5rem;
   }
 }
