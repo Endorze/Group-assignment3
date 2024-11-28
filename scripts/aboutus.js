@@ -13,8 +13,8 @@ const teamMembers = [
         "The Team", ""),
 
     new Person("Emelie B. Silfverberg", 
-        "Emelie is uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..", 
-        "Emelie", "../assets/images/reptiles/reptile-hawksbill-turtle.jpg"),
+        "Emelie is uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
+        "Emelie", "url(../assets/images/reptiles/reptile-hawksbill-turtle.jpg)"),
 
     new Person("Jordan B. Smith", 
         "Jordan is an expert in backend systems.", 
@@ -81,26 +81,26 @@ const setActiveTab = (activeTab) => {
 };
 
 const updateTeamContent = (person) => {
-    let memberWrapper = document.createElement("div");
-    memberWrapper.classList.add("team__container");
+//     let memberWrapper = document.createElement("div");
+//     memberWrapper.classList.add("team__container");
 
-   let imgContainer = document.createElement("img");
-   imgContainer.src ="person.image"
-   imgContainer.alt="person.name picture"
+//    let imgContainer = document.createElement("img");
+//    imgContainer.src ="person.image"
+//    imgContainer.alt="person.name picture"
 
-   memberWrapper.appendChild(imgContainer);
+//    memberWrapper.appendChild(imgContainer);
 
-    let teamName = document.createElement("h3")
-    teamName.textContent = person.name;
+//     let teamName = document.createElement("h3")
+//     teamName.textContent = person.name;
 
-    let teamSection = document.querySelector("team");
-    teamSection.appendChild(memberWrapper);
+//     let teamSection = document.querySelector("team");
+//     teamSection.appendChild(memberWrapper);
 
+    
 
-
-    // document.querySelector(".team__title-name").textContent = person.name;
-    // document.querySelector(".team__about-text").textContent = person.aboutText;
-    // document.
+    document.querySelector(".team__title-name").textContent = person.name;
+    document.querySelector(".team__about-text").textContent = person.aboutText;
+    document.getElementById("#img").style.backgroundImage = person.image;
 };
 
 createTabs(teamMembers);
@@ -110,3 +110,5 @@ if (teamMembers.length > 0) {
     document.querySelectorAll(".tab")[0].classList.add("active");
     updateTeamContent(teamMembers[0]);
 }
+
+

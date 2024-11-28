@@ -226,7 +226,7 @@ body {
 /* Footer */
 
 footer {
-    background-color: var(--color-lightbeige);
+    background-color: #9D6034;
 }
 
 .footer-container {
@@ -300,7 +300,7 @@ ul {
 }
 
 .footer-bottom {
-    background-color: var(--color-darkbeige);
+    /* background-color: var(--color-darkbeige); */
     padding: 0.75rem;
     text-align: center;
 }
