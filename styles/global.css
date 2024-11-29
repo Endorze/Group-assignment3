@@ -223,9 +223,9 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  body {
+  /*body {
     margin-left: 0;
-  }
+  }*/
 }
 
 /* Footer */
