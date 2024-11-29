@@ -42,6 +42,7 @@ const createTabs = (members) => {
     });
 };
 
+// forEach(person).Array
 
 const setActiveTab = (activeTab) => {
     document.querySelectorAll(".tab").forEach((tab) => tab.classList.remove("active"));
