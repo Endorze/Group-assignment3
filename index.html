@@ -1,76 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="./styles/global.css">
-    <script src="scripts/index.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-</head>
-<body>
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <script src="scripts/index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header class="header">
-        <a href="index.html"><img class="header-logotype" src="./assets/header/capyzoo-logotype.png" href="index.html"></a>
-        <div class="header-nav-bar">
-            <a class="selected" href="index.html">Home</a>
-            <a href="reptiles.html">Reptiles</a>
-            <a href="mammals.html">Mammals</a>
-            <a href="birds.html">Birds</a>
-            <a href="aboutus.html">About us</a>
-        </div>
-        <div class="header-searchbar">
-            <button>Login</button>
-                <input placeholder="Search...">
-        </div>
+      <a href="index.html"
+        ><img
+          class="header-logotype"
+          src="./assets/header/capyzoo-logotype.png"
+          href="index.html"
+      /></a>
+      <div class="header-nav-bar">
+        <a class="selected" href="index.html">Home</a>
+        <a href="reptiles.html">Reptiles</a>
+        <a href="mammals.html">Mammals</a>
+        <a href="birds.html">Birds</a>
+        <a href="aboutus.html">About us</a>
+      </div>
+      <div class="header-searchbar">
+        <button>Login</button>
+        <input placeholder="Search..." />
+      </div>
     </header>
-    <input type="checkbox" id="sidebar-checkbox" class="sidebar-checkbox">
-    <label for="sidebar-checkbox" class="sidebar-toggle-label">
-        <i class="bx bx-menu"></i>
-    </label>
-    
-    <div class="sidebar">
-        <nav class="sidebar-menu">
+
+    <div class="main-container">
+      <div class="siderbar-container">
+        <input type="checkbox" id="sidebar-checkbox" class="sidebar-checkbox" />
+        <label for="sidebar-checkbox" class="sidebar-toggle-label">
+          <i class="bx bx-menu"></i>
+        </label>
+
+        <div class="sidebar">
+          <nav class="sidebar-menu">
             <ul>
+              <!-- Yasmine: This is an example, you can it on your pages as we shouldn't hardcode the elements in the sidebar
                 <li><a href="index.html" class="selected">Home</a></li>
                 <li><a href="reptiles.html">Reptiles</a></li>
                 <li><a href="mammals.html">Mammals</a></li>
                 <li><a href="birds.html">Birds</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="aboutus.html">About Us</a></li>-->
             </ul>
-        </nav>
-    </div>    
-</body>
+          </nav>
+        </div>
+      </div>
+      <div class="content">content is here</div>
+    </div>
 
     <footer>
-        <div class="footer-container">
-            <div class="logo-div">
-                <img class="brand-logo" src="./img/capyzoo-logo.png" alt="capyzoo-logo">
-            </div>
-            <div class="footer-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="birds.html">Birds</a></li>
-                    <li><a href="mammals.html">Mammals</a></li>
-                    <li><a href="reptiles.html">Reptiles</a></li>
-                    <li><a href="aboutus.html">About us</a></li>
-                </ul>
-            </div>
-            <div class="social-icons">
-                <a href="https://www.facebook.com"><i class="bx bxl-facebook-circle"></i></a>
-                <a href="https://www.instagram.com"><i class="bx bxl-instagram"></i></a>
-                <a href="https://www.x.com"><i class="bx bxl-twitter"></i></a>
-                <a href="https://www.youtube.com"><i class="bx bxl-youtube"></i></a>
-            </div>
+      <div class="footer-container">
+        <div class="logo-div">
+          <img
+            class="brand-logo"
+            src="./img/capyzoo-logo.png"
+            alt="capyzoo-logo"
+          />
         </div>
-        <div class="footer-bottom">
-            <p>Copyright &copy; 2024; Group 4</p>
+        <div class="footer-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="birds.html">Birds</a></li>
+            <li><a href="mammals.html">Mammals</a></li>
+            <li><a href="reptiles.html">Reptiles</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+          </ul>
         </div>
+        <div class="social-icons">
+          <a href="https://www.facebook.com"
+            ><i class="bx bxl-facebook-circle"></i
+          ></a>
+          <a href="https://www.instagram.com"
+            ><i class="bx bxl-instagram"></i
+          ></a>
+          <a href="https://www.x.com"><i class="bx bxl-twitter"></i></a>
+          <a href="https://www.youtube.com"><i class="bx bxl-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2024; Group 4</p>
+      </div>
     </footer>
-    
-</body>
+  </body>
 </html>
