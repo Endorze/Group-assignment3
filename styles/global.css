@@ -231,7 +231,7 @@ ul {
 }
 
 /* home page */
-.main-container {
+.main-containerr {
   heigh: 90dvh;
   padding-top: 10vh;
   display: grid;
@@ -250,7 +250,7 @@ ul {
 .display-info-container {
   height: 100vh;
   width: 100%;
-  position: relative;
+  position: relative; 
 }
 
 .welcome-card-container,
