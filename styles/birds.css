@@ -1,385 +1,631 @@
 .main-section-container {
-    min-height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
 }
 
 .main-section-column {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
-    overflow-x: hidden;
-    font-size: 100%;
+  overflow-x: hidden;
+  font-size: 100%;
+  background-color: var(--color-midbeige);
 }
 
 .main-section-hero-container {
-    position: relative;
-    height: 90vh;
-    background-image: url("/assets/images/birds-html-images/junglebg.jpg");
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  background-image: url("/assets/images/birds-html-images/junglebg.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
 }
 
 .main-section-hero {
-    position: absolute;
-    top: 20%;
-    left: 10%;
-    padding-bottom: 3%;
-    width: 50%;
-    background-color: #ffffff1f;
-    border-radius: 1rem;
-    --blur-size: 5px;
-    -webkit-backdrop-filter: blur(var(--blur-size));
-    -moz-backdrop-filter: blur(var(--blur-size));
-    -o-backdrop-filter: blur(var(--blur-size));
-    -ms-backdrop-filter: blur(var(--blur-size));
-    backdrop-filter: blur(var(--blur-size));
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  padding-bottom: 3%;
+  width: 50%;
+  background-color: #ffffff1f;
+  border-radius: 1rem;
+  --blur-size: 5px;
+  -webkit-backdrop-filter: blur(var(--blur-size));
+  -moz-backdrop-filter: blur(var(--blur-size));
+  -o-backdrop-filter: blur(var(--blur-size));
+  -ms-backdrop-filter: blur(var(--blur-size));
+  backdrop-filter: blur(var(--blur-size));
 }
 
 .hero-call-to-action {
-    margin-left: 2rem;
-    width: 90%;
+  margin-left: 2rem;
+  width: 90%;
 }
 
 .hero-call-to-action h2 {
-    font-size: 2.5rem;
-    color: var(--color-lightbeige);
+  font-size: 2.5rem;
+  color: var(--color-lightbeige);
 }
 
 .hero-call-to-action h3 {
-    font-size: 2rem;
-    color: var(--color-lightbeige);
+  font-size: 2rem;
+  color: var(--color-lightbeige);
 }
 
 .hero-call-to-action p {
-    color: var(--color-lightbeige);
+  color: var(--color-lightbeige);
 }
 
 .planes-text {
-    font-size: 6rem;
-    color: var(--color-darkblue);
+  font-size: 6rem;
+  color: #FA8072;
 }
 
 #hero-parrot-image {
-    position: absolute;
-    height: 100%;
-    right: 0%;
-    bottom: 20%;
-    transform: translateX(60%);
+  position: absolute;
+  height: 100%;
+  right: 0%;
+  bottom: 20%;
+  transform: translateX(60%);
 }
 
 .main-section-sidebar {
-    margin-top: 6rem;
-    background-color: var(--color-blue);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    border-right: 1px solid var(--color-lightbeige);
-    max-width: 250px;
-    width: 100%;
-    
+  margin-top: 6rem;
+  background-color: var(--color-darkblue);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  border-right: 1px solid var(--color-lightbeige);
+  max-width: 250px;
+  width: 100%;
+  
 }
 
-#navigate-space {
-  scroll-margin-top: 10vh;
-  height: 6rem;
-  width: 100%;
-  background-color: var(--color-lightbeige);
+#navigate-birds {
+scroll-margin-top: 10vh;
 }
 
 .bird-buttons {
-    position: absolute;
-    height: 100%;
-    gap: 0.3%;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
+  position: absolute;
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
 }
 
 .hero-section-buttons {
-    display: flex;
-    gap: 2.5%;
+  display: flex;
+  gap: 5%;
 }
 
 #pidgeon-button,
 #hawk-button {
-    margin-top: 5%;
-    padding: 2%;
-    border: none;
-    cursor: pointer;
-    color: var(--color-lightbeige);
-    font-weight: 600;
+  margin-top: 5%;
+  padding: 2%;
+  border: none;
+  cursor: pointer;
+  color: var(--color-lightbeige);
+  font-weight: 600;
 }
 
 #pidgeon-button {
-    background-color: var(--color-lightbeige);
-    color: var(--dark-blue);
+  background-color: #FA8072;
+
+}
+
+.chat-with-bird-container {
+margin-top: 2%;
+height: 60vh;
+margin-bottom: 2%;
+min-width: 25vw;
+display: flex;
+align-items: center;
+
+}
+
+.bird-chat-window {
+width: 28vw;
+height: 100%;
+
+}
+
+.bird-chat-window-header {
+height: 15%;
+background-color: #FA8072;
+color: var(--color-lightbeige);
+display: flex;
+text-align: center;
+justify-content: center;
+align-items: center;
+}
+.bird-chat-messagelog {
+height: 70%;
+padding: 2%;
+background-color: var(--color-lightbeige);
+}
+
+.bird-chat-input {
+height: 15%;
+display: flex;
+background-color: lightgray;
+}
+
+.bird-chat-input button img {
+width: 40%;
+}
+.bird-chat-input button {
+width: 20%;
+background-color: white;
+border: none;
+cursor: pointer;
+}
+
+.bird-chat-input input {
+width: 100%;
+border: none;
+font-size: 1.5rem;
+padding-left: 5%;
+}
+
+.bird-chat-input input:focus {
+outline: none;
+}
+
+.bird-chat-window-header img {
+height: 60%;
 }
 
 #pidgeon-button:hover {
-    background-color: #f3e0c3;
+  background-color: #f3e0c3;
 }
 
 #hawk-button {
-    background-color: var(--color-blue);
+  background-color: var(--color-blue);
 }
 
 #hawk-button:hover {
-    background-color: #c7703a;
+  background-color: #c7703a;
 }
 
 .bird-button-text-container {
-    position: relative;
-    max-width: 250px;
-    max-height: 30%;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    border: none;
-    background-color: rgba(0, 0, 0, 0.774);
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: 2px solid var(--color-lightbeige);
+  position: relative;
+  max-width: 250px;
+  max-height: 30%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.774);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid var(--color-lightbeige);
 }
 
 .bird-button-text-container p {
-    position: absolute;
-    left: 5%;
-    bottom: 0;
+  position: absolute;
+  left: 5%;
+  bottom: 0;
 }
 
 .bird-button-text-container img {
-    max-width: 250px;
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-    overflow: hidden;
-    border: none;
-    background-color: var(--color-blue);
-    cursor: pointer;
-    height: 2s;
+  max-width: 250px;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  overflow: hidden;
+  border: none;
+  background-color: var(--color-darkblue);
+  cursor: pointer;
+  height: 2s;
 }
 
 .bird-information-container {
-    position: relative;
-    display: none;
-    height: 80vh;
-    padding: 5%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color-lightbeige);
+  position: relative;
+  display: none;
+  height: 80vh;
+  padding: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-midbeige);
 }
 
 .bird-information-container img {
-  height: 20%;
+height: 20%;
 }
 
 .bird-information-video {
-  position: relative;
-  height: 100%;
+position: relative;
+height: 100%;
 }
 
 .bird-information-video video {
-  max-width: 800px;
-  width: 100%;
+max-width: 800px;
+width: 100%;
 }
 
 .bird-info-text-section {
-  width: 50%;
-  height: 100%;
-
-  margin-left: 5%;
+width: 50%;
+height: 100%;
+margin-left: 5%;
+font-weight: 350;
 }
 
+.phone-nav-bar {
+background-color: var(--color-lightbeige);
+margin-top: 5%;
+width: 100%;
+height: 20vh;
+display: none;
+}
 
 .bird-button-text-container img:hover {
-    height: 120%;
+  height: 120%;
 }
 
 .bird-info-buttons {
-  display: flex;
-  gap: 3%;
-  max-width: 250px;
-  width: 100%;
-  justify-content: space-between;
+display: flex;
+height: 40px;
+max-width: 250px;
+width: 100%;
+justify-content: space-between;
 }
 #read-more-btn {
-  padding: 1.5%;
-  height: 100%;
-  max-width: 150px;
-  width: 100%;
-  background-color: var(--color-blue);
-  color: var(--color-lightbeige);
-  border: none;
-  cursor: pointer;
+padding: 2.5%;
+height: 100%;
+max-width: 150px;
+width: 100%;
+background-color: var(--color-darkblue);
+color: var(--color-lightbeige);
+border: none;
+cursor: pointer;
 }
 
 #play-audio-btn {
-  padding: 1.5%;
-  height: 100%;
-  max-width: 150px;
-  width: 100%;
-  background-color: var(--color-blue);
-  color: var(--color-lightbeige);
-  border: none;
-  cursor: pointer;
+padding: 2.5%;
+height: 100%;
+max-width: 150px;
+width: 100%;
+background-color: var(--color-blue);
+color: var(--color-lightbeige);
+border: none;
+margin-right: 2%;
+cursor: pointer;
+}
+
+.chat-container {
+width: 100%;
+justify-content: center;
+align-items: center;
+display: flex;
+gap: 2%;
+}
+
+.chat-info-section {
+width: 60%;
+background-color: var(--color-lightbeige);
+height: 60vh;
+}
+
+.chat-info-header {
+height: 15%;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #FA8072;
+color: var(--color-lightbeige);
+}
+
+.chat-info-text {
+padding: 2%;
+width: 100%;
+height: 100%;
+}
+
+.display-horizontal {
+display: flex;
 }
 
 .flying-birds {
-    width: 100px;
-    left: 100%;
-    position: absolute;
-    top: 30%;
-    animation: birds-flying 60s linear;
-    mix-blend-mode: multiply;
-    animation-iteration-count: infinite;
+  width: 100px;
+  left: 100%;
+  position: absolute;
+  top: 30%;
+  animation: birds-flying 60s linear;
+  mix-blend-mode: multiply;
+  animation-iteration-count: infinite;
 }
 
 .bird-buttons p {
-    margin-top: 0;
-    color: var(--color-lightbeige);
-    font-weight: 900;
+  margin-top: 0;
+  color: var(--color-lightbeige);
+  font-weight: 900;
 }
 
 .jumpscare-birds {
-    width: 100vw;
-    z-index: 100;
-    position: absolute;
-    top: 100%;
-    right: 100%;
-    animation: birds-jumpscare 2.5s ease-in;
-    pointer-events: none;
+  width: 100vw;
+  z-index: 100;
+  position: absolute;
+  top: 100%;
+  right: 100%;
+  animation: birds-jumpscare 2.5s ease-in;
+  pointer-events: none;
 }
-  
-  .image-section {
-    min-height: 50vh;
-  }
-  
-  .image-section-content {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    padding: 2rem;
-  }
-  
-  .image-section-content h2 {
-    color: var(--color-button);
-  }
-  
-  .image-section-content img {
-    max-width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+
+.image-section-content {
+  display: grid;
+  width: 100%;
+  background-color: var(--color-lightbeige);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  padding: 2rem;
+}
+
+.image-section-content h2 {
+  color: var(--color-button);
+}
+
+.image-section-content img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-container-1 {
+  grid-area: 1 / 1 / 3 / 3;
+}
+.grid-container-2 {
+  grid-area: 1 / 3 / 2 / 4;
+}
+.grid-container-3 {
+  grid-area: 1 / 4 / 2 / 5;
+}
+.grid-container-4 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+.grid-container-5 {
+  grid-area: 2 / 4 / 3 / 5;
+}
+
+.image-section-content .grid-container {
+  position: relative;
+}
+.image-section-content .grid-container::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.grid-text-container {
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+  right: 2rem;
+  color :white;
+}
 
 
-  
-  .grid-container-1 {
-    grid-area: 1 / 1 / 3 / 3;
-  }
-  .grid-container-2 {
-    grid-area: 1 / 3 / 2 / 4;
-  }
-  .grid-container-3 {
-    grid-area: 1 / 4 / 2 / 5;
-  }
-  .grid-container-4 {
-    grid-area: 2 / 3 / 3 / 4;
-  }
-  .grid-container-5 {
-    grid-area: 2 / 4 / 3 / 5;
-  }
-  
-  .image-section-content .grid-container {
-    position: relative;
-  }
-  .image-section-content .grid-container::before {
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-    opacity: 0;
-    transition: all 0.3s ease;
-  }
-  
-  .grid-text-container {
-    position: absolute;
-    left: 2rem;
-    bottom: 2rem;
-    right: 2rem;
-    color :white;
-  }
-  
-  
-  .grid-container:hover::before {
-    opacity: .5;
-  }
-  
-  .grid-container:hover .grid-text-container-description {
-    opacity: 1;
-  }
-  
-  .grid-container .grid-text-container {
-    transform: translateY(calc(100% - 25px));
-    transition: all .3s ease;
-  }
-  
-  .grid-container:hover .grid-text-container {
-    transform: translateY(0);
-  }
-  
-  .grid-text-container-title {
-    font-size: 1.3rem;
-  }
-  
-  .grid-text-container-description {
-    font-size: .6rem;
-    opacity: 0;
-    transition: all .3s ease;
-    text-align: justify;
-  }
-  
+.grid-container:hover::before {
+  opacity: .5;
+}
+
+.grid-container:hover .grid-text-container-description {
+  opacity: 1;
+}
+
+.grid-container .grid-text-container {
+  transform: translateY(calc(100% - 25px));
+  transition: all .3s ease;
+}
+
+.grid-container:hover .grid-text-container {
+  transform: translateY(0);
+}
+
+.grid-text-container-title {
+  font-size: 1.3rem;
+}
+
+.grid-text-container-description {
+  font-size: .6rem;
+  opacity: 0;
+  transition: all .3s ease;
+  text-align: justify;
+  pointer-events: none;
+}
+
 
 
 @keyframes birds-flying {
-    from {
-        left: 100%;
-    }
-    to {
-        left: -50px;
-    }
+  from {
+      left: 100%;
+  }
+  to {
+      left: -50px;
+  }
 }
 
 @keyframes birds-jumpscare {
-    from {
-        top: 100%;
-        right: 100%;
-    }
-    to {
-        top: -100vw;
-        right: -100vw;
-    }
+  from {
+      top: 100%;
+      right: 100%;
+  }
+  to {
+      top: -100vw;
+      right: -100vw;
+  }
 }
 
 @keyframes grow-size {
-    0% {
-        height: 100%;
-    }
-    100% {
-        height: 120%
-    }
+  0% {
+      height: 100%;
+  }
+  100% {
+      height: 120%
+  }
 }
+
+@media (max-width: 1024px) {
+
+.bird-information-container {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.bird-info-text-section {
+  margin-top: 10%;
+  margin-left: 0;
+  font-size: 0.8rem;
+}
+
+#bird-video {
+  display: none;
+}
+
+.main-section-container {
+  padding: 2%;
+}
+
+.main-section-sidebar {
+    display: none;
+}
+
+.image-section-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chat-container {
+  margin-top: 10%;
+  flex-direction: column;
+  width: 100%;
+}
+
+.chat-info-section {
+  width: 100%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.phone-nav-bar {
+  display: flex;
+}
+
+.bird-buttons {
+  padding: 3%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 3%;
+  background-color: #FA8072;
+}
+
+.bird-button-text-container {
+  max-width: 24.5%;
+  font-size: 0.8rem;
+}
+
+.bird-button-text-container p {
+  pointer-events: none;
+}
+
+.bird-chat-window {
+  min-width: 92vw;
+}
+
+.main-section-hero-container {
+  margin-top: 2rem;
+  height: 50vh;
+}
+
+.main-section-hero {
+  height: 70%;
+  left: 10%;
+  min-width: 80%;
+}
+
+.hero-call-to-action {
+  width: 100%;
+}
+
+.main-section-hero img {
+  transform: translateX(-20%)!important;
+}
+
+.hero-section-buttons {
+  width: 70%;
+}
+
+.hero-call-to-action h2 {
+  font-size: 1.5rem;
+}
+
+.hero-call-to-action h3 {
+  font-size: 1.2rem;
+}
+
+.hero-call-to-action p {
+  display: none;
+}
+
+.planes-text {
+  font-size: 2rem;
+}
+
+}
+
+@media (max-width: 768px) {
+.main-section-hero img {
+  display: none;
+}
+
+.jumpscare-birds {
+  display: none;
+}
+
+.phone-nav-bar {
+  display: flex;
+}
+
+.main-section-hero {
+  --blur-size: 3px;
+}
+
+.bird-buttons {
+  padding: 3%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.bird-button-text-container {
+  max-width: 24.5%;
+  font-size: 0.8rem;
+}
+}
+
