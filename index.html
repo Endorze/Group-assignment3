@@ -1,55 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="./styles/global.css">
-    <script src="scripts/index.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capyzoo</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-</head>
-<body>
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./scripts/index.js" defer></script>
+  </head>
+  <body>
     <header class="header">
-        <a href="index.html"><img class="header-logotype" src="./assets/header/capyzoo-logotype.png" href="index.html"></a>
-        <div class="header-nav-bar">
-            <a class="selected" href="index.html">Home</a>
-            <a href="reptiles.html">Reptiles</a>
-            <a href="mammals.html">Mammals</a>
-            <a href="birds.html">Birds</a>
-            <a href="aboutus.html">About us</a>
-        </div>
-        <div class="header-searchbar">
-            <button>Login</button>
-                <input placeholder="Search...">
-        </div>
+      <a href="index.html"
+        ><img
+          class="header-logotype"
+          src="./assets/header/capyzoo-logotype.png"
+          href="index.html"
+      /></a>
+      <div class="header-nav-bar">
+        <a class="selected" href="index.html">Home</a>
+        <a href="reptiles.html">Reptiles</a>
+        <a href="mammals.html">Mammals</a>
+        <a href="birds.html">Birds</a>
+        <a href="aboutus.html">About us</a>
+      </div>
+      <div class="header-searchbar">
+        <button>Login</button>
+        <input placeholder="Search..." />
+      </div>
     </header>
-    <input type="checkbox" id="sidebarToggle" class="sidebar-checkbox">
-    <label for="sidebarToggle" class="sidebar-toggle-label">
-        <i class="bx bx-menu"></i>
-    </label>
-
-    <div class="sidebar">
-        <nav class="sidebar-menu">
-            <ul>
-                <li><a href="index.html" class="selected"><i class="bx bx-home"></i> Home</a></li>
-                <li><a href="reptiles.html">Reptiles</a></li>
-                <li><a href="mammals.html">Mammals</a></li>
-                <li><a href="birds.html">Birds</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <div class="content">
-        <h1>Welcome to Capyzoo!</h1>
+    <div class="main-container">
+      <section class="sidebar-may"></section>
+      <div class="display-info-container">
+        <section class="animal-card-container">
+        </section>
+        <section class="welcome-card-container">
+          <div class="welcome-card-background"></div>
+          <div class="welcome-card-gradient-veil"></div>
+          <div class="welcome-card-gradient-pawprints"></div>
+          <div class="welcome-card-text-container">
+            <div class="welcome-card-text-wrap">
+              <p class="welcome-card-text-header">Welcome</p>
+              <p class="welcome-card-text-subheader">
+                Discover the wonders of wildlife on an unforgettable journey!
+              </p>
+              <p class="welcome-card-text-description">
+                Nestled in the heart of Australia, Capyzoo is home to several
+                species from around the globe. Experience the magic of wildlife,
+                from majestic lions to playful otters, all in a setting designed
+                to inspire conservation and education.
+              </p>
+              <button class="button-explore">Explore</button>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
 
     <footer>
+<<<<<<< HEAD
         <div class="footer-container">
             <div class="logo-div">
                 <a href="index.html"><img class="brand-logo" src="./assets/footer/capyzoo-logo.png" alt="capyzoo-logo"></a>
@@ -69,11 +86,39 @@
                 <a href="https://www.x.com"><i class="bx bxl-twitter"></i></a>
                 <a href="https://www.youtube.com"><i class="bx bxl-youtube"></i></a>
             </div>
+=======
+      <div class="footer-container">
+        <div class="logo-div">
+          <img
+            class="brand-logo"
+            src="./img/capyzoo-logo.png"
+            alt="capyzoo-logo"
+          />
+>>>>>>> feature/home-animal-info-card
         </div>
-        <div class="footer-bottom">
-            <p>Copyright &copy; 2024; Group 4</p>
+        <div class="footer-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="birds.html">Birds</a></li>
+            <li><a href="mammals.html">Mammals</a></li>
+            <li><a href="reptiles.html">Reptiles</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+          </ul>
         </div>
+        <div class="social-icons">
+          <a href="https://www.facebook.com"
+            ><i class="bx bxl-facebook-circle"></i
+          ></a>
+          <a href="https://www.instagram.com"
+            ><i class="bx bxl-instagram"></i
+          ></a>
+          <a href="https://www.x.com"><i class="bx bxl-twitter"></i></a>
+          <a href="https://www.youtube.com"><i class="bx bxl-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; 2024; Group 4</p>
+      </div>
     </footer>
-    
-</body>
+  </body>
 </html>
