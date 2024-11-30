@@ -14,6 +14,7 @@ const zooBirds = {
         image: "./assets/images/birds-html-images/cassowary.png",
         videoTag: "cassowary.mp4",
         sound: "cassowary.mp3",
+        id: "cassowary"
     },
 
     kookaburra: {
@@ -29,6 +30,7 @@ const zooBirds = {
         image: "./assets/images/birds-html-images/kookaburra.png",
         videoTag: "kookaburra.mp4",
         sound: "kookaburra.mp3",
+        id: "kookaburra"
     },
     yellowtailedblackcockatoo: {
         name: "YellowTailedBlackCockatoo",
@@ -43,6 +45,7 @@ const zooBirds = {
         image: "./assets/images/birds-html-images/cockatoo.png",
         videoTag: "yellowcockatoo.mp4",
         sound: "yellowblack.mp3",
+        id: "yellowtailedblackcockatoo"
     },
     seagull: {
         name: "Seagull",
@@ -54,9 +57,10 @@ const zooBirds = {
         length: "1.4m-10.5m",
         weight: "About 500kg of fries",
         found: ["Everywhere, but preferably close to gas-stations, harbors and Mcdonalds, and perhaps even IN THE WALLS :("],
-        image: "./assets/images/birds-html-images/seagull.gif",
+        image: "./assets/images/birds-html-images/seagull.png",
         videoTag: "seagull.mp4",
         sound: "seagull.mp3",
+        id: "seagull"
     },
     flamingo: {
         name: "Flamingo",
@@ -68,9 +72,10 @@ const zooBirds = {
         length: "1.3-1.9m",
         weight: "30-55kg",
         found: ["Mainland Australia"],
-        image: "./assets/images/birds-html-images/flamingo.gif",
+        image: "./assets/images/birds-html-images/flamingo.png",
         videoTag: "flamingo.mp4",
         sound: "flamingo.mp3",
+        id: "flamingo",
     },
     colibri: {
         name: "Colibri",
@@ -82,9 +87,10 @@ const zooBirds = {
         length: "12-14cm",
         weight: "15g",
         found: ["Northern Australia"],
-        image: "./assets/images/birds-html-images/colibri.gif",
+        image: "./assets/images/birds-html-images/colibri.png",
         videoTag: "colibri.mp4",
         sound: "hummingbird.mp3",
+        id: "colibri"
 
     },
     pigeon: {
@@ -100,8 +106,67 @@ const zooBirds = {
         image: "./assets/images/birds-html-images/pigeon.png",
         videoTag: "pigeon.mp4",
         sound: "pigeon.mp3",
-    }
+        id: "pigeon"
+    },
 }
+
+const setSideBarContent = (className) => {
+    const selectedSidebar = document.querySelector(`${className}`);
+    if (!selectedSidebar) {
+        return;
+    }
+
+    Object.keys(zooBirds).forEach((key) => {
+    const bird = zooBirds[key];
+    const newDiv = document.createElement("div");
+    newDiv.classList.add("bird-button-text-container");
+
+    newDiv.id = `${bird.id}`
+
+    const birdImage = document.createElement("img");
+    birdImage.src = bird.image;
+    birdImage.alt = bird.name;
+    birdImage.id = key;
+    newDiv.appendChild(birdImage);
+
+    const birdName = document.createElement("p");
+    birdName.textContent = bird.name;
+    newDiv.appendChild(birdName);
+
+    selectedSidebar.appendChild(newDiv);
+})
+}
+
+const setPhoneSideBarContent = (className) => {
+    const selectedSidebar = document.getElementById(`${className}`);
+    if (!selectedSidebar) {
+        return;
+    }
+
+    Object.keys(zooBirds).forEach((key) => {
+    const bird = zooBirds[key];
+    const newDiv = document.createElement("div");
+    newDiv.classList.add("bird-button-text-container");
+
+    newDiv.id = `${bird.id}`
+
+    const birdImage = document.createElement("img");
+    birdImage.src = bird.image;
+    birdImage.alt = bird.name;
+    birdImage.id = key;
+    newDiv.appendChild(birdImage);
+
+    const birdName = document.createElement("p");
+    birdName.textContent = bird.name;
+    newDiv.appendChild(birdName);
+
+    selectedSidebar.appendChild(newDiv);
+})
+}
+
+setSideBarContent(".bird-buttons");
+setPhoneSideBarContent("bird-buttons")
+
 
 const birdInfoContainer = document.querySelector(".bird-information-container")
 birdInfoContainer.style.display = "none"
@@ -183,3 +248,4 @@ document.getElementById("read-more-btn").addEventListener("click", () => {
     const activeBirdKey = document.querySelector(".bird-name").textContent.split(": ")[1].toLowerCase();
     setBirdInformation(activeBirdKey);
 });
+
