@@ -242,9 +242,9 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  /*body {
-    margin-left: 0;
-  }*/
+  .sidebar-container { 
+    width: 0;
+  }
 }
 
 /* Footer */
