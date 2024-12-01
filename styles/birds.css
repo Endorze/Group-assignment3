@@ -1,7 +1,6 @@
 .main-section-container {
     height: 100%;
     width: 100%;
-    overflow: hidden;
     display: flex;
 }
 
@@ -13,13 +12,13 @@
 body {
     overflow-x: hidden;
     font-size: 100%;
-    background-color: var(--color-midbeige);
+    background-color: var(--color-blue);
 }
 
 .main-section-hero-container {
     position: relative;
     height: 100vh;
-    background-image: url("/assets/images/birds-html-images/junglebg.jpg");
+    background-image: url("https://i.redd.it/v41wn7nbe7m61.jpg");
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -27,13 +26,13 @@ body {
 
 .main-section-hero {
     position: absolute;
-    top: 20%;
-    left: 10%;
+    top: 25%;
+    left: 20%;
     padding-bottom: 3%;
     width: 50%;
-    background-color: #ffffff1f;
+    background-color: #05859c70;
     border-radius: 1rem;
-    --blur-size: 5px;
+    --blur-size: 15px;
     -webkit-backdrop-filter: blur(var(--blur-size));
     -moz-backdrop-filter: blur(var(--blur-size));
     -o-backdrop-filter: blur(var(--blur-size));
@@ -62,14 +61,14 @@ body {
 
 .planes-text {
     font-size: 6rem;
-    color: #FA8072;
+    color: rgb(111, 197, 247)
 }
 
 #hero-parrot-image {
     position: absolute;
-    height: 100%;
+    height: 80%;
     right: 0%;
-    bottom: 20%;
+    bottom: 10%;
     transform: translateX(60%);
 }
 
@@ -98,13 +97,13 @@ body {
 }
 
 #bird-buttons {
-  /* height: 100%; */
+  background-color: var(--color-blue);
   display: flex;
   align-items: center;
   width: 100%;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0;
+  gap: 1%;
   color: white;
 }
 
@@ -115,6 +114,7 @@ body {
 
 #pidgeon-button,
 #hawk-button {
+    width: 200px;
     margin-top: 5%;
     padding: 2%;
     border: none;
@@ -124,8 +124,7 @@ body {
 }
 
 #pidgeon-button {
-    background-color: #FA8072;
-
+    background-color: var(--color-darkblue);
 }
 
 .chat-with-bird-container {
@@ -146,7 +145,7 @@ body {
 
 .bird-chat-window-header {
   height: 15%;
-  background-color: #FA8072;
+  background-color: var(--color-darkblue);
   color: var(--color-lightbeige);
   display: flex;
   text-align: center;
@@ -239,17 +238,17 @@ body {
 .bird-information-container {
     position: relative;
     display: none;
-    height: 80vh;
     padding: 5%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--color-midbeige);
+    background-color: var(--color-blue);
+    color: var(--color-lightbeige);
 }
 
 .bird-information-container img {
-  height: 20%;
+  height: 150px;
 }
 
 .bird-information-video {
@@ -303,8 +302,8 @@ body {
   height: 100%;
   max-width: 150px;
   width: 100%;
-  background-color: var(--color-blue);
-  color: var(--color-lightbeige);
+  background-color: var(--color-lightbeige);
+  color: var(--color-darkblue);
   border: none;
   margin-right: 2%;
   cursor: pointer;
@@ -329,7 +328,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #FA8072;
+  background-color: var(--color-darkblue);
   color: var(--color-lightbeige);
 }
 
@@ -344,10 +343,10 @@ body {
 }
 
 .flying-birds {
-    width: 100px;
+    width: 125px;
     left: 100%;
     position: absolute;
-    top: 30%;
+    top: 15%;
     animation: birds-flying 60s linear;
     mix-blend-mode: multiply;
     animation-iteration-count: infinite;
@@ -493,10 +492,13 @@ body {
 @media (max-width: 1024px) {
 
   .bird-information-container {
-    height: 100vh;
     justify-content: center;
     align-items: center;
     padding: 0;
+  }
+
+  #hero-parrot-img {
+    display: none;
   }
 
   .bird-info-text-section {
@@ -522,6 +524,10 @@ body {
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .main-section-hero {
+    margin-top: 5%;
   }
 
   .chat-container {
@@ -564,16 +570,28 @@ body {
   .bird-chat-window {
     min-width: 92vw;
   }
+
+  .flying-birds {
+    display: none;
+  }
   
   .main-section-hero-container {
-    margin-top: 2rem;
-    height: 50vh;
+    height: 30vh;
+  }
+
+  .chat-container {
+    display: none;
+  }
+
+  .image-section-content {
+    display: none;
   }
 
   .main-section-hero {
     height: 70%;
-    left: 10%;
-    min-width: 80%;
+    left: 20%;
+    min-width: 60%;
+    top: 15%;
   }
 
   .hero-call-to-action {
@@ -581,7 +599,7 @@ body {
   }
 
   .main-section-hero img {
-    transform: translateX(-20%)!important;
+    transform: translateX(40%)!important;
   }
 
   .hero-section-buttons {
@@ -603,11 +621,29 @@ body {
   .planes-text {
     font-size: 2rem;
   }
+  #pidgeon-button,
+  #hawk-button {
+    display: none;
+    width: 100px;
+  }
 
 }
 
 @media (max-width: 768px) {
-  .main-section-hero img {
+
+  .main-section-hero-container {
+    height: 40vh;
+  }
+
+  .main-section-hero {
+    top: 25%;
+    background-color: #000000a9;
+    --blur-size: 0px;
+    width: 50%;
+    height: 60%;
+  }
+
+  .main-section-hero-container img {
     display: none;
   }
 
@@ -619,8 +655,12 @@ body {
     display: flex;
   }
 
-  .main-section-hero {
-    --blur-size: 3px;
+  .image-section-content {
+    background-color: var(--color-blue);
+  }
+
+  .flying-birds {
+    display: none;
   }
 
   .bird-buttons {
@@ -636,6 +676,12 @@ body {
   .bird-button-text-container {
     max-width: 24.5%;
     font-size: 0.8rem;
+  }
+  
+  #pidgeon-button,
+  #hawk-button {
+    display: none;
+
   }
 }
 
