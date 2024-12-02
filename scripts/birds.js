@@ -1,7 +1,6 @@
 
-const zooBirds = {
-
-    cassowary: {
+const zooBirds = [
+    {
         name: "Cassowary",
         lifespan: "20 years",
         group: "bird",
@@ -14,9 +13,9 @@ const zooBirds = {
         image: "./assets/images/birds-html-images/cassowary.png",
         videoTag: "cassowary.mp4",
         sound: "cassowary.mp3",
+        id: "cassowary"
     },
-
-    kookaburra: {
+    {
         name: "Kookaburra",
         lifespan: "20 years",
         group: "bird",
@@ -29,9 +28,10 @@ const zooBirds = {
         image: "./assets/images/birds-html-images/kookaburra.png",
         videoTag: "kookaburra.mp4",
         sound: "kookaburra.mp3",
+        id: "kookaburra"
     },
-    yellowtailedblackcockatoo: {
-        name: "YellowTailedBlackCockatoo",
+    {
+        name: "Yellow Tailed Black Cockatoo",
         lifespan: "41 years",
         group: "bird",
         food: ["fruit", "seeds", "plant material"],
@@ -43,8 +43,9 @@ const zooBirds = {
         image: "./assets/images/birds-html-images/cockatoo.png",
         videoTag: "yellowcockatoo.mp4",
         sound: "yellowblack.mp3",
+        id: "yellowtailedblackcockatoo"
     },
-    seagull: {
+    {
         name: "Seagull",
         lifespan: "F-ing forever",
         group: "Devilspawn",
@@ -54,11 +55,12 @@ const zooBirds = {
         length: "1.4m-10.5m",
         weight: "About 500kg of fries",
         found: ["Everywhere, but preferably close to gas-stations, harbors and Mcdonalds, and perhaps even IN THE WALLS :("],
-        image: "./assets/images/birds-html-images/seagull.gif",
+        image: "./assets/images/birds-html-images/seagull.png",
         videoTag: "seagull.mp4",
         sound: "seagull.mp3",
+        id: "seagull"
     },
-    flamingo: {
+    {
         name: "Flamingo",
         lifespan: "10-20 years",
         group: "bird",
@@ -68,11 +70,12 @@ const zooBirds = {
         length: "1.3-1.9m",
         weight: "30-55kg",
         found: ["Mainland Australia"],
-        image: "./assets/images/birds-html-images/flamingo.gif",
+        image: "./assets/images/birds-html-images/flamingo.png",
         videoTag: "flamingo.mp4",
         sound: "flamingo.mp3",
+        id: "flamingo",
     },
-    colibri: {
+    {
         name: "Colibri",
         lifespan: "7 years",
         group: "bird",
@@ -82,12 +85,13 @@ const zooBirds = {
         length: "12-14cm",
         weight: "15g",
         found: ["Northern Australia"],
-        image: "./assets/images/birds-html-images/colibri.gif",
+        image: "./assets/images/birds-html-images/colibri.png",
         videoTag: "colibri.mp4",
         sound: "hummingbird.mp3",
+        id: "colibri"
 
     },
-    pigeon: {
+    {
         name: "Pigeon",
         lifespan: "7 years",
         group: "bird",
@@ -100,8 +104,95 @@ const zooBirds = {
         image: "./assets/images/birds-html-images/pigeon.png",
         videoTag: "pigeon.mp4",
         sound: "pigeon.mp3",
+        id: "pigeon"
+    },
+    {
+        name: "Mordekai",
+        lifespan: "7 years",
+        group: "bird",
+        food: ["grass seeds", "insects"],
+        description:
+            "The Gouldian Finch is a brightly colored and striking bird, often called the 'rainbow finch' due to its vibrant plumage in shades of red, yellow, green, blue, and black. Native to the savannahs of northern Australia, these finches are highly social and live in flocks. They primarily feed on grass seeds but will also consume insects during the breeding season. Unfortunately, habitat loss and other factors have made them a threatened species, and conservation efforts are underway to protect their populations.",
+        length: "12-14cm",
+        weight: "15g",
+        found: ["Northern Australia"],
+        image: "./assets/images/birds-html-images/bluejay.png",
+        videoTag: "bluejay.mp4",
+        sound: "pigeon.mp3",
+        id: "bluejay"
+    },
+    {
+        name: "Resplendant Quetzal",
+        lifespan: "7 years",
+        group: "bird",
+        food: ["grass seeds", "insects"],
+        description:
+            "The Gouldian Finch is a brightly colored and striking bird, often called the 'rainbow finch' due to its vibrant plumage in shades of red, yellow, green, blue, and black. Native to the savannahs of northern Australia, these finches are highly social and live in flocks. They primarily feed on grass seeds but will also consume insects during the breeding season. Unfortunately, habitat loss and other factors have made them a threatened species, and conservation efforts are underway to protect their populations.",
+        length: "12-14cm",
+        weight: "15g",
+        found: ["Northern Australia"],
+        image: "./assets/images/birds-html-images/resplendant.png",
+        videoTag: "resplendantquetzal.mp4",
+        sound: "pigeon.mp3",
+        id: "resplendantquetzal"
+    },
+]
+
+const setSideBarContent = (className) => {
+    const selectedSidebar = document.querySelector(`${className}`);
+    if (!selectedSidebar) {
+        return;
     }
+
+    zooBirds.forEach((bird) => {
+        const newDiv = document.createElement("div");
+        newDiv.classList.add("bird-button-text-container");
+
+        newDiv.id = `${bird.id}`
+
+        const birdImage = document.createElement("img");
+        birdImage.src = bird.image;
+        birdImage.alt = bird.name;
+        birdImage.id = bird.id;
+        newDiv.appendChild(birdImage);
+
+        const birdName = document.createElement("p");
+        birdName.textContent = bird.name;
+        newDiv.appendChild(birdName);
+
+        selectedSidebar.appendChild(newDiv);
+    })
 }
+
+const setPhoneSideBarContent = (className) => {
+    const selectedSidebar = document.getElementById(`${className}`);
+    if (!selectedSidebar) {
+        return;
+    }
+
+    zooBirds.forEach((bird) => {
+        const newDiv = document.createElement("div");
+        newDiv.classList.add("bird-button-text-container");
+
+        newDiv.id = `${bird.id}`
+
+        const birdImage = document.createElement("img");
+        birdImage.src = bird.image;
+        birdImage.alt = bird.name;
+        birdImage.id = bird.id;
+        newDiv.appendChild(birdImage);
+
+        const birdName = document.createElement("p");
+        birdName.textContent = bird.name;
+        newDiv.appendChild(birdName);
+
+        selectedSidebar.appendChild(newDiv);
+    })
+}
+
+setSideBarContent(".bird-buttons");
+setPhoneSideBarContent("bird-buttons")
+
 
 const birdInfoContainer = document.querySelector(".bird-information-container")
 birdInfoContainer.style.display = "none"
@@ -109,19 +200,24 @@ birdInfoContainer.style.display = "none"
 const birdAudio = document.getElementById("bird-audio");
 const playAudioButton = document.getElementById("play-audio-btn");
 
-const setShortBirdInformation = (key) => {
+const setShortBirdInformation = (birdId) => {
     const readMoreButton = document.getElementById("read-more-btn")
-    const bird = zooBirds[key];
+    const bird = zooBirds.find(bird => bird.id == birdId)
     if (!bird) {
-        console.error(`Bird with key "${key}" not found.`);
+        console.error(`Bird with id "${birdId}" not found.`);
         return;
     }
 
     document.querySelector(".bird-name").textContent = "Name: " + bird.name;
+    document.querySelector(".bird-name").id = bird.id;
     document.getElementById("bird-image").src = bird.image;
     document.querySelector(".bird-desc").textContent = bird.description.substring(0, 200) + "...";
     document.querySelector(".bird-group").textContent = `Group: ${bird.group}`;
     document.querySelector(".bird-food").textContent = `Food: ${bird.food.join(", ")}`;
+    document.querySelector(".bird-length").textContent = ""
+    document.querySelector(".bird-weight").textContent = "";
+    document.querySelector(".bird-found").textContent = ""
+
 
     const birdVideo = document.getElementById("bird-video");
     if (birdVideo) {
@@ -135,15 +231,16 @@ const setShortBirdInformation = (key) => {
 };
 
 
-const setBirdInformation = (key) => {
+const setBirdInformation = (birdId) => {
 
-    const bird = zooBirds[key];
+    const bird = zooBirds.find(bird => bird.id == birdId)
     if (!bird) {
-        console.error(`Bird with key "${key}" not found.`);
+        console.error(`Bird with id "${birdId}" not found.`);
         return;
     }
 
     document.querySelector(".bird-name").textContent = "Name: " + bird.name;
+    document.querySelector(".bird-name").id = bird.id;
     document.querySelector(".bird-lifespan").textContent = `Lifespan: ${bird.lifespan}`;
     document.querySelector(".bird-group").textContent = `Group: ${bird.group}`;
     document.querySelector(".bird-food").textContent = `Food: ${bird.food.join(", ")}`;
@@ -168,14 +265,15 @@ playAudioButton.addEventListener("click", () => {
 );
 
 document.querySelectorAll(".bird-button-text-container img").forEach((img) => {
-    const birdKey = img.id;
+    const birdId = img.id;
     img.addEventListener("click", () => {
-        setShortBirdInformation(birdKey);
-        document.getElementById("navigate-space").scrollIntoView({ behavior: "smooth" });
+        setShortBirdInformation(birdId);
+        document.getElementById("navigate-birds").scrollIntoView({ behavior: "smooth" });
     });
 });
 
 document.getElementById("read-more-btn").addEventListener("click", () => {
-    const activeBirdKey = document.querySelector(".bird-name").textContent.split(": ")[1].toLowerCase();
-    setBirdInformation(activeBirdKey);
+    const activeBirdId = document.querySelector(".bird-name").id
+    setBirdInformation(activeBirdId);
 });
+

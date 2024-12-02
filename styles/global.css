@@ -2,6 +2,7 @@
     --color-blue: #7388A0;
     --color-darkblue: #313640;
     --color-lightbeige: #FAF2E6;
+    --color-midbeige: #f5d5ac;
     --color-darkbeige: #DAA46D;
     --color-brown: #9C4F20;
     --color-darkgreen: #766621;
@@ -39,6 +40,25 @@ body {
     -webkit-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
     -moz-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
     box-shadow: 0px 1px 5px 0px var(--color-lightbeige)
+}
+
+.phone-header {
+    position: fixed;
+    top: 0;
+    background-color: var(--color-lightbeige);
+    height: 6rem;
+    min-width: 100vw;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    -webkit-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
+    -moz-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
+    box-shadow: 0px 1px 5px 0px var(--color-lightbeige)
+}
+
+.header-nav-bar a img {
+    object-fit: contain;
+    height: 40px;
 }
 
 .header-logotype {
@@ -321,5 +341,23 @@ ul {
 
     .brand-logo {
         margin-left: 0.25rem;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .header {
+        display: none;
+    }
+
+    .phone-header {
+        display: flex;
+        width: 100%;
+    }
+
+    .header-nav-bar {
+        justify-content: space-evenly;
+        min-width: 320px;
+        width: 100%;
     }
 }
