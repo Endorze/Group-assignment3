@@ -1,14 +1,14 @@
 :root {
-  --color-blue: #7388a0;
-  --color-darkblue: #313640;
-  --color-lightbeige: #faf2e6;
-  --color-midbeige: #f5d5ac;
-  --color-darkbeige: #daa46d;
-  --color-brown: #9c4f20;
-  --color-darkgreen: #766621;
-  --color-text: white;
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-  /*To get this font on each page you need to insert this into head of every html page.
+    --color-blue: #7388A0;
+    --color-darkblue: #313640;
+    --color-lightbeige: #FAF2E6;
+    --color-midbeige: #f5d5ac;
+    --color-darkbeige: #DAA46D;
+    --color-brown: #9C4F20;
+    --color-darkgreen: #766621;
+    --color-text: white;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    /*To get this font on each page you need to insert this into head of every html page.
         <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
@@ -41,117 +41,115 @@ body {
     -moz-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
     box-shadow: 0px 1px 5px 0px var(--color-lightbeige)
 }
-
 .phone-header {
-  position: fixed;
-  top: 0;
-  background-color: var(--color-lightbeige);
-  height: 6rem;
-  min-width: 100vw;
-  display: none;
-  align-items: center;
-  justify-content: space-between;
-  -webkit-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
-  -moz-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
-  box-shadow: 0px 1px 5px 0px var(--color-lightbeige);
+    position: fixed;
+    top: 0;
+    background-color: var(--color-lightbeige);
+    height: 6rem;
+    min-width: 100vw;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    -webkit-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
+    -moz-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
+    box-shadow: 0px 1px 5px 0px var(--color-lightbeige)
 }
 
 .header-nav-bar a img {
-  object-fit: contain;
-  height: 40px;
+    object-fit: contain;
+    height: 40px;
 }
 
 .header-logotype {
-  position: absolute;
-  height: 100%;
-  left: 8vw;
+    position: absolute;
+    height: 100%;
+    left: 8vw;
 }
 
 .header a img {
-  position: absolute;
-  top: 0;
+    position: absolute;
+    top: 0;
 }
 
 .header-nav-bar {
-  display: flex;
-  justify-content: space-between;
-  width: 30%;
-  min-width: 400px;
-  /*This min-width is to meak sure that the nav-bar anchor tags dont crash into eachother.*/
-  font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    min-width: 400px;
+    /*This min-width is to meak sure that the nav-bar anchor tags dont crash into eachother.*/
+    font-weight: bold;
 }
 
 .header-nav-bar a {
-  position: relative;
-  cursor: pointer;
-  text-decoration: none;
-  color: var(--color-darkblue);
-  font-weight: bold;
-  padding: 0.3rem 0;
-  transition: color 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--color-darkblue);
+    font-weight: bold;
+    padding: 0.3rem 0;
+    transition: color 0.3s ease;
 }
 
 .header-nav-bar a:hover {
-  color: var(--color-darkbeige);
+    color: var(--color-darkbeige); 
 }
 
 .header-nav-bar a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 2px;
-  background-color: var(--color-darkbeige);
-  transition: width 0.3s ease;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px; 
+    background-color: var(--color-darkbeige);
+    transition: width 0.3s ease;
 }
 
 .header-nav-bar a:hover::after,
 .header-nav-bar a.selected::after {
-  width: 100%;
+    width: 100%;
 }
 
 .header-searchbar {
-  width: 25%;
-  display: flex;
-  position: absolute;
-  gap: 1rem;
-  right: 5%;
+    width: 25%;
+    display: flex;
+    position: absolute;
+    gap: 1rem;
+    right: 5%
 }
 
 .header-searchbar button {
-  width: 30%;
-  padding: 0.3rem;
-  min-width: 100px;
-  background-color: var(--color-darkgreen);
-  color: var(--color-text);
-  border: none;
-  cursor: pointer;
+    width: 30%;
+    padding: 0.3rem;
+    min-width: 100px;
+    background-color: var(--color-darkblue);
+    color: var(--color-text);
+    border: none;
+    cursor: pointer;
 }
 
 .header-searchbar button:hover {
-  background-color: var(--color-darkgreen);
-  background-color: #a18c2f;
-  /*
+    background-color: var(--color-blue);
+    /*
     I temporarily added a second bg to change color when a person is hovering the button.
     */
 }
 
 .header-searchbar input {
-  padding: 0.5rem;
-  color: var(--color-text);
-  border: 1px solid var(--color-darkblue);
+    padding: 0.5rem;
+    color: var(--color-text);
+    border: 1px solid var(--color-darkblue);
 }
 
 .header-searchbar input::placeholder {
-  color: var(--color-darkblue);
+    color: var(--color-darkblue);
 }
 
 /* Main container */
 .main-container {
   display: flex;
   min-height: 100dvh;
-  margin-top: 10vh;
+  margin-top: 6rem;
 }
 
 .content {
