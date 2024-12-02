@@ -146,6 +146,16 @@ body {
     color: var(--color-darkblue);
 }
 
+/* Main container */
+.main-container {
+    display: flex;
+    min-height: 100dvh;
+}
+
+.content {
+    flex: 1;
+}
+
 /* Sidebar */
 .sidebar {
     position: relative;
@@ -159,7 +169,6 @@ body {
     flex-direction: column;
     padding: 2rem 1rem;
     transition: left 0.3s ease-in-out;
-    z-index: 1000;
 }
 
 .sidebar-menu ul {
@@ -237,14 +246,16 @@ body {
     .sidebar-toggle-label {
         display: none;
     }
-
-    .content {
-        margin-left: 250px;
-    }
 }
 
-/* Footer */
+@media (max-width: 768px){
+  .sidebar-container {
+    width: 0;
+  }
+}
 
+
+/* Footer */
 footer {
     background-color: var(--color-lightbeige);
 }
