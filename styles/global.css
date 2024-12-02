@@ -238,23 +238,6 @@ body {
     margin-left: 250px;
 }
 
-@media (min-width: 768px) {
-    .sidebar {
-        left: 0;
-    }
-
-    .sidebar-toggle-label {
-        display: none;
-    }
-}
-
-@media (max-width: 768px){
-  .sidebar-container {
-    width: 0;
-  }
-}
-
-
 /* Footer */
 footer {
     background-color: var(--color-lightbeige);
@@ -355,6 +338,17 @@ ul {
     }
 }
 
+
+@media (min-width: 1024px) {
+    .sidebar {
+        left: 0;
+    }
+    .sidebar-toggle-label {
+        display: none;
+    }
+}
+
+
 @media (max-width: 1024px) {
 
     .header {
@@ -371,4 +365,7 @@ ul {
         min-width: 320px;
         width: 100%;
     }
+    .sidebar-container {
+        width: 0;
+      }
 }
