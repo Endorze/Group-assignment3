@@ -150,6 +150,7 @@ body {
 .main-container {
     display: flex;
     min-height: 100dvh;
+    margin-top: 6rem;
 }
 
 .content {
@@ -314,7 +315,7 @@ ul {
 }
 
 .footer-bottom {
-    /* background-color: var(--color-darkbeige); */
+    background-color: var(--color-darkbeige);
     padding: 0.75rem;
     text-align: center;
 }
