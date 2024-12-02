@@ -29,18 +29,17 @@ body {
 }
 
 .header {
-  position: fixed;
-  top: 0;
-  background-color: var(--color-lightbeige);
-  height: 10vh;
-  min-width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  -webkit-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
-  -moz-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
-  box-shadow: 0px 1px 5px 0px var(--color-lightbeige);
-  z-index: 100;
+    position: fixed;
+    top: 0;
+    background-color: var(--color-lightbeige);
+    height: 6rem;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
+    -moz-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
+    box-shadow: 0px 1px 5px 0px var(--color-lightbeige)
 }
 
 .phone-header {
