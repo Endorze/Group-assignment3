@@ -1,4 +1,4 @@
-function Person(name, aboutText, tab, image, imageName, ageText, age, interest, origin, species, group, foodText, food) {
+function Person(name, aboutText, tab, image, imageName, ageText, age, interestText, interest, origin, species, group, foodText, food) {
     this.name = name;
     this.aboutText = aboutText;
     this.tab = tab;
@@ -6,6 +6,7 @@ function Person(name, aboutText, tab, image, imageName, ageText, age, interest, 
     this.imageName = imageName;
     this.ageText = ageText;
     this.age = age;
+    this.interestText = interestText;
     this.interest = interest;
     this.origin = origin;
     this.species = species;
@@ -23,6 +24,7 @@ const teamMembers = [
         "Our team picture",
         "Years on earth:",
         42,
+        "Interests: ",
         ["Film", " Animals", " Sudoku"],
         "Earth",
         "Humans (Homo Sapiens)",
@@ -39,6 +41,7 @@ const teamMembers = [
         "Emelie picture",
         "Years on earth:",
         26,
+        "Interests: ",
         ["Film", " Animals", " Sudoku"],
         "Stockholm, Sweden",
         "Human (Homo Sapien)",
@@ -54,12 +57,13 @@ const teamMembers = [
         "May picture",
         "Years on earth:",
         32,
-        [],
+        "Interests: ",
+        ["Playing Games", " Reading Books",],
         "",
         "Human (Homo Sapien)",
         "",
         "What it eats:",
-        [],
+        ["Noodles"],
     ),
     new Person(
         "Victor Furustubbe",
@@ -69,12 +73,13 @@ const teamMembers = [
         "Victor picture",
         "Years on earth:",
         35,
-        [],
+        "Interests: ",
+        ["Marbles",],
         "",
         "Human (Homo Sapien)",
         "",
         "What it eats:",
-        [],
+        ["Grilled cheese off the radiator",],
     ),
     new Person(
         "Alex Jim Hallgren",
@@ -84,12 +89,13 @@ const teamMembers = [
         "Alex picture",
         "Years on earth:",
         26,
-        [],
+        "Interests: ",
+        ["Gaming", " Coding",],
         "",
         "Human (Homo Sapien)",
         "",
         "What it eats:",
-        [],
+        ["Sushi" , " Bruschetta", " Fläsk med potatis & löksås",],
     ),
     new Person(
         "Yasmine",
@@ -98,20 +104,21 @@ const teamMembers = [
         "assets/images/mammals/mammal-bilby.jpg",
         "Yasmine",
         "Years on earth:",
-        1,
-        [],
+        26,
+        "Interests: ",
+        ["Crochet", " Reading",],
         "",
         "Human (Homo Sapien)",
         "",
         "What it eats:",
-        [],
+        ["Pizza"],
     ),
 ];
 
 
 const createTabs = (teamMembers) => {
     const tabsContainer = document.querySelector(".team-tabs");
-    
+
     teamMembers.forEach((person) => {
         const tab = document.createElement("div");
         tab.classList.add("tab");
@@ -155,7 +162,7 @@ const updateTeamContent = (person) => {
 
             const interest = document.createElement("p");
             interest.classList.add("info__interest");
-            interest.textContent = person.interest;
+            interest.textContent = person.interestText;
 
             const interestText = document.createElement("p");
             interestText.classList.add("info__interest-text");
@@ -164,11 +171,27 @@ const updateTeamContent = (person) => {
             interestWrapper.appendChild(interest);
             interestWrapper.appendChild(interestText);
 
+        const ageWrapper = document.createElement("div");
+        ageWrapper.classList.add("age__container");
+
+            const ageText = document.createElement("p");
+            ageText.classList.add("info__interest");
+            ageText.textContent = person.ageText;
+
+            const age = document.createElement("p");
+            age.classList.add("info__interest-text");
+            age.textContent = person.age;
+
+            ageWrapper.appendChild(ageText);
+            ageWrapper.appendChild(age);
+
+
+        infoWrapper.appendChild(ageWrapper);
         infoWrapper.appendChild(interestWrapper);
 
-        const age = document.createElement("p");
-        age.classList.add("info__age");
-        age.textContent = person.age;
+        // const age = document.createElement("p");
+        // age.classList.add("info__age");
+        // age.textContent = person.age;
 
         const origin = document.createElement("p")
         origin.classList.add("info__origin");
