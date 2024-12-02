@@ -1,36 +1,30 @@
-function Person(name, aboutText, tab, image, imageName, ageText, age, interestText, interest, origin, species, group, foodText, food) {
+function Person(name, aboutText, tab, image, imageName, age, interest, origin, species, group, food) {
     this.name = name;
     this.aboutText = aboutText;
     this.tab = tab;
     this.image = image;
     this.imageName = imageName;
-    this.ageText = ageText;
     this.age = age;
-    this.interestText = interestText;
     this.interest = interest;
     this.origin = origin;
     this.species = species;
     this.group = group;
-    this.foodText = foodText;
     this.food = food;
 }
 
 const teamMembers = [
     new Person(
-        "Our Team!",
-        "Information about the team, about the project, etc. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+        "Team Capybara",
+        "On this page you can read more about each and one of the team members of team Capybara!",
         "The Team",
         "assets/images/mammals/mammal-wombat.jpeg",
         "Our team picture",
-        "Years on earth:",
-        42,
-        "Interests: ",
-        ["Film", " Animals", " Sudoku"],
+        "26+",
+        ["Studying",],
         "Earth",
         "Humans (Homo Sapiens)",
         "Mammal",
-        "What it eats:",
-        ["Pizza"],
+        "Omnivore",
 
     ),
     new Person(
@@ -39,15 +33,12 @@ const teamMembers = [
         "Emelie",
         "assets/images/mammals/mammal-bilby.jpg",
         "Emelie picture",
-        "Years on earth:",
         26,
-        "Interests: ",
         ["Film", " Animals", " Sudoku"],
         "Stockholm, Sweden",
         "Human (Homo Sapien)",
         "Mammal",
-        "What it eats:",
-        [],
+        ["Sushi"],
     ),
     new Person(
         "May Sunktong",
@@ -55,14 +46,11 @@ const teamMembers = [
         "May",
         "assets/images/mammals/mammal-bilby.jpg",
         "May picture",
-        "Years on earth:",
         32,
-        "Interests: ",
         ["Playing Games", " Reading Books",],
-        "",
+        "Thailand",
         "Human (Homo Sapien)",
         "",
-        "What it eats:",
         ["Noodles"],
     ),
     new Person(
@@ -71,46 +59,37 @@ const teamMembers = [
         "Victor",
         "assets/images/mammals/mammal-bilby.jpg",
         "Victor picture",
-        "Years on earth:",
         35,
-        "Interests: ",
         ["Marbles",],
-        "",
+        "Sweden",
         "Human (Homo Sapien)",
         "",
-        "What it eats:",
         ["Grilled cheese off the radiator",],
     ),
     new Person(
         "Alex Jim Hallgren",
-        "about My biggest dream is to one day become a full fledged senior fullstack-developerme text",
+        "about My biggest dream is to one day become a full fledged senior fullstack-developer.",
         "Alex",
         "assets/images/mammals/mammal-bilby.jpg",
         "Alex picture",
-        "Years on earth:",
         26,
-        "Interests: ",
         ["Gaming", " Coding",],
-        "",
+        "Töreboda, Sweden",
         "Human (Homo Sapien)",
         "",
-        "What it eats:",
         ["Sushi" , " Bruschetta", " Fläsk med potatis & löksås",],
     ),
     new Person(
-        "Yasmine",
+        "Yasmine Borghol",
         "about me text",
         "Yasmine",
         "assets/images/mammals/mammal-bilby.jpg",
         "Yasmine",
-        "Years on earth:",
         26,
-        "Interests: ",
         ["Crochet", " Reading",],
-        "",
+        "Tunisia",
         "Human (Homo Sapien)",
         "",
-        "What it eats:",
         ["Pizza"],
     ),
 ];
@@ -158,52 +137,66 @@ const updateTeamContent = (person) => {
     const infoWrapper = document.createElement("div");
     infoWrapper.classList.add("info__container");
         const interestWrapper = document.createElement("div");
-        interestWrapper.classList.add("interest__container");
+        interestWrapper.classList.add("info__child");
 
             const interest = document.createElement("p");
-            interest.classList.add("info__interest");
-            interest.textContent = person.interestText;
+            interest.classList.add("info__sort");
+            interest.textContent = "Interests";
 
             const interestText = document.createElement("p");
-            interestText.classList.add("info__interest-text");
+            interestText.classList.add("info__content");
             interestText.textContent = person.interest;
 
             interestWrapper.appendChild(interest);
             interestWrapper.appendChild(interestText);
 
         const ageWrapper = document.createElement("div");
-        ageWrapper.classList.add("age__container");
+        ageWrapper.classList.add("info__child");
 
             const ageText = document.createElement("p");
-            ageText.classList.add("info__interest");
-            ageText.textContent = person.ageText;
+            ageText.classList.add("info__sort");
+            ageText.textContent = "Age";
 
             const age = document.createElement("p");
-            age.classList.add("info__interest-text");
+            age.classList.add("info__content");
             age.textContent = person.age;
 
             ageWrapper.appendChild(ageText);
             ageWrapper.appendChild(age);
 
+        const originWrapper = document.createElement("div");
+        originWrapper.classList.add("info__child");
+
+            const originText = document.createElement("p");
+            originText.classList.add("info__sort");
+            originText.textContent = "Origin";
+
+            const origin = document.createElement("p");
+            origin.classList.add("info__content");
+            origin.textContent = person.origin;
+
+            originWrapper.appendChild(originText);
+            originWrapper.appendChild(origin);
+
+        const foodWrapper = document.createElement("div");
+        foodWrapper.classList.add("info__child");
+    
+            const foodText = document.createElement("p");
+            foodText.classList.add("info__sort");
+            foodText.textContent = "Diet";
+    
+            const food = document.createElement("p");
+            food.classList.add("info__content");
+            food.textContent = person.food;
+
+            foodWrapper.appendChild(foodText);
+            foodWrapper.appendChild(food);
+    
 
         infoWrapper.appendChild(ageWrapper);
         infoWrapper.appendChild(interestWrapper);
-
-        // const age = document.createElement("p");
-        // age.classList.add("info__age");
-        // age.textContent = person.age;
-
-        const origin = document.createElement("p")
-        origin.classList.add("info__origin");
-        origin.textContent = person.origin;
-
-        const food = document.createElement("p")
-        food.classList.add("info__food");
-        food.textContent = person.food;
-        
-        infoWrapper.appendChild(age);
-        infoWrapper.appendChild(origin);
-        infoWrapper.appendChild(food);
+        infoWrapper.appendChild(originWrapper);
+        infoWrapper.appendChild(foodWrapper);
 
     imgContainer.appendChild(personImage);
     imgContainer.appendChild(infoWrapper);
