@@ -213,12 +213,12 @@ body {
 /* Sidebar toggle button */
 .sidebar-toggle-label {
     position: fixed;
-    top: 1rem;
+    top: 2rem;
     left: 1rem;
     background-color: var(--color-darkgreen);
     color: var(--color-text);
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
