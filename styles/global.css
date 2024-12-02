@@ -148,8 +148,99 @@ body {
   color: var(--color-darkblue);
 }
 
-/* Footer */
+/* Main container */
+.main-container {
+  display: flex;
+  min-height: 100dvh;
+}
 
+.content {
+  flex: 1;
+}
+
+/* Sidebar */
+.sidebar {
+  position: relative;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: var(--color-darkblue);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  transition: left 0.3s ease-in-out;
+}
+
+.sidebar-menu ul {
+  list-style: none;
+}
+
+.sidebar-menu ul li {
+  margin: 1rem 0;
+}
+
+.sidebar-menu ul li a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-menu ul li a:hover,
+.sidebar-menu ul li a.selected {
+  background-color: var(--color-darkbeige);
+  border-radius: 4px;
+}
+
+/* Sidebar toggle control */
+.sidebar-checkbox {
+  display: none;
+}
+
+.sidebar-checkbox:checked ~ .sidebar {
+  left: 0;
+}
+
+.sidebar-checkbox:checked ~ .sidebar-toggle-label {
+  left: 250px;
+}
+
+/* Sidebar toggle button */
+.sidebar-toggle-label {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background-color: var(--color-darkgreen);
+  color: var(--color-text);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1100;
+  transition: left 0.3s ease-in-out;
+}
+
+/* Content */
+.content {
+  margin: 0;
+  padding: 5rem 1rem;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.sidebar-checkbox:checked ~ .content {
+  margin-left: 250px;
+}
+
+/* Footer */
 footer {
   background-color: var(--color-lightbeige);
 }
@@ -231,26 +322,11 @@ ul {
 }
 
 /* home page */
-.main-containerr {
-  heigh: 90dvh;
-  padding-top: 10vh;
-  display: grid;
-  grid-template-columns: 1fr 6fr;
-}
-
-.sidebar-may {
-  color: black;
-  background-color: beigh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
 .welcome-card-container,
 .display-info-container {
   height: 100vh;
   width: 100%;
-  position: relative; 
+  position: relative;
 }
 
 .welcome-card-container,
@@ -486,7 +562,8 @@ ul {
     padding: 1.5rem;
   }
 
-  .animal-card-inner-right, .animal-description  {
+  .animal-card-inner-right,
+  .animal-description {
     font-size: 0.8rem;
   }
 
@@ -498,7 +575,8 @@ ul {
   .animal-weight,
   .animal-food,
   .animal-lifespan,
-  .animal-found, .animal-description{
+  .animal-found,
+  .animal-description {
     line-height: 1.5rem;
   }
 
@@ -518,6 +596,15 @@ ul {
   }
 }
 
+@media (min-width: 1024px) {
+  .sidebar {
+    left: 0;
+  }
+  .sidebar-toggle-label {
+    display: none;
+  }
+}
+
 @media (max-width: 1024px) {
   .header {
     display: none;
@@ -534,6 +621,15 @@ ul {
     width: 100%;
   }
 
+  .header-nav-bar {
+    justify-content: space-evenly;
+    min-width: 320px;
+    width: 100%;
+  }
+  .sidebar-container {
+    width: 0;
+  }
+
   /* Homepage */
   .animal-card-inner {
     display: block;
@@ -543,7 +639,8 @@ ul {
     max-width: 10rem;
   }
 
-  .animal-card-inner-right, .animal-description  {
+  .animal-card-inner-right,
+  .animal-description {
     font-size: 1rem;
   }
 
