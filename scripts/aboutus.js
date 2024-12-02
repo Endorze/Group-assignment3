@@ -111,7 +111,7 @@ const teamMembers = [
 
 const createTabs = (teamMembers) => {
     const tabsContainer = document.querySelector(".team-tabs");
-
+    
     teamMembers.forEach((person) => {
         const tab = document.createElement("div");
         tab.classList.add("tab");
