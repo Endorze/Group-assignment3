@@ -150,6 +150,7 @@ body {
 .main-container {
     display: flex;
     min-height: 100dvh;
+    margin-top: 6rem;
 }
 
 .content {
@@ -225,13 +226,6 @@ body {
     cursor: pointer;
     z-index: 1100;
     transition: left 0.3s ease-in-out;
-}
-
-/* Content */
-.content {
-    margin: 0;
-    padding: 5rem 1rem;
-    transition: margin-left 0.3s ease-in-out;
 }
 
 .sidebar-checkbox:checked ~ .content {
