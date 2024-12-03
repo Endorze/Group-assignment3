@@ -196,6 +196,10 @@ body {
   border-radius: 4px;
 }
 
+.sidebar-container {
+  background-color: var(--color-darkblue);
+}
+
 /* Sidebar toggle control */
 .sidebar-checkbox {
   display: none;
@@ -212,12 +216,12 @@ body {
 /* Sidebar toggle button */
 .sidebar-toggle-label {
   position: fixed;
-  top: 1rem;
+  top: 2rem;
   left: 1rem;
   background-color: var(--color-darkgreen);
   color: var(--color-text);
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -504,7 +508,6 @@ ul {
 
 /* Responsivness */
 @media screen and (max-width: 555px) {
-  /* Footer */
   .footer-nav ul {
     flex-direction: column;
   }
@@ -597,38 +600,7 @@ ul {
     width: 100%;
   }
 
-  .header-nav-bar {
-    justify-content: space-evenly;
-    min-width: 320px;
-    width: 100%;
-  }
   .sidebar-container {
     width: 0;
-  }
-
-  /* Homepage */
-  .animal-card-inner {
-    display: block;
-  }
-
-  .animal-image {
-    max-width: 10rem;
-  }
-
-  .animal-card-inner-right,
-  .animal-description {
-    font-size: 1rem;
-  }
-
-  .animal-length,
-  .animal-weight,
-  .animal-food,
-  .animal-lifespan,
-  .animal-found {
-    line-height: 1.5rem;
-  }
-
-  .animal-card-inner-right {
-    padding: 1.5rem;
   }
 }
