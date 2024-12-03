@@ -230,9 +230,9 @@ body {
 
 /* Content */
 .content {
-    /* margin: 0;
+    margin: 0;
     padding: 5rem 1rem;
-    transition: margin-left 0.3s ease-in-out; */
+    transition: margin-left 0.3s ease-in-out;
 }
 
 .sidebar-checkbox:checked ~ .content {
@@ -241,7 +241,7 @@ body {
 
 /* Footer */
 footer {
-    background-color: #9D6034;
+    background-color: var(--color-lightbeige);
 }
 
 .footer-container {

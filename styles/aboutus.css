@@ -157,12 +157,12 @@ p {
     .species__container {
         
     }
-    .species__text {
-        font-style: italic;
-        font-weight: 100;
-        margin: 6px 0 12px 0;
-        padding: 0;
-    }
+        .species__text {
+            font-style: italic;
+            font-weight: 100;
+            margin: 6px 0 12px 0;
+            padding: 0;
+        }
 
 
         .team__name {
