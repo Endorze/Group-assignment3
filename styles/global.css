@@ -1,14 +1,14 @@
 :root {
-    --color-blue: #7388A0;
-    --color-darkblue: #313640;
-    --color-lightbeige: #FAF2E6;
-    --color-midbeige: #f5d5ac;
-    --color-darkbeige: #DAA46D;
-    --color-brown: #9C4F20;
-    --color-darkgreen: #766621;
-    --color-text: white;
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
-    /*To get this font on each page you need to insert this into head of every html page.
+  --color-blue: #7388a0;
+  --color-darkblue: #313640;
+  --color-lightbeige: #faf2e6;
+  --color-midbeige: #f5d5ac;
+  --color-darkbeige: #daa46d;
+  --color-brown: #9c4f20;
+  --color-darkgreen: #766621;
+  --color-text: white;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  /*To get this font on each page you need to insert this into head of every html page.
         <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
@@ -16,348 +16,351 @@
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    min-height: 100dvh;
+  min-height: 100dvh;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .header {
-    position: fixed;
-    top: 0;
-    background-color: var(--color-lightbeige);
-    height: 6rem;
-    min-width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    -webkit-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
-    -moz-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
-    box-shadow: 0px 1px 5px 0px var(--color-lightbeige)
+  position: fixed;
+  top: 0;
+  background-color: var(--color-lightbeige);
+  height: 6rem;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
+  -moz-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
+  box-shadow: 0px 1px 5px 0px var(--color-lightbeige);
 }
 
 .phone-header {
-    position: fixed;
-    top: 0;
-    background-color: var(--color-lightbeige);
-    height: 6rem;
-    min-width: 100vw;
-    display: none;
-    align-items: center;
-    justify-content: space-between;
-    -webkit-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
-    -moz-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
-    box-shadow: 0px 1px 5px 0px var(--color-lightbeige)
+  position: fixed;
+  top: 0;
+  background-color: var(--color-lightbeige);
+  height: 6rem;
+  min-width: 100vw;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  -webkit-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
+  -moz-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
+  box-shadow: 0px 1px 5px 0px var(--color-lightbeige);
 }
 
 .header-nav-bar a img {
-    object-fit: contain;
-    height: 40px;
+  object-fit: contain;
+  height: 40px;
 }
 
 .header-logotype {
-    position: absolute;
-    height: 100%;
-    left: 8vw;
+  position: absolute;
+  height: 100%;
+  left: 8vw;
 }
 
 .header a img {
-    position: absolute;
-    top: 0;
+  position: absolute;
+  top: 0;
 }
 
 .header-nav-bar {
-    display: flex;
-    justify-content: space-between;
-    width: 30%;
-    min-width: 400px;
-    /*This min-width is to meak sure that the nav-bar anchor tags dont crash into eachother.*/
-    font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  min-width: 400px;
+  /*This min-width is to meak sure that the nav-bar anchor tags dont crash into eachother.*/
+  font-weight: bold;
 }
 
 .header-nav-bar a {
-    position: relative;
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--color-darkblue);
-    font-weight: bold;
-    padding: 0.3rem 0;
-    transition: color 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--color-darkblue);
+  font-weight: bold;
+  padding: 0.3rem 0;
+  transition: color 0.3s ease;
 }
 
 .header-nav-bar a:hover {
-    color: var(--color-darkbeige); 
+  color: var(--color-darkbeige);
 }
 
 .header-nav-bar a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0%;
-    height: 2px; 
-    background-color: var(--color-darkbeige);
-    transition: width 0.3s ease;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-darkbeige);
+  transition: width 0.3s ease;
 }
 
 .header-nav-bar a:hover::after,
 .header-nav-bar a.selected::after {
-    width: 100%;
+  width: 100%;
 }
 
 .header-searchbar {
-    width: 25%;
-    display: flex;
-    position: absolute;
-    gap: 1rem;
-    right: 5%
+  width: 25%;
+  display: flex;
+  position: absolute;
+  gap: 1rem;
+  right: 5%;
 }
 
 .header-searchbar button {
-    width: 30%;
-    padding: 0.3rem;
-    min-width: 100px;
-    background-color: var(--color-darkblue);
-    color: var(--color-text);
-    border: none;
-    cursor: pointer;
+  width: 30%;
+  padding: 0.3rem;
+  min-width: 100px;
+  background-color: var(--color-darkblue);
+  color: var(--color-text);
+  border: none;
+  cursor: pointer;
 }
 
 .header-searchbar button:hover {
-    background-color: var(--color-blue);
-    /*
+  background-color: var(--color-blue);
+  /*
     I temporarily added a second bg to change color when a person is hovering the button.
     */
 }
 
 .header-searchbar input {
-    padding: 0.5rem;
-    color: var(--color-text);
-    border: 1px solid var(--color-darkblue);
+  padding: 0.5rem;
+  color: var(--color-text);
+  border: 1px solid var(--color-darkblue);
 }
 
 .header-searchbar input::placeholder {
-    color: var(--color-darkblue);
+  color: var(--color-darkblue);
+}
+
+/* Main container */
+.main-container {
+  display: flex;
+  min-height: 100dvh;
+  margin-top: 6rem;
+}
+
+.content {
+  flex: 1;
 }
 
 /* Sidebar */
 .sidebar {
-    position: relative;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100vh;
-    background-color: var(--color-darkblue);
-    color: var(--color-text);
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 1rem;
-    transition: left 0.3s ease-in-out;
-    z-index: 1000;
+  position: relative;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: var(--color-darkblue);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  transition: left 0.3s ease-in-out;
 }
 
 .sidebar-menu ul {
-    list-style: none;
+  list-style: none;
 }
 
 .sidebar-menu ul li {
-    margin: 1rem 0;
+  margin: 1rem 0;
 }
 
 .sidebar-menu ul li a {
-    text-decoration:none;
-    color: var(--color-text);
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem;
-    transition: background-color 0.3s ease;
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  transition: background-color 0.3s ease;
 }
 
 .sidebar-menu ul li a:hover,
 .sidebar-menu ul li a.selected {
-    background-color: var(--color-darkbeige);
-    border-radius: 4px;
+  background-color: var(--color-darkbeige);
+  border-radius: 4px;
+}
+
+.sidebar-container {
+  background-color: var(--color-darkblue);
 }
 
 /* Sidebar toggle control */
 .sidebar-checkbox {
-    display: none;
+  display: none;
 }
 
 .sidebar-checkbox:checked ~ .sidebar {
-    left: 0;
+  left: 0;
 }
 
 .sidebar-checkbox:checked ~ .sidebar-toggle-label {
-    left: 250px;
+  left: 250px;
 }
 
 /* Sidebar toggle button */
 .sidebar-toggle-label {
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-    background-color: var(--color-darkgreen);
-    color: var(--color-text);
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 1100;
-    transition: left 0.3s ease-in-out;
-}
-
-/* Content */
-.content {
-    margin: 0;
-    padding: 5rem 1rem;
-    transition: margin-left 0.3s ease-in-out;
+  position: fixed;
+  top: 2rem;
+  left: 1rem;
+  background-color: var(--color-darkgreen);
+  color: var(--color-text);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1100;
+  transition: left 0.3s ease-in-out;
 }
 
 .sidebar-checkbox:checked ~ .content {
-    margin-left: 250px;
-}
-
-@media (min-width: 768px) {
-    .sidebar {
-        left: 0;
-    }
-
-    .sidebar-toggle-label {
-        display: none;
-    }
-
-    .content {
-        margin-left: 250px;
-    }
+  margin-left: 250px;
 }
 
 /* Footer */
-
 footer {
-    background-color: var(--color-lightbeige);
+  background-color: var(--color-lightbeige);
 }
 
 .footer-container {
-    width: 100%;
-    padding: 70px 0px 20px;
+  width: 100%;
+  padding: 70px 0px 20px;
 }
 
 .brand-logo {
-    width: 12rem;
+  width: 12rem;
 }
 
 .logo-div {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .social-icons {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .social-icons a {
-    text-decoration: none;
-    padding: 0.5rem;
-    background-color: white;
-    margin: 0.5rem;
-    border-radius: 50%;
+  text-decoration: none;
+  padding: 0.5rem;
+  background-color: white;
+  margin: 0.5rem;
+  border-radius: 50%;
 }
 
 .social-icons a i {
-    font-size: 1.5rem;
-    color: var(--color-darkblue);
-    opacity: 0.8;
+  font-size: 1.5rem;
+  color: var(--color-darkblue);
+  opacity: 0.8;
 }
 
 .social-icons a:hover {
-    background-color: var(--color-darkblue);
-    transition: 0.5;
+  background-color: var(--color-darkblue);
+  transition: 0.5;
 }
 
 .social-icons a:hover i {
-    color: white;
-    transition: 0.5;
+  color: white;
+  transition: 0.5;
 }
 
 .footer-nav {
-    margin: 30px 0;
+  margin: 30px 0;
 }
 
-
-.footer-nav ul, li {
-    display: flex;
-    justify-content: center;
-    list-style: none;
+.footer-nav ul,
+li {
+  display: flex;
+  justify-content: center;
+  list-style: none;
 }
 
 .footer-nav ul li a {
-    color: var(--color-darkblue);
-    margin: 20px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    opacity: 0.7;
+  color: var(--color-darkblue);
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  opacity: 0.7;
 }
 
 .footer-nav ul li a:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 ul {
-    padding-inline-start: 0px;
+  padding-inline-start: 0px;
 }
 
 .footer-bottom {
-    background-color: var(--color-darkbeige);
-    padding: 0.75rem;
-    text-align: center;
+  background-color: var(--color-darkbeige);
+  padding: 0.75rem;
+  text-align: center;
 }
 
 /* Responsivness */
 
 @media screen and (max-width: 555px) {
-    
-    .footer-nav ul {
-        flex-direction: column;
-    }
+  .footer-nav ul {
+    flex-direction: column;
+  }
 
-    .footer-nav ul li {
-        width: 100%;
-        text-align: center;
-        margin: 0;
-    }
+  .footer-nav ul li {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
 
-    .brand-logo {
-        margin-left: 0.25rem;
-    }
+  .brand-logo {
+    margin-left: 0.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sidebar {
+    left: 0;
+  }
+  .sidebar-toggle-label {
+    display: none;
+  }
 }
 
 @media (max-width: 1024px) {
+  .header {
+    display: none;
+  }
 
-    .header {
-        display: none;
-    }
+  .phone-header {
+    display: flex;
+    width: 100%;
+  }
 
-    .phone-header {
-        display: flex;
-        width: 100%;
-    }
+  .header-nav-bar {
+    justify-content: space-evenly;
+    min-width: 320px;
+    width: 100%;
+  }
 
-    .header-nav-bar {
-        justify-content: space-evenly;
-        min-width: 320px;
-        width: 100%;
-    }
+  .sidebar-container {
+    width: 0;
+  }
 }
