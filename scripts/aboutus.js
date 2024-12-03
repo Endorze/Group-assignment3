@@ -129,6 +129,7 @@ const updateTeamContent = (person) => {
 
     const imgContainer = document.createElement("div");
     imgContainer.classList.add("img-info__container");
+    
     const personImage = document.createElement("img");
     personImage.src = person.image || "../assets/images/default-team.jpg"; // Default image if missing
     personImage.alt = person.imageName || "Team image";
