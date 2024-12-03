@@ -504,6 +504,21 @@ ul {
 
 /* Responsivness */
 @media screen and (max-width: 555px) {
+  /* Footer */
+  .footer-nav ul {
+    flex-direction: column;
+  }
+
+  .footer-nav ul li {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .brand-logo {
+    margin-left: 0.25rem;
+  }
+
   /* Homepage */
   .welcome-card-text-container {
     align-items: center;
@@ -554,21 +569,6 @@ ul {
   .animal-found,
   .animal-description {
     line-height: 1.5rem;
-  }
-
-  /* Footer */
-  .footer-nav ul {
-    flex-direction: column;
-  }
-
-  .footer-nav ul li {
-    width: 100%;
-    text-align: center;
-    margin: 0;
-  }
-
-  .brand-logo {
-    margin-left: 0.25rem;
   }
 }
 
