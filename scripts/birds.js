@@ -200,7 +200,11 @@ birdInfoContainer.style.display = "none"
 const birdAudio = document.getElementById("bird-audio");
 const playAudioButton = document.getElementById("play-audio-btn");
 
+let displayInformation = false;
+
+
 const setShortBirdInformation = (birdId) => {
+
     const readMoreButton = document.getElementById("read-more-btn")
     const bird = zooBirds.find(bird => bird.id == birdId)
     if (!bird) {
@@ -228,8 +232,8 @@ const setShortBirdInformation = (birdId) => {
     }
     birdAudio.src = `./assets/bird-sounds/${bird.sound}`;
     birdAudio.load();
-};
-
+    displayInformation = true;
+}
 
 const setBirdInformation = (birdId) => {
 
@@ -264,16 +268,39 @@ playAudioButton.addEventListener("click", () => {
 }
 );
 
+let lastClickedBirdId = null;
+let showingFullInformation = false;
+
 document.querySelectorAll(".bird-button-text-container img").forEach((img) => {
     const birdId = img.id;
     img.addEventListener("click", () => {
-        setShortBirdInformation(birdId);
-        document.getElementById("navigate-birds").scrollIntoView({ behavior: "smooth" });
+        if (lastClickedBirdId === birdId) {
+            const birdInfoContainer = document.querySelector(".bird-information-container");
+            birdInfoContainer.style.display = "none";
+            lastClickedBirdId = null;
+            displayInformation = false;
+        } else {
+            setShortBirdInformation(birdId);
+
+            document.getElementById("read-more-btn").textContent = "Read More";
+            showingFullInformation = false;
+
+            document.getElementById("navigate-birds").scrollIntoView({ behavior: "smooth" });
+            lastClickedBirdId = birdId;
+        }
     });
 });
 
 document.getElementById("read-more-btn").addEventListener("click", () => {
-    const activeBirdId = document.querySelector(".bird-name").id
-    setBirdInformation(activeBirdId);
-});
+    const activeBirdId = document.querySelector(".bird-name").id;
 
+    if (showingFullInformation) {
+        setShortBirdInformation(activeBirdId);
+        showingFullInformation = false;
+        document.getElementById("read-more-btn").textContent = "Read More";
+    } else {
+        setBirdInformation(activeBirdId);
+        showingFullInformation = true;
+        document.getElementById("read-more-btn").textContent = "Show Less";
+    }
+});
