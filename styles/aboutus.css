@@ -1,72 +1,16 @@
-:root {
-    --background-color: #FAF4E8;
-    --feature-color: #34959E;
-    --footer-color: #9D6034;
-    --nav-bar: #DAA46D;
-    --text-color: #382B22;
-}
-
-* {
-    box-sizing: border-box;
-}
-
 html, body {
-    background-color: var(--background-color);
-    font-family:Arial, Helvetica, sans-serif;
-    height: 90%;
-    margin: 0;
-    padding: 0;
-    width: 100%;
+    background-color: #FAF4E8;
 }
 
-h2 {
-    margin: 0;
+.main-container {
+    min-height: calc(100dvh - (383px + 96px));
 }
-
-h3 {
-    margin: 0;
-}
-p {
-    margin: 0;
-}
-
-.header {
-    
-}
-
-.nav-bar {
-    /* margin: 32px 0 0 32px; */
-    background-color: #313640;
-    background-color: var(--nav-bar);
-    border-radius: 25px 25px 0 0;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-    overflow-y: auto; 
-    padding-top: 32px;
-    width: 240px;
-}
-
-.main {
-    /* width: 100%; */
-    background-color: var(--color-background);
-    display: flex;
-    gap: 32px;
-    height: calc(100% - 350px);
-    margin: 150px 32px 32px 32px;
-}
-
 
 .team-tabs {
-    /* gap: 18px; */
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
-
-    .tab {
-           
-    }
 
     .tab,
     .tab.active {
@@ -75,25 +19,17 @@ p {
         text-align: center;
         color: white;
         font-size: 1rem;
-        gap: 32px;
         text-decoration: none;
         display: block;
 }   
 
     .tab:hover {
-        color: var(--feature-color);
+        color: #34959E;
         cursor: pointer;
         transition: color 0.3s ease, color 0.3s ease;
     }
 
-    .main-container {
-        display: flex;
-        min-height: calc(100dvh - (383px + 96px));
-        margin-top: 6rem;
-      }
-
 .team {
-    background-color: var(--background-color);
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto auto auto 1fr;
@@ -103,22 +39,23 @@ p {
 .img-info__content {
     grid-column: 1;
 }
+
     .image {
         grid-row: 1 / span 2;
     }
-        .image__child {
-            width: 100%;
-        }
+    .image__child {
+        width: 100%;
+    }
 
     .info {
         display: flex;
         text-align: center;
     }
 
-        .info__child {
-            display: flex;
-            flex-direction: column;
-        }
+    .info__child {
+        display: flex;
+        flex-direction: column;
+     }
 
 .text__content {
     grid-column: 2;
@@ -144,21 +81,19 @@ p {
         flex: 100%;
     }
 
-    .title {
-        order: 0;
-    }
+        .title {
+            order: 0;
+        }
 
-    .image {
-        order: 1;
-    }
+        .image {
+            order: 1;
+        }
 
-    .info {
-        order: 2;
-    }
+        .info {
+            order: 2;
+        }
 
-    .paragraph {
-        order: 3;
-    }
-
-
+        .paragraph {
+            order: 3;
+        }
 }
