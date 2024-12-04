@@ -127,19 +127,26 @@ const animals = [
   },
 ];
 
-animals.forEach((animal, index) => {
+// Sidebar menu 
+const createSidebarMenu = animals => {
   const sideBarMenuList = document.querySelector(".sidebar-menu-list");
-  const menuList = document.createElement("li");
-  menuList.classList.add("menu-list");
-  const menuListLink = document.createElement("a");
-  menuListLink.textContent = animal.name;
 
-  menuList.appendChild(menuListLink);
-  sideBarMenuList.appendChild(menuList);
-});
+  animals.forEach((animal, index) => {
+    const menuList = document.createElement("li");
+    menuList.classList.add("menu-list");
+    const menuListLink = document.createElement("a");
+    menuListLink.textContent = animal.name;
 
-const animalCardContainer = document.querySelector(".animal-card-container");
+    menuList.appendChild(menuListLink);
+    sideBarMenuList.appendChild(menuList);
+  });
+};
+
+createSidebarMenu(animals);
+
+// Animal card builder
 animals.forEach((animal) => {
+  const animalCardContainer = document.querySelector(".animal-card-container");
   const animalCard = document.createElement("div");
   animalCard.classList.add("animal-card");
   if (animal.group === "mammal") {
@@ -220,21 +227,21 @@ animals.forEach((animal) => {
 });
 
 // add and remove active
-const sidebarItems = document.querySelectorAll(".menu-list");
-const animalCardsAll = document.querySelectorAll(".animal-card");
+// const selectAllSidebarItems = document.querySelectorAll(".menu-list");
+// const animalCardsAll = document.querySelectorAll(".animal-card");
 
-sidebarItems.forEach((item, index) => {
-  item.addEventListener("click", () => {
-    if (animalCardsAll[index].classList.contains("active")) {
-      animalCardsAll[index].classList.remove("active");
-      item.classList.remove("clicked");
-    } else {
-      animalCardsAll.forEach((card) => {
-        card.classList.remove("active");
-      });
-      sidebarItems.forEach((i) => i.classList.remove("clicked"));
-      animalCardsAll[index].classList.add("active");
-      item.classList.add("clicked");
-    }
-  });
-});
+// selectAllSidebarItems.forEach((item, index) => {
+//   item.addEventListener("click", () => {
+//     if (animalCardsAll[index].classList.contains("active")) {
+//       animalCardsAll[index].classList.remove("active");
+//       item.classList.remove("clicked");
+//     } else {
+//       animalCardsAll.forEach((card) => {
+//         card.classList.remove("active");
+//       });
+//       selectAllSidebarItems.forEach((i) => i.classList.remove("clicked"));
+//       animalCardsAll[index].classList.add("active");
+//       item.classList.add("clicked");
+//     }
+//   });
+// });
