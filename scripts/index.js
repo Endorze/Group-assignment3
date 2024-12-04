@@ -127,8 +127,8 @@ const animals = [
   },
 ];
 
-// Sidebar menu 
-const createSidebarMenu = animals => {
+// Sidebar menu
+const createSidebarMenu = (animals) => {
   const sideBarMenuList = document.querySelector(".sidebar-menu-list");
 
   animals.forEach((animal, index) => {
@@ -227,21 +227,23 @@ animals.forEach((animal) => {
 });
 
 // add and remove active
-// const selectAllSidebarItems = document.querySelectorAll(".menu-list");
-// const animalCardsAll = document.querySelectorAll(".animal-card");
+const setActive = () => {
+  const allSidebarItems = document.querySelectorAll(".menu-list");
+  const allAnimalCards = document.querySelectorAll(".animal-card");
 
-// selectAllSidebarItems.forEach((item, index) => {
-//   item.addEventListener("click", () => {
-//     if (animalCardsAll[index].classList.contains("active")) {
-//       animalCardsAll[index].classList.remove("active");
-//       item.classList.remove("clicked");
-//     } else {
-//       animalCardsAll.forEach((card) => {
-//         card.classList.remove("active");
-//       });
-//       selectAllSidebarItems.forEach((i) => i.classList.remove("clicked"));
-//       animalCardsAll[index].classList.add("active");
-//       item.classList.add("clicked");
-//     }
-//   });
-// });
+  allSidebarItems.forEach((item, index) => {
+    item.addEventListener("click", () => {
+      const isActive = allAnimalCards[index].classList.contains('active');
+
+      allSidebarItems.forEach(menu => menu.classList.remove('clicked'));
+      allAnimalCards.forEach(card => card.classList.remove('active'));
+
+      if (!isActive) {
+        allAnimalCards[index].classList.add("active");
+        item.classList.add("clicked");
+      }
+    });
+  });
+};
+
+setActive();
