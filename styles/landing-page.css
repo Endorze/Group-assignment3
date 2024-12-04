@@ -245,6 +245,10 @@
 
 /* Responsivness */
 @media screen and (max-width: 555px) {
+  .menu-list:hover, .menu-list.clicked {
+    background-size: 30%;
+  }
+
   .welcome-card-text-container {
     align-items: center;
   }
