@@ -127,13 +127,15 @@ const animals = [
   },
 ];
 
-const sideBar = document.querySelector(".sidebar-may");
 animals.forEach((animal, index) => {
-  console.log(`${animal.name} at ${index}`);
-  const animalName = document.createElement("button");
-  animalName.classList.add("animal-name-sidebar");
-  animalName.textContent = animal.name;
-  sideBar.appendChild(animalName);
+  const sideBarMenuList = document.querySelector(".sidebar-menu-list");
+  const menuList = document.createElement("li");
+  menuList.classList.add("menu-list");
+  const menuListLink = document.createElement("a");
+  menuListLink.textContent = animal.name;
+
+  menuList.appendChild(menuListLink);
+  sideBarMenuList.appendChild(menuList);
 });
 
 const animalCardContainer = document.querySelector(".animal-card-container");
@@ -215,23 +217,11 @@ animals.forEach((animal) => {
   const fullDescription = animal.description;
   const truncatedDescription = fullDescription.substring(0, 200) + "...";
   animalDescription.textContent = truncatedDescription;
-  // readMoreButton.textContent = "Read more";
-  // const toggleDescription = () => {
-  //   if (animalDescription.textContent === truncatedDescription) {
-  //     animalDescription.textContent = fullDescription;
-  //     readMoreButton.textContent = "Read less";
-  //   } else {
-  //     animalDescription.textContent = truncatedDescription;
-  //     readMoreButton.textContent = "Read more";
-  //   }
-  // };
-  // readMoreButton.addEventListener("click", toggleDescription);
 });
 
 // add and remove active
-const sidebarItems = document.querySelectorAll(".animal-name-sidebar");
+const sidebarItems = document.querySelectorAll(".menu-list");
 const animalCardsAll = document.querySelectorAll(".animal-card");
-const exploreButton = document.querySelector(".button-explore");
 
 sidebarItems.forEach((item, index) => {
   item.addEventListener("click", () => {
@@ -247,10 +237,4 @@ sidebarItems.forEach((item, index) => {
       item.classList.add("clicked");
     }
   });
-});
-
-// random animal when click explore
-exploreButton.addEventListener("click", () => {
-  const randomIndex = Math.floor(Math.random() * animalCardsAll.length);
-  animalCardsAll[randomIndex].classList.add("active");
 });
