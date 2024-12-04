@@ -13,7 +13,7 @@
 html, body {
     background-color: var(--background-color);
     font-family:Arial, Helvetica, sans-serif;
-    height: 100%;
+    height: 90%;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -53,7 +53,7 @@ p {
     display: flex;
     gap: 32px;
     height: calc(100% - 350px);
-    margin: 150px 32px 0 32px;
+    margin: 150px 32px 32px 32px;
 }
 
 
@@ -86,54 +86,79 @@ p {
         transition: color 0.3s ease, color 0.3s ease;
     }
 
+    .main-container {
+        display: flex;
+        min-height: calc(100dvh - (383px + 96px));
+        margin-top: 6rem;
+      }
+
 .team {
     background-color: var(--background-color);
-    display: flex;
-    flex-wrap: wrap;
-    width: 85%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto 1fr;
+    margin: 1rem;
 }
 
 .img-info__content {
-    flex: 40%;
+    grid-column: 1;
 }
     .image {
-        width: 20px;
+        grid-row: 1 / span 2;
     }
+        .image__child {
+            width: 100%;
+        }
 
     .info {
-
+        display: flex;
+        text-align: center;
     }
 
+        .info__child {
+            display: flex;
+            flex-direction: column;
+        }
+
 .text__content {
-    flex: 60%;
+    grid-column: 2;
 }
 
     .title {
-
+        height: min-content;
     }
 
     .paragraph {
-
+       grid-row: 2 / span 3; 
     }
 
 @media (max-width: 768px) {
+
     .team {
-        flex-direction: column; /* Stack image and text vertically */
-        width: 90%; /* Full width for each team member */
-        text-align: center; /* Center text in phone view */
-        padding: 0;
+        display: flex;
+        flex-direction: column; 
+        justify-items: center;
     }
 
-    .team__name {
+    .img-info__content, .text__content {
+        flex: 100%;
+    }
+
+    .title {
         order: 0;
     }
 
-    .img-info__container {
-        align-items: center;
+    .image {
+        order: 1;
     }
-        
-            .team__image {
-                margin: 0 auto; 
-                padding: 0;
-            }
-        }
+
+    .info {
+        order: 2;
+    }
+
+    .paragraph {
+        order: 3;
+    }
+
+
+}
