@@ -41,6 +41,7 @@ body {
   -moz-box-shadow: 0px 1px 1px 0px var(--color-lightbeige);
   box-shadow: 0px 1px 5px 0px var(--color-lightbeige);
 }
+
 .phone-header {
   position: fixed;
   top: 0;
