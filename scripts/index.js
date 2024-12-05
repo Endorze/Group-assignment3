@@ -127,17 +127,26 @@ const animals = [
   },
 ];
 
-const sideBar = document.querySelector(".sidebar-may");
-animals.forEach((animal, index) => {
-  console.log(`${animal.name} at ${index}`);
-  const animalName = document.createElement("button");
-  animalName.classList.add("animal-name-sidebar");
-  animalName.textContent = animal.name;
-  sideBar.appendChild(animalName);
-});
+// Sidebar menu
+const createSidebarMenu = (animals) => {
+  const sideBarMenuList = document.querySelector(".sidebar-menu-list");
 
-const animalCardContainer = document.querySelector(".animal-card-container");
+  animals.forEach((animal, index) => {
+    const menuList = document.createElement("li");
+    menuList.classList.add("menu-list");
+    const menuListLink = document.createElement("a");
+    menuListLink.textContent = animal.name;
+
+    menuList.appendChild(menuListLink);
+    sideBarMenuList.appendChild(menuList);
+  });
+};
+
+createSidebarMenu(animals);
+
+// Animal card builder
 animals.forEach((animal) => {
+  const animalCardContainer = document.querySelector(".animal-card-container");
   const animalCard = document.createElement("div");
   animalCard.classList.add("animal-card");
   if (animal.group === "mammal") {
@@ -215,42 +224,26 @@ animals.forEach((animal) => {
   const fullDescription = animal.description;
   const truncatedDescription = fullDescription.substring(0, 200) + "...";
   animalDescription.textContent = truncatedDescription;
-  // readMoreButton.textContent = "Read more";
-  // const toggleDescription = () => {
-  //   if (animalDescription.textContent === truncatedDescription) {
-  //     animalDescription.textContent = fullDescription;
-  //     readMoreButton.textContent = "Read less";
-  //   } else {
-  //     animalDescription.textContent = truncatedDescription;
-  //     readMoreButton.textContent = "Read more";
-  //   }
-  // };
-  // readMoreButton.addEventListener("click", toggleDescription);
 });
 
 // add and remove active
-const sidebarItems = document.querySelectorAll(".animal-name-sidebar");
-const animalCardsAll = document.querySelectorAll(".animal-card");
-const exploreButton = document.querySelector(".button-explore");
+// const setActive = () => {
+//   const allSidebarItems = document.querySelectorAll(".menu-list");
+//   const allAnimalCards = document.querySelectorAll(".animal-card");
 
-sidebarItems.forEach((item, index) => {
-  item.addEventListener("click", () => {
-    if (animalCardsAll[index].classList.contains("active")) {
-      animalCardsAll[index].classList.remove("active");
-      item.classList.remove("clicked");
-    } else {
-      animalCardsAll.forEach((card) => {
-        card.classList.remove("active");
-      });
-      sidebarItems.forEach((i) => i.classList.remove("clicked"));
-      animalCardsAll[index].classList.add("active");
-      item.classList.add("clicked");
-    }
-  });
-});
+//   allSidebarItems.forEach((item, index) => {
+//     item.addEventListener("click", () => {
+//       const isActive = allAnimalCards[index].classList.contains('active');
 
-// random animal when click explore
-exploreButton.addEventListener("click", () => {
-  const randomIndex = Math.floor(Math.random() * animalCardsAll.length);
-  animalCardsAll[randomIndex].classList.add("active");
-});
+//       allSidebarItems.forEach(menu => menu.classList.remove('clicked'));
+//       allAnimalCards.forEach(card => card.classList.remove('active'));
+
+//       if (!isActive) {
+//         allAnimalCards[index].classList.add("active");
+//         item.classList.add("clicked");
+//       }
+//     });
+//   });
+// };
+
+// setActive();
