@@ -144,3 +144,106 @@ const createSidebarMenu = (animals) => {
 
 createSidebarMenu(animals);
 
+// Animal card builder
+animals.forEach((animal) => {
+  const animalCardContainer = document.querySelector(".animal-card-container");
+  const animalCard = document.createElement("div");
+  animalCard.classList.add("animal-card");
+  if (animal.group === "mammal") {
+    animalCard.classList.add("group-mammal");
+  } else if (animal.group === "reptile") {
+    animalCard.classList.add("group-reptile");
+  } else {
+    animalCard.classList.add("group-bird");
+  }
+
+  const animalCardInner = document.createElement("div");
+  animalCardInner.classList.add("animal-card-inner");
+
+  const animalCardInnerLeft = document.createElement("div");
+  animalCardInnerLeft.classList.add("animal-card-inner-left");
+  const animalCardInnerRight = document.createElement("div");
+  animalCardInnerRight.classList.add("animal-card-inner-right");
+
+  const animalDescriptionContainer = document.createElement("div");
+  animalDescriptionContainer.classList.add("animal-description-container");
+  const readMoreButton = document.createElement("div");
+  readMoreButton.classList.add("button-readmore");
+
+  const animalImage = document.createElement("img");
+  animalImage.classList.add("animal-image");
+  const animalName = document.createElement("div");
+  animalName.classList.add("animal-name");
+  const animalDescription = document.createElement("div");
+  animalDescription.classList.add("animal-description");
+  const animalLength = document.createElement("div");
+  animalLength.classList.add("animal-length");
+  const animalWeight = document.createElement("div");
+  animalWeight.classList.add("animal-weight");
+  const animalFound = document.createElement("div");
+  animalFound.classList.add("animal-found");
+  const animalFood = document.createElement("div");
+  animalFood.classList.add("animal-food");
+  const animalGroup = document.createElement("div");
+  animalGroup.classList.add("animal-group");
+  const animalLifeSpan = document.createElement("div");
+  animalLifeSpan.classList.add("animal-lifespan");
+
+  animalImage.src = animal.image;
+  animalImage.alt = `${animal.name}`;
+  animalName.textContent = animal.name;
+  animalDescription.textContent = animal.description;
+  animalLifeSpan.textContent = `Lifespan: ${animal.lifespan}`;
+  animalFood.textContent = `Food: ${animal.food}`;
+  animalGroup.textContent = animal.group;
+  animalLength.textContent = `Length: ${animal.length}`;
+  animalWeight.textContent = `Weight: ${animal.weight}`;
+  animalFound.textContent = `Found in: ${animal.found}`;
+
+  animalCardInnerLeft.appendChild(animalImage);
+  animalCardInnerLeft.appendChild(animalGroup);
+
+  animalCardInnerRight.appendChild(animalName);
+  animalCardInnerRight.appendChild(animalLength);
+  animalCardInnerRight.appendChild(animalWeight);
+  animalCardInnerRight.appendChild(animalLifeSpan);
+  animalCardInnerRight.appendChild(animalFood);
+  animalCardInnerRight.appendChild(animalFound);
+
+  animalCardInnerRight.appendChild(animalDescriptionContainer);
+  animalDescriptionContainer.appendChild(animalDescription);
+  animalDescriptionContainer.appendChild(readMoreButton);
+
+  animalCardInner.appendChild(animalCardInnerLeft);
+  animalCardInner.appendChild(animalCardInnerRight);
+  animalCard.appendChild(animalCardInner);
+
+  animalCardContainer.appendChild(animalCard);
+
+  // Truncated text: aniamal description
+  const fullDescription = animal.description;
+  const truncatedDescription = fullDescription.substring(0, 200) + "...";
+  animalDescription.textContent = truncatedDescription;
+});
+
+// add and remove active
+const setActive = () => {
+  const allSidebarItems = document.querySelectorAll(".menu-list");
+  const allAnimalCards = document.querySelectorAll(".animal-card");
+
+  allSidebarItems.forEach((item, index) => {
+    item.addEventListener("click", () => {
+      const isActive = allAnimalCards[index].classList.contains('active');
+
+      allSidebarItems.forEach(menu => menu.classList.remove('clicked'));
+      allAnimalCards.forEach(card => card.classList.remove('active'));
+
+      if (!isActive) {
+        allAnimalCards[index].classList.add("active");
+        item.classList.add("clicked");
+      }
+    });
+  });
+};
+
+setActive();
