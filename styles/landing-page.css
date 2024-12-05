@@ -63,7 +63,7 @@
 }
 
 .welcome-card-text-wrap {
-  max-width: 25rem;
+  max-width: 40rem;
   max-height: 50rem;
   line-height: 1.5rem;
   padding: 2rem;
@@ -72,23 +72,24 @@
 .welcome-card-text-header {
   text-transform: uppercase;
   font-weight: 800;
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: "Roboto", sans-serif;
   color: var(--color-lightbeige);
 }
 
 .welcome-card-text-subheader {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 400;
   font-family: "Caveat", sans-serif;
   color: var(--color-darkblue);
-  line-height: 2rem;
+  line-height: 2.5rem;
 }
 
 .welcome-card-text-description {
   font-family: "Roboto", sans-serif;
   color: var(--color-lightbeige);
   font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .animal-card-container {
@@ -242,27 +243,4 @@
   .animal-description {
     line-height: 1.5rem;
   }
-}
-
-@media screen and (min-width: 1024px){
-  .welcome-card-text-wrap {
-    max-width: 40rem;
-    max-height: 60rem;
-    padding-right: 5rem;
-  }
-  
-  .welcome-card-text-header {
-    font-size: 5rem;
-  }
-  
-  .welcome-card-text-subheader {
-    font-size: 3rem;
-    line-height: 2.5rem;
-  }
-  
-  .welcome-card-text-description {
-    font-size: 2rem;
-    line-height: 3rem;
-  }
-  
 }
