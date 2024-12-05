@@ -1,0 +1,243 @@
+/* home page */
+.welcome-card-container,
+.display-info-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: -1;
+  transition: all 0.5s ease-in-out;
+}
+
+.welcome-card-container,
+.animal-card-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.welcome-card-gradient-veil,
+.welcome-card-background,
+.welcome-card-text-container,
+.welcome-card-gradient-pawprints {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.welcome-card-gradient-veil {
+  background: rgb(218, 164, 109);
+  background: linear-gradient(
+    90deg,
+    rgba(218, 164, 109, 0) 41%,
+    rgba(218, 164, 109, 0.6741290266106443) 53%,
+    rgba(218, 164, 109, 0.8702074579831933) 67%,
+    rgba(218, 164, 109, 1) 100%
+  );
+}
+
+.welcome-card-background,
+.welcome-card-gradient-pawprints,
+.animal-card-container {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.welcome-card-background {
+  background-image: url("../assets/homepage/giraffe.jpg");
+}
+
+.welcome-card-gradient-pawprints {
+  background-image: url("../assets/homepage/veilpaw.svg");
+}
+
+.welcome-card-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.welcome-card-text-wrap {
+  max-width: 40rem;
+  max-height: 50rem;
+  line-height: 1.5rem;
+  padding: 2rem;
+}
+
+.welcome-card-text-header {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 4rem;
+  font-family: "Roboto", sans-serif;
+  color: var(--color-lightbeige);
+}
+
+.welcome-card-text-subheader {
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: "Caveat", sans-serif;
+  color: var(--color-darkblue);
+  line-height: 2.5rem;
+}
+
+.welcome-card-text-description {
+  font-family: "Roboto", sans-serif;
+  color: var(--color-lightbeige);
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.animal-card-container {
+  overflow: visible;
+  position: relative;
+  min-height: 100vh;
+}
+
+.animal-card {
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  display: none;
+  padding: 2rem;
+}
+
+.animal-card.active {
+  display: block;
+  z-index: 15;
+}
+
+.animal-card-inner {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  font-family: "Roboto", sans-serif;
+}
+
+.animal-card-inner-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.animal-card-inner-right {
+  padding: 3rem;
+  border-radius: 24px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  background-color: var(--color-lightbeige);
+  font-size: 1.5rem;
+}
+
+.animal-name {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  color: var(--color-darkbeige);
+  padding: 1rem 0;
+}
+
+.animal-length,
+.animal-weight,
+.animal-food,
+.animal-lifespan,
+.animal-found {
+  line-height: 3rem;
+}
+
+.animal-description {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  padding: 1rem 0;
+}
+
+.animal-image {
+  width: 25rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-position: center;
+  object-fit: cover;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.group-mammal {
+  background-color: #766621;
+}
+
+.group-mammal .animal-name {
+  color: #766621;
+}
+
+.group-bird {
+  background-color: #7387a0;
+}
+
+.group-bird .animal-name {
+  color: #7387a0;
+}
+
+.group-reptile {
+  background-color: #d9a56c;
+}
+
+.group-reptile .animal-name {
+  color: #d9a56c;
+}
+
+/* Responsivness */
+@media screen and (max-width: 555px) {
+  .welcome-card-text-container {
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .welcome-card-text-wrap {
+    text-align: center;
+    background-color: var(--color-darkbeige);
+    border-radius: 36px;
+  }
+
+  .welcome-card-gradient-veil {
+    background: none;
+  }
+
+  .welcome-card-text-description {
+    color: var(--color-lightbeige);
+  }
+
+  .animal-card-inner {
+    display: block;
+  }
+
+  .animal-image {
+    width: 6rem;
+  }
+
+  .animal-card-inner-right {
+    padding: 1.5rem;
+  }
+
+  .animal-card-inner-right,
+  .animal-description {
+    font-size: 0.8rem;
+  }
+
+  .animal-name {
+    font-size: 1.5rem;
+  }
+
+  .animal-length,
+  .animal-weight,
+  .animal-food,
+  .animal-lifespan,
+  .animal-found,
+  .animal-description {
+    line-height: 1.5rem;
+  }
+}
