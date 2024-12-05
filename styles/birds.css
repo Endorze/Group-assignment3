@@ -123,6 +123,12 @@ body {
     font-weight: 600;
 }
 
+#pidgeon-button a,
+#hawk-button a {
+  text-decoration: none;
+  color: white;
+}
+
 #pidgeon-button {
     background-color: var(--color-darkblue);
 }
@@ -190,7 +196,7 @@ body {
 }
 
 #pidgeon-button:hover {
-    background-color: #f3e0c3;
+    background-color: rgb(34, 34, 34);
 }
 
 #hawk-button {
@@ -198,7 +204,7 @@ body {
 }
 
 #hawk-button:hover {
-    background-color: #c7703a;
+    background-color: #314f58;
 }
 
 .bird-button-text-container {
@@ -359,6 +365,7 @@ body {
 }
 
 .jumpscare-birds {
+  display: none;
     width: 100vw;
     z-index: 100;
     position: absolute;
