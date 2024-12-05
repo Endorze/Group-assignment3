@@ -190,27 +190,24 @@
   color: #d9a56c;
 }
 
-
 /* Responsivness */
 @media screen and (max-width: 555px) {
   .welcome-card-text-container {
     align-items: center;
+    padding: 2rem;
   }
 
   .welcome-card-text-wrap {
     text-align: center;
+    background-color: var(--color-darkbeige);
+    border-radius: 36px;
   }
 
   .welcome-card-gradient-veil {
-    background: rgb(255, 255, 255);
-    background: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0) 74%,
-      rgba(217, 165, 108, 1) 100%
-    );
+    background: none;
   }
 
-  .welcome-card-text-subheader {
+  .welcome-card-text-description {
     color: var(--color-lightbeige);
   }
 
