@@ -130,7 +130,6 @@ const createTabs = (teamMembers, introContent) => {
                 updateTeamContent(person);
             }
         });
-
         tabsContainer.appendChild(tab);
     });
 };
@@ -140,14 +139,12 @@ const setActiveTab = (activeTab) => {
     if (activeTab)activeTab.classList.add("active");
 };
 
-
 const updateTeamContent = (content) => {
     const teamSection = document.querySelector(".team");
-
     while (teamSection.firstChild) {
         teamSection.removeChild(teamSection.firstChild);
     }
-    
+
     const teamImage = document.createElement("div");
     teamImage.classList.add("img-info__content", "image");
         const imageObject = document.createElement("img");
@@ -155,28 +152,20 @@ const updateTeamContent = (content) => {
         imageObject.alt = content.imageName || "Team image";
         imageObject.classList.add("image__child");
 
-        teamImage.appendChild(imageObject)
-    
-
     const teamInfo = document.createElement("div");
     teamInfo.classList.add("img-info__content", "info");
         const interestWrapper = document.createElement("div");
         interestWrapper.classList.add("info__child");
-
             const interest = document.createElement("p");
             interest.classList.add("info__sort");
             interest.textContent = "Interests";
-
+            
             const interestText = document.createElement("p");
             interestText.classList.add("info__input");
-            interestText.textContent = content.interest;
-
-            interestWrapper.appendChild(interest);
-            interestWrapper.appendChild(interestText);
+            interestText.textContent = content.interest; 
 
         const ageWrapper = document.createElement("div");
         ageWrapper.classList.add("info__child");
-
             const ageText = document.createElement("p");
             ageText.classList.add("info__sort");
             ageText.textContent = "Age";
@@ -185,12 +174,8 @@ const updateTeamContent = (content) => {
             age.classList.add("info__input");
             age.textContent = content.age;
 
-            ageWrapper.appendChild(ageText);
-            ageWrapper.appendChild(age);
-
         const originWrapper = document.createElement("div");
         originWrapper.classList.add("info__child");
-
             const originText = document.createElement("p");
             originText.classList.add("info__sort");
             originText.textContent = "Origin";
@@ -199,12 +184,8 @@ const updateTeamContent = (content) => {
             origin.classList.add("info__input");
             origin.textContent = content.origin;
 
-            originWrapper.appendChild(originText);
-            originWrapper.appendChild(origin);
-
         const foodWrapper = document.createElement("div");
         foodWrapper.classList.add("info__child");
-    
             const foodText = document.createElement("p");
             foodText.classList.add("info__sort");
             foodText.textContent = "Diet";
@@ -213,17 +194,8 @@ const updateTeamContent = (content) => {
             food.classList.add("info__input");
             food.textContent = content.food;
 
-            foodWrapper.appendChild(foodText);
-            foodWrapper.appendChild(food);
-    
-        teamInfo.appendChild(ageWrapper);
-        teamInfo.appendChild(interestWrapper);
-        teamInfo.appendChild(originWrapper);
-        teamInfo.appendChild(foodWrapper);
-
     const teamTitle = document.createElement("div");
     teamTitle.classList.add("text__content", "title");
-
         const titleName = document.createElement("h3");
         titleName.classList.add("title__name");
         titleName.textContent = content.name;
@@ -235,18 +207,29 @@ const updateTeamContent = (content) => {
             species.classList.add("species__text");
             species.textContent = content.species;
         
-        teamTitle.appendChild(titleName);
-        teamTitle.appendChild(speciesWrapper);
-            speciesWrapper.appendChild(species);
-
-
     const teamParagraph = document.createElement("p");
     teamParagraph.classList.add("text__content", "paragraph");
     teamParagraph.textContent = content.aboutText; 
 
     teamSection.appendChild(teamImage);
+        teamImage.appendChild(imageObject)
     teamSection.appendChild(teamTitle);
+        teamTitle.appendChild(titleName);
+        teamTitle.appendChild(speciesWrapper);
+            speciesWrapper.appendChild(species);
     teamSection.appendChild(teamInfo);
+        teamInfo.appendChild(ageWrapper);
+            ageWrapper.appendChild(ageText);
+            ageWrapper.appendChild(age);
+        teamInfo.appendChild(interestWrapper);
+            interestWrapper.appendChild(interest);
+            interestWrapper.appendChild(interestText);
+        teamInfo.appendChild(originWrapper);
+            originWrapper.appendChild(originText);
+            originWrapper.appendChild(origin);
+        teamInfo.appendChild(foodWrapper);
+            foodWrapper.appendChild(foodText);
+            foodWrapper.appendChild(food);
     teamSection.appendChild(teamParagraph);
 };
 
