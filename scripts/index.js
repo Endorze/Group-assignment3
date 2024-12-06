@@ -210,18 +210,14 @@ createAnimalCard(animals);
 const setActive = () => {
   const allSidebarItems = document.querySelectorAll(".menu-list");
   const allAnimalCards = document.querySelectorAll(".animal-card");
-
+  
   allSidebarItems.forEach((item, index) => {
     item.addEventListener("click", () => {
-      const isActive = allAnimalCards[index].classList.contains("active");
-
       allSidebarItems.forEach((menu) => menu.classList.remove("clicked"));
       allAnimalCards.forEach((card) => card.classList.remove("active"));
 
-      if (!isActive) {
-        allAnimalCards[index].classList.add("active");
-        item.classList.add("clicked");
-      }
+      item.classList.add("clicked");
+      allAnimalCards[index].classList.add("active");
     });
   });
 };
