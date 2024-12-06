@@ -220,6 +220,7 @@
 
 .animal-group {
   text-decoration: none;
+  color: black;
   font-size: 1.5rem;
   text-transform: uppercase;
   font-weight: 600;
@@ -233,6 +234,10 @@
 .animal-group:hover {
   transform: scale(1.1);
   opacity: 0.9;
+}
+
+.animal-group a {
+  text-decoration: none;
 }
 
 .animal-food {
