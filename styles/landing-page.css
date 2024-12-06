@@ -10,7 +10,7 @@
 }
 
 /* Sidebar customized */
-.sidebar-menu{
+.sidebar-menu {
   min-height: 90vh;
 }
 
@@ -26,7 +26,7 @@
   background-color: unset;
 }
 
-.menu-list{
+.menu-list {
   width: 100%;
   height: 100%;
   text-align: center;
@@ -42,7 +42,7 @@
   background-size: 20%;
 }
 
-.menu-list.clicked {  
+.menu-list.clicked {
   background-image: url(../assets/homepage/icon-paws.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -148,10 +148,12 @@
   overflow: visible;
   position: relative;
   min-height: 100vh;
+  width: 100%;
 }
 
 .animal-card {
   height: 100%;
+  width: 100%;
   position: absolute;
   overflow: hidden;
   display: none;
@@ -161,28 +163,6 @@
 .animal-card.active {
   display: block;
   z-index: 15;
-}
-
-.animal-card-inner {
-  height: 100%;
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  font-family: "Roboto", sans-serif;
-}
-
-.animal-card-inner-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.animal-card-inner-right {
-  padding: 3rem;
-  border-radius: 24px;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  background-color: var(--color-lightbeige);
-  font-size: 1.5rem;
 }
 
 .animal-name {
@@ -244,7 +224,8 @@
 
 /* Responsivness */
 @media screen and (max-width: 768px) {
-  .menu-list:hover, .menu-list.clicked {
+  .menu-list:hover,
+  .menu-list.clicked {
     background-size: 30%;
   }
 
@@ -267,21 +248,8 @@
     color: var(--color-lightbeige);
   }
 
-  .animal-card-inner {
-    display: block;
-  }
-
   .animal-image {
     width: 6rem;
-  }
-
-  .animal-card-inner-right {
-    padding: 1.5rem;
-  }
-
-  .animal-card-inner-right,
-  .animal-description {
-    font-size: 0.8rem;
   }
 
   .animal-name {
