@@ -9,10 +9,11 @@
   --color-text: white;
 }
 
-.header,
-.phone-header {
-  z-index: 3;
+.header {
+  z-index: 2;
 }
+
+
 
 /* Sidebar customized */
 .sidebar-container {
