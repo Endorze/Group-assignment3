@@ -1,0 +1,59 @@
+const mammalsData = {
+    echidna: {
+        name: "Echidna",
+        lifespan: 50,
+        group: "mammals",
+        food: "insects such as ants and termites, beetle larvae and worms",
+        description: "Echidnas, also called spiny anteaters, are walking contradictions. They are mammals, but they lay eggs. They are often classified as long- or sort-beaked, but don't have beaks at all, in the traditional sense; they have fleshy noses that can be either on the long side or rather short. They don't really look like true anteaters (Myrmecophaga tridactyla), either, and they are not closely related to them. They are spiny, though; their bodies are covered with hollow, barbless quills. Echidnas are monotremes, egg-laying mammals. The only other living monotreme is the platypus.",
+        length: 76,
+        weight: 10,
+        found: "Throughout Australia",
+        images: {
+            small: "./assets/mammals-images/echidna-1.jpg",
+            large: "assets/images/echidna-large.jpg"
+        }
+    },
+    tasmanianDevil: {
+        name: "Tasmanian Devil",
+        lifespan: 5,
+        group: "mammals",
+        food: "A predator, then eat meat from other animals such as wallabies and wombats",
+        description: "The Tasmanian devil (Sarcophilus harrisii) (palawa kani: purinina) is a carnivorous marsupial of the family Dasyuridae. Until recently, it was only found on the island state of Tasmania, but it has been reintroduced to New South Wales in mainland Australia, with a small breeding population. The size of a small dog, the Tasmanian devil became the largest carnivorous marsupial in the world, following the extinction of the thylacine in 1936. It is related to quolls, and distantly related to the thylacine. It is characterised by its stocky and muscular build, black fur, pungent odour, extremely loud and disturbing screech, keen sense of smell, and ferocity when feeding. The Tasmanian devil's large head and neck allow it to generate among the strongest bites per unit body mass of any extant predatory land mammal. It hunts prey and scavenges on carrion.",
+        length: 70,
+        weight: 10,
+        found: "Tasmania",
+        images: {
+            small: "assets/images/tasmanian-devil-small.jpg",
+            large: "assets/images/tasmanian-devil-large.jpg"
+        }
+    },
+    quokka: {
+        name: "Quokka",
+        lifespan: 10,
+        group: "mammals",
+        food: "Plant eaters, they munch on shrubs and grasses",
+        description: "The Quokka, Setonix brachyurus, was described by early Dutch explorer, Willem de Vlamingh, 'as a kind of rat as big as a common cat'. His first sighting of the Quokka was on an island off the mouth of the Swan River. He named the island Rottenest ('rat nest') in honour of this sighting. The island is now known as Rottnest Island. Essentially the Quokka looks very much like other wallabies. It has short, very coarse and thick grey-brown fur over most of the body with lighter parts underneath. Its facial features consist of a naked nose on a short, broad face with rounded furry ears. The tail is relatively short and mostly devoid of hair. In contrast, the hair on the feet extends to cover its claws.",
+        length: 50,
+        weight: 3,
+        found: "Only found on Rottnest Island and a few places on mainland Western Australia",
+        images: {
+            small: "assets/images/quokka-small.jpg",
+            large: "assets/images/quokka-large.jpg"
+        }
+    },
+    koala: { 
+        name: "Koala", 
+        lifespan: 12, 
+        group: "mammals", 
+        food: "Eucalyptus leaves",
+        description: "The koala or, inaccurately, koala bear (Phascolarctos cinereus) is an arboreal herbivorous marsupial native to Australia. It is the only extant representative of the family Phascolarctidae and its closest living relatives are the wombats. The koala is found in coastal areas of the mainland's eastern and southern regions, inhabiting Queensland, New South Wales, Victoria, and South Australia. It is easily recognisable by its stout, tailless body and large head with round, fluffy ears and large, spoon-shaped nose. The koala has a body length of 60–85 cm (24–33 in) and weighs 4–15 kg (9–33 lb). Fur colour ranges from silver grey to chocolate brown. Koalas from the northern populations are typically smaller and lighter in colour than their counterparts further south. These populations possibly are separate subspecies, but this is disputed.",
+        length: 100,
+        weight: 15,
+        found: "New South Wales, Queensland, Victoria, South Australia, and Tasmania",
+        images: {
+            small: "assets/images/koala-small.jpg",
+            large: "assets/images/koala-large.jpg"
+        }
+    },
+
+};
