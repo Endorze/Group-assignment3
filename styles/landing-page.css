@@ -9,11 +9,10 @@
   --color-text: white;
 }
 
-.header {
+/* Header z index */
+.header, .phone-header {
   z-index: 2;
 }
-
-
 
 /* Sidebar customized */
 .sidebar-container {
@@ -31,9 +30,30 @@
   align-items: center;
 }
 
+/* when hovering, no bg color */
 .sidebar-menu ul li a:hover,
 .sidebar-menu ul li a.selected {
   background-color: unset;
+}
+
+/* if approve, implement on global.css */
+.sidebar-toggle-label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: var(--color-darkgreen);
+  color: var(--color-text);
+  width: 30px; 
+  height: 100px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  z-index: 1100;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .menu-list {
@@ -356,5 +376,15 @@
   .animal-food-wrapper,
   .animal-description {
     font-size: 1.5rem;
+  }
+}
+
+/* Delete later */
+@media (min-width: 1024px) {
+  .sidebar {
+    left: 0;
+  }
+  .sidebar-toggle-label {
+    display: none;
   }
 }
