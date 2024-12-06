@@ -175,7 +175,7 @@ const createAnimalCard = (animals) => {
     animalDescription.classList.add("animal-description");
     const animalFoodWrapper = document.createElement("div");
     animalFoodWrapper.classList.add("animal-food-wrapper");
-    const animalGroup = document.createElement("p");
+    const animalGroup = document.createElement("div");
     animalGroup.classList.add("animal-group");
 
     animalImage.src = animal.image;
@@ -191,6 +191,11 @@ const createAnimalCard = (animals) => {
       foodPill.textContent = foodItem;
       animalFoodWrapper.appendChild(foodPill);
     })
+
+
+    animalGroup.addEventListener("click", () => {
+      alert(`Group: ${animal.group}`);
+    });
 
     animalCardInner.appendChild(animalGroup);
     animalCardInner.appendChild(animalName);
