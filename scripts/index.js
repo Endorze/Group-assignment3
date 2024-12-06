@@ -167,6 +167,8 @@ const createAnimalCard = (animals) => {
 
     const animalDescriptionContainer = document.createElement("div");
     animalDescriptionContainer.classList.add("animal-description-container");
+    const animalImageWrapper = document.createElement("div");
+    animalImageWrapper.classList.add("animal-image-wrapper");
     const animalImage = document.createElement("img");
     animalImage.classList.add("animal-image");
     const animalName = document.createElement("p");
@@ -186,10 +188,11 @@ const createAnimalCard = (animals) => {
     animalGroup.textContent = animal.group;
 
     animalDescriptionContainer.appendChild(animalDescription);
+    animalImageWrapper.appendChild(animalImage);
 
-    animalCardInner.appendChild(animalImage);
     animalCardInner.appendChild(animalGroup);
     animalCardInner.appendChild(animalName);
+    animalCardInner.appendChild(animalImageWrapper);
     animalCardInner.appendChild(animalFood);
     animalCardInner.appendChild(animalDescriptionContainer);
 
