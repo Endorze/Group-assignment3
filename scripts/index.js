@@ -157,26 +157,18 @@ animals.forEach((animal) => {
     animalCard.classList.add("group-bird");
   }
 
-  const animalCardInner = document.createElement("div");
-  animalCardInner.classList.add("animal-card-inner");
-
-  const animalCardInnerLeft = document.createElement("div");
-  animalCardInnerLeft.classList.add("animal-card-inner-left");
-  const animalCardInnerRight = document.createElement("div");
-  animalCardInnerRight.classList.add("animal-card-inner-right");
-
   const animalDescriptionContainer = document.createElement("div");
   animalDescriptionContainer.classList.add("animal-description-container");
 
   const animalImage = document.createElement("img");
   animalImage.classList.add("animal-image");
-  const animalName = document.createElement("div");
+  const animalName = document.createElement("p");
   animalName.classList.add("animal-name");
-  const animalDescription = document.createElement("div");
+  const animalDescription = document.createElement("p");
   animalDescription.classList.add("animal-description");
-  const animalFood = document.createElement("div");
+  const animalFood = document.createElement("p");
   animalFood.classList.add("animal-food");
-  const animalGroup = document.createElement("div");
+  const animalGroup = document.createElement("p");
   animalGroup.classList.add("animal-group");
 
   animalImage.src = animal.image;
@@ -186,18 +178,13 @@ animals.forEach((animal) => {
   animalFood.textContent = `Food: ${animal.food}`;
   animalGroup.textContent = animal.group;
 
-  animalCardInnerLeft.appendChild(animalImage);
-  animalCardInnerLeft.appendChild(animalGroup);
-
-  animalCardInnerRight.appendChild(animalName);
-  animalCardInnerRight.appendChild(animalFood);
-
-  animalCardInnerRight.appendChild(animalDescriptionContainer);
   animalDescriptionContainer.appendChild(animalDescription);
 
-  animalCardInner.appendChild(animalCardInnerLeft);
-  animalCardInner.appendChild(animalCardInnerRight);
-  animalCard.appendChild(animalCardInner);
+  animalCard.appendChild(animalImage);
+  animalCard.appendChild(animalGroup);
+  animalCard.appendChild(animalName);
+  animalCard.appendChild(animalFood);
+  animalCard.appendChild(animalDescriptionContainer);
 
   animalCardContainer.appendChild(animalCard);
 
@@ -214,10 +201,10 @@ const setActive = () => {
 
   allSidebarItems.forEach((item, index) => {
     item.addEventListener("click", () => {
-      const isActive = allAnimalCards[index].classList.contains('active');
+      const isActive = allAnimalCards[index].classList.contains("active");
 
-      allSidebarItems.forEach(menu => menu.classList.remove('clicked'));
-      allAnimalCards.forEach(card => card.classList.remove('active'));
+      allSidebarItems.forEach((menu) => menu.classList.remove("clicked"));
+      allAnimalCards.forEach((card) => card.classList.remove("active"));
 
       if (!isActive) {
         allAnimalCards[index].classList.add("active");
