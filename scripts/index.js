@@ -151,11 +151,11 @@ const createAnimalCard = (animals) => {
       ".animal-card-container"
     );
 
-    const animalCardWrapper = document.createElement("div");
-    animalCardWrapper.classList.add("animal-card-wrapper")
-
     const animalCard = document.createElement("div");
     animalCard.classList.add("animal-card");
+
+    const animalCardInner = document.createElement("div");
+    animalCardInner.classList.add("animal-card-inner")
 
     if (animal.group === "mammal") {
       animalCard.classList.add("group-mammal");
@@ -187,14 +187,14 @@ const createAnimalCard = (animals) => {
 
     animalDescriptionContainer.appendChild(animalDescription);
 
-    animalCard.appendChild(animalImage);
-    animalCard.appendChild(animalGroup);
-    animalCard.appendChild(animalName);
-    animalCard.appendChild(animalFood);
-    animalCard.appendChild(animalDescriptionContainer);
+    animalCardInner.appendChild(animalImage);
+    animalCardInner.appendChild(animalGroup);
+    animalCardInner.appendChild(animalName);
+    animalCardInner.appendChild(animalFood);
+    animalCardInner.appendChild(animalDescriptionContainer);
 
-    animalCardWrapper.appendChild(animalCard);
-    animalCardContainer.appendChild(animalCardWrapper);
+    animalCard.appendChild(animalCardInner);
+    animalCardContainer.appendChild(animalCard);
 
     // Truncated text: aniamal description
     const fullDescription = animal.description;

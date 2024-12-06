@@ -165,6 +165,10 @@
   z-index: 15;
 }
 
+.animal-card-inner {
+  background-color: white;
+}
+
 .animal-name {
   text-transform: uppercase;
   font-weight: 800;
