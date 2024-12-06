@@ -196,7 +196,7 @@ const updateTeamContent = (content) => {
 
     const teamTitle = document.createElement("div");
     teamTitle.classList.add("text__content", "title");
-        const titleName = document.createElement("h3");
+        const titleName = document.createElement("h1");
         titleName.classList.add("title__name");
         titleName.textContent = content.name;
 
