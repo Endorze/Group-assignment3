@@ -55,7 +55,7 @@
   height: 100dvh;
   width: 100%;
   position: relative;
-  z-index: 1;
+  z-index: 0;
   transition: all 0.5s ease-in-out;
 }
 
@@ -162,7 +162,7 @@
 
 .animal-card.active {
   display: block;
-  z-index: 15;
+  z-index: 1;
 }
 
 .animal-card-inner {
@@ -182,8 +182,27 @@
   text-align: center;
 }
 
+.animal-group-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .animal-group {
-  text-align: end;
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  border-radius: 36px;
+  border: dashed 3px var(--color-midbeige);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.animal-group:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
 }
 
 .animal-food {
@@ -225,22 +244,27 @@
 }
 
 .group-mammal,
-.group-mammal .food-pill {
+.group-mammal .food-pill,
+.group-mammal .animal-group {
   background-color: #766621;
 }
 
 .group-mammal .food-pill,
-.group-bird .food-pill {
+.group-bird .food-pill,
+.group-mammal .animal-group,
+.group-bird .animal-group {
   color: white;
 }
 
 .group-bird,
-.group-bird .food-pill {
+.group-bird .food-pill,
+.group-bird .animal-group {
   background-color: #7387a0;
 }
 
 .group-reptile,
-.group-reptile .food-pill {
+.group-reptile .food-pill,
+.group-reptile .animal-group {
   background-color: #d9a56c;
 }
 
@@ -298,6 +322,10 @@
   .animal-food-wrapper,
   .animal-description {
     font-size: 1.2rem;
+  }
+
+  .animal-group-wrapper {
+    justify-content: center;
   }
 }
 

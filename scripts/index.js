@@ -175,7 +175,9 @@ const createAnimalCard = (animals) => {
     animalDescription.classList.add("animal-description");
     const animalFoodWrapper = document.createElement("div");
     animalFoodWrapper.classList.add("animal-food-wrapper");
-    const animalGroup = document.createElement("div");
+    const animalGroupWrapper = document.createElement("div");
+    animalGroupWrapper.classList.add("animal-group-wrapper");
+    const animalGroup = document.createElement("a");
     animalGroup.classList.add("animal-group");
 
     animalImage.src = animal.image;
@@ -192,12 +194,21 @@ const createAnimalCard = (animals) => {
       animalFoodWrapper.appendChild(foodPill);
     })
 
-
     animalGroup.addEventListener("click", () => {
-      alert(`Group: ${animal.group}`);
+      if (animal.group === "mammal") {
+        animalGroup.href = "/mammals.html";
+        animalGroup.target = "_blank";
+      } else if (animal.group === "reptile") {
+        animalGroup.href = "/reptiles.html";
+        animalGroup.target = "_blank";
+      } else {
+        animalGroup.href = "/birds.html";
+        animalGroup.target = "_blank";
+      }
     });
 
-    animalCardInner.appendChild(animalGroup);
+    animalGroupWrapper.appendChild(animalGroup);
+    animalCardInner.appendChild(animalGroupWrapper);
     animalCardInner.appendChild(animalName);
     animalCardInner.appendChild(animalImageWrapper);
     animalImageWrapper.appendChild(animalImage);
