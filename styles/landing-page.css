@@ -276,7 +276,7 @@
 .group-mammal,
 .group-mammal .food-pill,
 .group-mammal .animal-group {
-  background-color: #766621;
+  background-color: var(--color-brown);
 }
 
 .group-mammal .food-pill,
