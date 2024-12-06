@@ -167,8 +167,6 @@ animals.forEach((animal) => {
 
   const animalDescriptionContainer = document.createElement("div");
   animalDescriptionContainer.classList.add("animal-description-container");
-  const readMoreButton = document.createElement("div");
-  readMoreButton.classList.add("button-readmore");
 
   const animalImage = document.createElement("img");
   animalImage.classList.add("animal-image");
@@ -176,43 +174,26 @@ animals.forEach((animal) => {
   animalName.classList.add("animal-name");
   const animalDescription = document.createElement("div");
   animalDescription.classList.add("animal-description");
-  const animalLength = document.createElement("div");
-  animalLength.classList.add("animal-length");
-  const animalWeight = document.createElement("div");
-  animalWeight.classList.add("animal-weight");
-  const animalFound = document.createElement("div");
-  animalFound.classList.add("animal-found");
   const animalFood = document.createElement("div");
   animalFood.classList.add("animal-food");
   const animalGroup = document.createElement("div");
   animalGroup.classList.add("animal-group");
-  const animalLifeSpan = document.createElement("div");
-  animalLifeSpan.classList.add("animal-lifespan");
 
   animalImage.src = animal.image;
   animalImage.alt = `${animal.name}`;
   animalName.textContent = animal.name;
   animalDescription.textContent = animal.description;
-  animalLifeSpan.textContent = `Lifespan: ${animal.lifespan}`;
   animalFood.textContent = `Food: ${animal.food}`;
   animalGroup.textContent = animal.group;
-  animalLength.textContent = `Length: ${animal.length}`;
-  animalWeight.textContent = `Weight: ${animal.weight}`;
-  animalFound.textContent = `Found in: ${animal.found}`;
 
   animalCardInnerLeft.appendChild(animalImage);
   animalCardInnerLeft.appendChild(animalGroup);
 
   animalCardInnerRight.appendChild(animalName);
-  animalCardInnerRight.appendChild(animalLength);
-  animalCardInnerRight.appendChild(animalWeight);
-  animalCardInnerRight.appendChild(animalLifeSpan);
   animalCardInnerRight.appendChild(animalFood);
-  animalCardInnerRight.appendChild(animalFound);
 
   animalCardInnerRight.appendChild(animalDescriptionContainer);
   animalDescriptionContainer.appendChild(animalDescription);
-  animalDescriptionContainer.appendChild(readMoreButton);
 
   animalCardInner.appendChild(animalCardInnerLeft);
   animalCardInner.appendChild(animalCardInnerRight);
