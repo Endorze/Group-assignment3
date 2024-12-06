@@ -153,6 +153,7 @@
 
 .animal-card {
   height: 100%;
+  width: 100%;
   position: absolute;
   overflow: hidden;
   display: none;
@@ -165,7 +166,8 @@
 }
 
 .animal-card-inner {
-  height: 100%;
+  height: 90%;
+  width: 100%;
   border-radius: 24px;
   background-color: white;
   padding: 4rem;
@@ -174,10 +176,18 @@
 .animal-name {
   text-transform: uppercase;
   font-weight: 800;
-  font-size: 3rem;
+  font-size: xx-large;
   font-family: "Roboto", sans-serif;
   color: var(--color-darkbeige);
   text-align: center;
+}
+
+.animal-group {
+  text-align: end;
+}
+
+.animal-food {
+  font-size: 2rem;
 }
 
 .animal-image-wrapper {
@@ -197,8 +207,8 @@
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
-.animal-group {
-  text-align: end;
+.animal-description{
+  font-size: xx-large;
 }
 
 .group-mammal {
@@ -251,12 +261,38 @@
     color: var(--color-lightbeige);
   }
 
-  .animal-length,
-  .animal-weight,
-  .animal-food,
-  .animal-lifespan,
-  .animal-found,
-  .animal-description {
-    line-height: 1.5rem;
+  .animal-card-inner {
+    height: auto;
   }
+
+  .animal-card{
+    padding: 2rem;
+  }
+
+  .animal-card-inner{
+    padding: 2rem;
+  }
+
+  .animal-image {
+    width: 50vw;
+  }
+
+  .animal-food, .animal-description{
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .animal-card-inner {
+    height: auto;
+  }
+
+  .animal-image {
+    width: 40vw;
+  }
+
+  .animal-food, .animal-description{
+    font-size: 2rem;
+  }
+
 }

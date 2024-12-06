@@ -155,7 +155,7 @@ const createAnimalCard = (animals) => {
     animalCard.classList.add("animal-card");
 
     const animalCardInner = document.createElement("div");
-    animalCardInner.classList.add("animal-card-inner")
+    animalCardInner.classList.add("animal-card-inner");
 
     if (animal.group === "mammal") {
       animalCard.classList.add("group-mammal");
@@ -165,8 +165,6 @@ const createAnimalCard = (animals) => {
       animalCard.classList.add("group-bird");
     }
 
-    const animalDescriptionContainer = document.createElement("div");
-    animalDescriptionContainer.classList.add("animal-description-container");
     const animalImageWrapper = document.createElement("div");
     animalImageWrapper.classList.add("animal-image-wrapper");
     const animalImage = document.createElement("img");
@@ -175,34 +173,34 @@ const createAnimalCard = (animals) => {
     animalName.classList.add("animal-name");
     const animalDescription = document.createElement("p");
     animalDescription.classList.add("animal-description");
-    const animalFood = document.createElement("p");
-    animalFood.classList.add("animal-food");
+    const animalFoodWrapper = document.createElement("div");
+    animalFoodWrapper.classList.add("animal-food-wrapper");
     const animalGroup = document.createElement("p");
     animalGroup.classList.add("animal-group");
 
     animalImage.src = animal.image;
     animalImage.alt = `${animal.name}`;
     animalName.textContent = animal.name;
-    animalDescription.textContent = animal.description;
-    animalFood.textContent = `Food: ${animal.food}`;
+    animalDescription.textContent = animal.description.substring(0, 200) + "... ";
     animalGroup.textContent = animal.group;
+    animalFoodWrapper.textContent = `Food: `
 
-    animalDescriptionContainer.appendChild(animalDescription);
-    animalImageWrapper.appendChild(animalImage);
+    animal.food.forEach(foodItem => {
+      const foodPill = document.createElement("span");
+      foodPill.classList.add("food-pill"),
+      foodPill.textContent = foodItem;
+      animalFoodWrapper.appendChild(foodPill);
+    })
 
     animalCardInner.appendChild(animalGroup);
     animalCardInner.appendChild(animalName);
     animalCardInner.appendChild(animalImageWrapper);
-    animalCardInner.appendChild(animalFood);
-    animalCardInner.appendChild(animalDescriptionContainer);
+    animalImageWrapper.appendChild(animalImage);
+    animalCardInner.appendChild(animalFoodWrapper);
+    animalCardInner.appendChild(animalDescription);
 
     animalCard.appendChild(animalCardInner);
     animalCardContainer.appendChild(animalCard);
-
-    // Truncated text: aniamal description
-    const fullDescription = animal.description;
-    const truncatedDescription = fullDescription.substring(0, 200) + "...";
-    animalDescription.textContent = truncatedDescription;
   });
 };
 
