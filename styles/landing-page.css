@@ -9,7 +9,16 @@
   --color-text: white;
 }
 
+.header,
+.phone-header {
+  z-index: 3;
+}
+
 /* Sidebar customized */
+.sidebar-container {
+  z-index: 1;
+}
+
 .sidebar-menu {
   min-height: 85vh;
 }
@@ -162,7 +171,7 @@
 
 .animal-card.active {
   display: block;
-  z-index: 1;
+  z-index: 2;
 }
 
 .animal-card-inner {
