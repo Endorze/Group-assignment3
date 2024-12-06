@@ -131,7 +131,7 @@ const animals = [
 const createSidebarMenu = (animals) => {
   const sideBarMenuList = document.querySelector(".sidebar-menu-list");
 
-  animals.forEach((animal, index) => {
+  animals.forEach((animal) => {
     const menuList = document.createElement("li");
     menuList.classList.add("menu-list");
     const menuListLink = document.createElement("a");
@@ -145,54 +145,59 @@ const createSidebarMenu = (animals) => {
 createSidebarMenu(animals);
 
 // Animal card builder
-animals.forEach((animal) => {
-  const animalCardContainer = document.querySelector(".animal-card-container");
-  const animalCard = document.createElement("div");
-  animalCard.classList.add("animal-card");
-  if (animal.group === "mammal") {
-    animalCard.classList.add("group-mammal");
-  } else if (animal.group === "reptile") {
-    animalCard.classList.add("group-reptile");
-  } else {
-    animalCard.classList.add("group-bird");
-  }
+const createAnimalCard = (animals) => {
+  animals.forEach((animal) => {
+    const animalCardContainer = document.querySelector(
+      ".animal-card-container"
+    );
+    const animalCard = document.createElement("div");
+    animalCard.classList.add("animal-card");
+    if (animal.group === "mammal") {
+      animalCard.classList.add("group-mammal");
+    } else if (animal.group === "reptile") {
+      animalCard.classList.add("group-reptile");
+    } else {
+      animalCard.classList.add("group-bird");
+    }
 
-  const animalDescriptionContainer = document.createElement("div");
-  animalDescriptionContainer.classList.add("animal-description-container");
+    const animalDescriptionContainer = document.createElement("div");
+    animalDescriptionContainer.classList.add("animal-description-container");
+    const animalImage = document.createElement("img");
+    animalImage.classList.add("animal-image");
+    const animalName = document.createElement("p");
+    animalName.classList.add("animal-name");
+    const animalDescription = document.createElement("p");
+    animalDescription.classList.add("animal-description");
+    const animalFood = document.createElement("p");
+    animalFood.classList.add("animal-food");
+    const animalGroup = document.createElement("p");
+    animalGroup.classList.add("animal-group");
 
-  const animalImage = document.createElement("img");
-  animalImage.classList.add("animal-image");
-  const animalName = document.createElement("p");
-  animalName.classList.add("animal-name");
-  const animalDescription = document.createElement("p");
-  animalDescription.classList.add("animal-description");
-  const animalFood = document.createElement("p");
-  animalFood.classList.add("animal-food");
-  const animalGroup = document.createElement("p");
-  animalGroup.classList.add("animal-group");
+    animalImage.src = animal.image;
+    animalImage.alt = `${animal.name}`;
+    animalName.textContent = animal.name;
+    animalDescription.textContent = animal.description;
+    animalFood.textContent = `Food: ${animal.food}`;
+    animalGroup.textContent = animal.group;
 
-  animalImage.src = animal.image;
-  animalImage.alt = `${animal.name}`;
-  animalName.textContent = animal.name;
-  animalDescription.textContent = animal.description;
-  animalFood.textContent = `Food: ${animal.food}`;
-  animalGroup.textContent = animal.group;
+    animalDescriptionContainer.appendChild(animalDescription);
 
-  animalDescriptionContainer.appendChild(animalDescription);
+    animalCard.appendChild(animalImage);
+    animalCard.appendChild(animalGroup);
+    animalCard.appendChild(animalName);
+    animalCard.appendChild(animalFood);
+    animalCard.appendChild(animalDescriptionContainer);
 
-  animalCard.appendChild(animalImage);
-  animalCard.appendChild(animalGroup);
-  animalCard.appendChild(animalName);
-  animalCard.appendChild(animalFood);
-  animalCard.appendChild(animalDescriptionContainer);
+    animalCardContainer.appendChild(animalCard);
 
-  animalCardContainer.appendChild(animalCard);
+    // Truncated text: aniamal description
+    const fullDescription = animal.description;
+    const truncatedDescription = fullDescription.substring(0, 200) + "...";
+    animalDescription.textContent = truncatedDescription;
+  });
+};
 
-  // Truncated text: aniamal description
-  const fullDescription = animal.description;
-  const truncatedDescription = fullDescription.substring(0, 200) + "...";
-  animalDescription.textContent = truncatedDescription;
-});
+createAnimalCard(animals);
 
 // add and remove active
 const setActive = () => {
