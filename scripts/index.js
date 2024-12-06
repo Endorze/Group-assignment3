@@ -150,8 +150,13 @@ const createAnimalCard = (animals) => {
     const animalCardContainer = document.querySelector(
       ".animal-card-container"
     );
+
+    const animalCardWrapper = document.createElement("div");
+    animalCardWrapper.classList.add("animal-card-wrapper")
+
     const animalCard = document.createElement("div");
     animalCard.classList.add("animal-card");
+
     if (animal.group === "mammal") {
       animalCard.classList.add("group-mammal");
     } else if (animal.group === "reptile") {
@@ -188,7 +193,8 @@ const createAnimalCard = (animals) => {
     animalCard.appendChild(animalFood);
     animalCard.appendChild(animalDescriptionContainer);
 
-    animalCardContainer.appendChild(animalCard);
+    animalCardWrapper.appendChild(animalCard);
+    animalCardContainer.appendChild(animalCardWrapper);
 
     // Truncated text: aniamal description
     const fullDescription = animal.description;
