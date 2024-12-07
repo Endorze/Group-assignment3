@@ -2,6 +2,18 @@ html, body {
     background-color: #FAF4E8;
 }
 
+
+
+.sidebar {
+    width: 185px;
+    background-color: #DAA46D;
+    padding-top: 6rem;
+}
+
+footer {
+    background-color: #9D6034;
+  }
+
 .main-container {
     min-height: calc(100dvh - (383px + 96px));
 }
@@ -31,9 +43,10 @@ html, body {
 
 .team {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 4fr 3fr;
     grid-template-rows: auto auto auto 1fr;
-    margin: 1rem;
+    margin: 2rem 4rem 2rem 2rem;
+    column-gap: 2rem;
 }
 
 .img-info__content {
@@ -50,11 +63,31 @@ html, body {
     .info {
         display: flex;
         text-align: center;
+        justify-content: space-between;
     }
 
     .info__child {
         display: flex;
         flex-direction: column;
+        width: 15%;
+        align-items: center;
+        margin: 0;
+     }
+
+     .info__input, .info__sort {
+        margin: 0;
+     }
+
+     .info__sort {
+        font-weight: 500;
+        font-size: 1.25rem;
+     }
+
+     .info__input {
+        font-weight: 300;
+        width: min-content;
+        text-align: center;
+        font-size: 0.75rem;
      }
 
 .text__content {
@@ -63,18 +96,48 @@ html, body {
 
     .title {
         height: min-content;
+        gap: 1rem;
+    }
+    .title__name {
+        margin: 0;
+        font-size: 3rem;
+        font-weight: 600;
+    }
+    .title__species-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        align-items: start;
+    }
+    .species__text {
+        margin: 0;
+        font-style: italic;
+        font-weight: 100;
+        font-size: 0.75rem;
+        color: black;
+    }
+    .species__button {
+        background-color: #34959e57;
+        border-radius: 12px;
+        border: none;
+        color: #34959E;
+        height: min-content;
+        padding: 3px 18px;
+        font-weight: 600;
     }
 
     .paragraph {
        grid-row: 2 / span 3; 
+       margin-right: 4rem;
     }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
     .team {
         display: flex;
         flex-direction: column; 
         justify-items: center;
+        margin: 1rem;
     }
 
     .img-info__content, .text__content {
@@ -96,4 +159,16 @@ html, body {
         .paragraph {
             order: 3;
         }
+
+    .title__species-container {
+        margin: 1rem 0 1rem 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+        .title__name {
+            font-size: 2rem;
+        }
+
 }
