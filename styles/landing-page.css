@@ -37,7 +37,7 @@
 }
 
 /* if approve, implement on global.css */
-.sidebar-toggle-label {
+/* .sidebar-toggle-label {
   position: absolute;
   top: 50%;
   left: 0;
@@ -54,7 +54,7 @@
   z-index: 1100;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
+} */
 
 .menu-list {
   width: 100%;
@@ -381,15 +381,5 @@
   .animal-food-wrapper,
   .animal-description {
     font-size: 1.5rem;
-  }
-}
-
-/* Delete later */
-@media (min-width: 1024px) {
-  .sidebar {
-    left: 0;
-  }
-  .sidebar-toggle-label {
-    display: none;
   }
 }
