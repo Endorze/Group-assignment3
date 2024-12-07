@@ -5,7 +5,6 @@
     overflow: hidden;
     display: flex;
 
-    min-height: 100vh;
     background: url(/assets/images/reptiles/reptile-background.png) no-repeat;
     background-size: cover;
     background-position: center;
@@ -110,7 +109,7 @@
     }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 768px) {
     .container {
         margin: 0px 20px 0 20px;
     }
