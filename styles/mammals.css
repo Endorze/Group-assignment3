@@ -1,10 +1,8 @@
-/* 1. Basic Layout and Colors */
 html, body { 
     background-color: var(--color-lightbeige);
     color: var(--color-darkblue);
 }
 
-/* 2. Main Content Layout */
 .main-content {
     flex: 1;
     padding: 2rem;
@@ -19,7 +17,7 @@ html, body {
     margin-bottom: 2rem;
 }
 
-/* 3. Animal Summary Cards */
+/* Animal Summary Cards */
 .animal-summary {
     background-color: white;
     border-radius: 15px;
@@ -54,7 +52,7 @@ html, body {
     color: var(--color-darkblue);
 }
 
-/* 4. Read More Button */
+/* Read More Button */
 .read-more-btn {
     background-color: var(--color-brown);
     color: white;
@@ -71,7 +69,7 @@ html, body {
     background-color: var(--color-darkgreen);
 }
 
-/* 5. Modal Styling */
+/* Modal Styling */
 .modal {
     display: none;
     position: fixed;
@@ -95,7 +93,7 @@ html, body {
     position: relative;
 }
 
-/* 6. Sidebar Styling */
+/* Sidebar Styling */
 .sidebar {
     background-color: var(--color-darkblue);
     padding: 2rem;
@@ -115,7 +113,7 @@ html, body {
     color: white;
 }
 
-/* 7. Modal Content Styling */
+/* Modal Content Styling */
 .title-area {
     display: flex;
     align-items: center;
