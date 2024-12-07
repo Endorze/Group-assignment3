@@ -1,0 +1,164 @@
+.main-container {
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+
+    background: url(/assets/images/reptiles/reptile-background.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    height: 600px;
+    padding: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.container img {
+    width: 100%;
+    height: 400px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-text {
+    width: 80%;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.hero-btn {
+    padding: 1em 2.1em 1.1em;
+    border-radius: 4px;
+    margin: 8px;
+    border: none;
+    background-color: rgb(246, 199, 137);
+    color: #333;
+    font-weight: 800;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: 0em -0.2rem 0em rgb(246, 199, 137) inset;
+    transition: color 3s ease-in-out;
+}
+
+.hero-btn:hover {
+    background-color: transparent;
+    color: #333;
+    border: 3px solid rgb(246, 199, 137);
+    cursor: pointer;
+}
+
+/*Side-bar menu*/
+
+.sidebar {
+    background-color: var(--color-midbeige);
+}
+
+.animal-sidebar-tabs {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    gap: 10px;
+}
+
+.tab {
+    background-color: var(--color-darkgreen);
+    color: white;
+    border-radius: 10px;
+    font-weight: 700;
+    padding: 8px 16px;
+    border: 1px solid #333;
+    box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.content {
+    display: none; /*hides all the content*/
+    border-radius: 10px;
+    margin: 24px;
+    padding: 8px;
+    background-color: var(--color-main);
+    color: var(--color-tertiary);
+}
+
+.featured {
+    display: block;
+}
+
+.content-container {
+    flex-direction: column;
+    align-self: flex-end;
+}
+
+
+
+/*Responsive Hero section*/
+
+@media screen and (max-width: 1268px) {
+    .container {
+        margin-top: 10px;
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .container img {
+        width: 600px;
+    }
+
+    .hero-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .container img {
+        width: 500px;
+        height: auto;
+    }
+
+    .hero-text {
+        margin-bottom: 5rem;
+    }
+
+
+    .hero-text h1 {
+        font-size: 2em;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 0px 20px 0 20px;
+    }
+
+    .container img {
+        width: 300px;
+    
+    }
+}
