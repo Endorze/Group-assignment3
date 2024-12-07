@@ -9,8 +9,7 @@ const mammalsData = {
         weight: 10,
         found: "Throughout Australia",
         images: {
-            small: "./assets/mammals-images/echidna-1.jpg",
-            large: "assets/images/echidna-large.jpg"
+            small: "./assets/images/mammals/mammal-echidna.jpg"
         }
     },
     tasmanianDevil: {
@@ -23,8 +22,7 @@ const mammalsData = {
         weight: 10,
         found: "Tasmania",
         images: {
-            small: "assets/images/tasmanian-devil-small.jpg",
-            large: "assets/images/tasmanian-devil-large.jpg"
+            small: "./assets/images/mammals/mammal-tasmanian-devil.jpg"
         }
     },
     quokka: {
@@ -37,8 +35,7 @@ const mammalsData = {
         weight: 3,
         found: "Only found on Rottnest Island and a few places on mainland Western Australia",
         images: {
-            small: "assets/images/quokka-small.jpg",
-            large: "assets/images/quokka-large.jpg"
+            small: "./assets/images/mammals/mammal-quokka.jpg",
         }
     },
     koala: { 
@@ -57,3 +54,92 @@ const mammalsData = {
     },
 
 };
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const animalsList = document.getElementById('animalsList');
+    const animalSummaries = document.getElementById('animalSummaries');
+    const modal = document.getElementById('fullSummaryModal');
+    const modalContent = document.getElementById('fullSummaryContent');
+    const closeButton = document.querySelector('.close-button');
+
+    // Clear existing summaries before adding new ones
+    function clearSummaries() {
+        animalSummaries.innerHTML = '';
+    }
+
+    // Populate sidebar
+    for (const key in mammalsData) {
+        const li = document.createElement('li');
+        li.textContent = mammalsData[key].name;
+        li.addEventListener('click', () => {
+            clearSummaries();
+            showAnimalSummary(key);
+        });
+        animalsList.appendChild(li);
+    }
+
+    // Show all animal summaries initially
+    for (const key in mammalsData) {
+        showAnimalSummary(key);
+    }
+
+    function showAnimalSummary(animalKey) {
+        const animal = mammalsData[animalKey];
+        const summaryDiv = document.createElement('div');
+        summaryDiv.className = 'animal-summary';
+        
+        const shortDescription = animal.description.substring(0, 200) + '...';
+        
+        summaryDiv.innerHTML = `
+            <img src="${animal.images.small}" alt="${animal.name}" onerror="this.src='./assets/placeholder.jpg'">
+            <h2>${animal.name}</h2>
+            <p>${shortDescription}</p>
+            <p><strong>Diet:</strong> ${animal.food}</p>
+            <p><strong>Group:</strong> ${animal.group}</p>
+            <button class="read-more-btn">Read More</button>
+        `;
+        
+        // Add event listener to Read More button
+        summaryDiv.querySelector('.read-more-btn').addEventListener('click', () => {
+            showFullSummary(animalKey);
+        });
+        
+        animalSummaries.appendChild(summaryDiv);
+    }
+
+    function showFullSummary(animalKey) {
+        const animal = mammalsData[animalKey];
+        modalContent.innerHTML = `
+            <div class="title-area">
+                <img src="${animal.images.small}" alt="${animal.name}" onerror="this.src='./assets/placeholder.jpg'">
+                <h2>${animal.name}</h2>
+            </div>
+            <div class="description">
+                <img src="${animal.images.large}" alt="${animal.name}" onerror="this.src='./assets/placeholder.jpg'">
+                <p><strong>Length:</strong> ${animal.length}cm</p>
+                <p><strong>Weight:</strong> ${animal.weight}kg</p>
+                <p>${animal.description}</p>
+            </div>
+            <div class="details">
+                <p><strong>Diet:</strong> ${animal.food}</p>
+                <p><strong>Habitat:</strong> ${animal.found}</p>
+                <p><strong>Lifespan:</strong> ${animal.lifespan} years</p>
+            </div>
+        `;
+        modal.style.display = 'block';
+    }
+
+    // Close modal when clicking the close button
+    closeButton.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Close modal when clicking outside
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
