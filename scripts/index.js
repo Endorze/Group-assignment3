@@ -19,7 +19,7 @@ const animals = [
     length: "76cm",
     weight: "10kg",
     found: ["Throughout Australia"],
-    image: "../assets/images/mammals/mammal-echidna.jpg",
+    image: "../assets/homepage/images/mammals/mammal-echidna.jpg",
   },
   {
     name: "Tasmanian Devil",
@@ -31,7 +31,7 @@ const animals = [
     length: "70cm",
     weight: "10kg",
     found: "Tasmania",
-    image: "../assets/images/mammals/mammal-tasmanian-devil.jpeg",
+    image: "../assets/homepage/images/mammals/mammal-tasmanian-devil.jpeg",
   },
   {
     name: "Quokka",
@@ -43,7 +43,7 @@ const animals = [
     length: "50cm",
     weight: "3kg",
     found: ["Rottnest Island", "few places on mainland Western Australia"],
-    image: "../assets/images/mammals/mammal-quokka.jpg",
+    image: "../assets/homepage/images/mammals/mammal-quokka.jpg",
   },
   {
     name: "Frill-Necked Lizard",
@@ -55,7 +55,7 @@ const animals = [
     length: "90cm",
     weight: "1kg",
     found: ["Northern Australia"],
-    image: "../assets/images/reptiles/reptile-frill-necked-lizard.jpeg",
+    image: "../assets/homepage/images/reptiles/reptile-frill-necked-lizard.jpeg",
   },
   {
     name: "Hawksbill Turtle",
@@ -71,7 +71,7 @@ const animals = [
       "Northern Territory",
       "Western Australia",
     ],
-    image: "../assets/images/reptiles/reptile-hawks-bill-turtle.jpg",
+    image: "../assets/homepage/images/reptiles/reptile-hawks-bill-turtle.jpg",
   },
   {
     name: "Perentie",
@@ -83,7 +83,7 @@ const animals = [
     length: "2.5m",
     weight: "20kg",
     found: ["Deserts"],
-    image: "../assets/images/reptiles/reptile-perentie.png",
+    image: "../assets/homepage/images/reptiles/reptile-perentie.png",
   },
   {
     name: "Cassowary",
@@ -99,7 +99,7 @@ const animals = [
     length: "1.7m",
     weight: "44kg",
     found: ["Queensland"],
-    image: "../assets/images/birds/bird-cassowary.jpg",
+    image: "../assets/homepage/images/birds/bird-cassowary.jpg",
   },
   {
     name: "Kookaburra",
@@ -111,7 +111,7 @@ const animals = [
     length: "43cm",
     weight: "300g",
     found: ["Australia wide"],
-    image: "../assets/images/birds/bird-kookaburra.jpeg",
+    image: "../assets/homepage/images/birds/bird-kookaburra.jpeg",
   },
   {
     name: "Yellow Tailed Black Cockatoo",
@@ -123,7 +123,7 @@ const animals = [
     length: "65cm",
     weight: "900g",
     found: ["SE Australia"],
-    image: "../assets/images/birds/bird-yellow-tailed-black-cockatoo.jpeg",
+    image: "../assets/homepage/images/birds/bird-yellow-tailed-black-cockatoo.jpeg",
   },
 ];
 
