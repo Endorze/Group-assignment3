@@ -6,12 +6,13 @@
     <title>Document</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./styles/global.css">
-    <link rel="stylesheet" href="./styles/reptile.css">
+    <link rel="stylesheet" href="./styles/reptiles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <script src="./scripts/reptiles.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -32,7 +33,30 @@
             <a href="birds.html"><img src="assets/images/birds-html-images/birdicon.png"></a>
             <a href="aboutus.html"><img src="assets/images/birds-html-images/aboutus.png"></a>
         </div>
-        </header>
+    </header>
+    <main class="main-container">
+        <div class="sidebar-container">
+          <input type="checkbox" id="sidebarToggle" class="sidebar-checkbox" />
+          <label for="sidebarToggle" class="sidebar-toggle-label">
+            <i class="bx bx-menu"></i>
+          </label>
+          <div class="sidebar">
+            <nav class="sidebar-menu">
+              <ul>
+                <!--<li>
+                  <a href="index.html" class="selected"
+                    ><i class="bx bx-home"></i> Home</a
+                  >
+                </li>
+                <li><a href="reptiles.html">Reptiles</a></li>
+                <li><a href="mammals.html">Mammals</a></li>
+                <li><a href="birds.html">Birds</a></li>
+                <li><a href="aboutus.html">About Us</a></li>-->
+              </ul>
+            </nav>
+          </div>
+        </div>
+    </main>
     <footer>
         <div class="footer-container">
             <div class="logo-div">
@@ -58,6 +82,5 @@
             <p>Copyright &copy; 2024; Group 4</p>
         </div>
     </footer>
-    
 </body>
 </html>
