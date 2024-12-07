@@ -39,15 +39,6 @@ document.querySelector('.hb-read-more-text').textContent = 'The Hawksbill Sea Tu
 document.querySelector('.fnl-read-more-text').textContent = 'When this unique creature feels threatened, it rises on its hind legs, opens its yellow-coloured mouth, unfurls the colorful, pleated skin flap that encircles its head, and hisses. If an attacker is unintimidated by these antics, the lizard simply turns tail, mouth and frill open, and bolts, legs splaying left and right. It continues its deliberate run without stopping or looking back until it reaches the safety of a tree.'
 document.querySelector('.per-read-more-text').textContent = 'The perentie (Varanus giganteus) is the largest monitor lizard or goanna native to Australia. It is one of the largest living lizards on earth, after the Komodo dragon, Asian water monitor, crocodile monitor, and intersecting by size with Nile monitor.[3] Found west of the Great Dividing Range in the arid areas of Australia, it is rarely seen, because of its shyness and the remoteness of much of its range from human habitation. The species is considered to be a least-concern species according to the International Union for Conservation of Nature. Its status in many Aboriginal cultures is evident in the totemic relationships, and part of the Ngiṉṯaka dreaming, as well as bush tucker. It was a favoured food item among desert Aboriginal tribes, and the fat was used for medicinal and ceremonial purposes.'
 
-// const contentDiv = document.querySelector('.hawksbill-turtle')
-// contentDiv.classList.add('input-class');
-
-
-// const checkBoxInput = document.createElement('input')
-// checkBoxInput.setAttribute('id', 'ch')
-// checkBoxInput.setAttribute('type', 'checkbox')
-// contentDiv.appendChild(checkBoxInput); 
-
 
 function Reptile(name, lifespan, food, description, length, weight, found) {
     this.name = name;
