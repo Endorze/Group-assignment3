@@ -108,15 +108,19 @@
 
 /*Read more button*/
 
-#ch {
+#ch1, #ch2, #ch3 {
     display: none;
 }
 
-#ch:checked ~ .read-more-content {
+#ch1:checked ~ .read-more-content,
+#ch2:checked ~ .read-more-content,
+#ch3:checked ~ .read-more-content {
     display: block;
 }
 
-#ch:checked ~ label {
+#ch1:checked ~ label,
+#ch2:checked ~ label,
+#ch3:checked ~ label {
     display: none;
 }
 
