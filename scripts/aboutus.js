@@ -149,8 +149,6 @@ const setActiveTab = (activeTab) => {
     if (activeTab)activeTab.classList.add("active");
 };
 
-
-
 const updateTeamContent = (content) => {
     const teamSection = document.querySelector(".team");
     while (teamSection.firstChild) {
@@ -169,7 +167,6 @@ const updateTeamContent = (content) => {
         overlayImage.src = content.imageOverlay;
         overlayImage.alt = "image overlay";
         overlayImage.classList.add("image__child", "overlay-image");
-        teamImage.appendChild(overlayImage);
 
     const teamInfo = document.createElement("div");
     teamInfo.classList.add("img-info__content", "info");
@@ -181,9 +178,7 @@ const updateTeamContent = (content) => {
         
             const interest = document.createElement("p");
             interest.classList.add("info__sort");
-            interest.textContent = "Interests";
-            
-            
+            interest.textContent = "Interests";            
 
         const ageWrapper = document.createElement("div");
         ageWrapper.classList.add("info__child");
@@ -203,9 +198,7 @@ const updateTeamContent = (content) => {
             
             const originText = document.createElement("p");
             originText.classList.add("info__sort");
-            originText.textContent = "Origin";
-
-            
+            originText.textContent = "Origin";   
 
         const foodWrapper = document.createElement("div");
         foodWrapper.classList.add("info__child");
@@ -216,8 +209,6 @@ const updateTeamContent = (content) => {
             const foodText = document.createElement("p");
             foodText.classList.add("info__sort");
             foodText.textContent = "Diet";
-    
-            
 
     const teamTitle = document.createElement("div");
     teamTitle.classList.add("text__content", "title");
@@ -227,7 +218,6 @@ const updateTeamContent = (content) => {
 
         const speciesWrapper = document.createElement("div");
         speciesWrapper.classList.add("title__species-container");
-
             const species = document.createElement("h4");
             species.classList.add("species__text");
             species.textContent = content.species;
@@ -244,6 +234,7 @@ const updateTeamContent = (content) => {
 
     teamSection.appendChild(teamImage);
         teamImage.appendChild(imageObject)
+        teamImage.appendChild(overlayImage);
     teamSection.appendChild(teamTitle);
         teamTitle.appendChild(titleName);
         teamTitle.appendChild(speciesWrapper);
