@@ -341,8 +341,12 @@
     color: var(--color-lightbeige);
   }
 
+  .animal-name {
+    font-size: 1.5rem;
+  }
+
   .animal-card-inner {
-    height: auto;
+    min-height: 80%;
   }
 
   .animal-card,
@@ -356,7 +360,11 @@
 
   .animal-food-wrapper,
   .animal-description {
-    font-size: 1.2rem;
+    font-size: 1rem;
+  }
+
+  .animal-group{
+    font-size: 1rem;
   }
 
   .animal-group-wrapper {
@@ -366,7 +374,7 @@
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .animal-card-inner {
-    height: auto;
+    min-height: 80%;
   }
 
   .animal-card,
