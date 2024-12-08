@@ -233,8 +233,8 @@ const updateTeamContent = (content) => {
     teamParagraph.textContent = content.aboutText; 
 
     teamSection.appendChild(teamImage);
-        teamImage.appendChild(imageObject)
         teamImage.appendChild(overlayImage);
+        teamImage.appendChild(imageObject)
     teamSection.appendChild(teamTitle);
         teamTitle.appendChild(titleName);
         teamTitle.appendChild(speciesWrapper);

@@ -1,8 +1,13 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>Document</title>
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -45,6 +50,12 @@
         <h1>Mammals</h1>
         <div id="animalSummaries"></div>
       </main>
+    </div>
+    <div id="fullSummaryModal" class="modal">
+      <div class="modal-content">
+        <button class="close-button" aria-label="Close modal">&times;</button>
+        <div id="fullSummaryContent"></div>
+      </div>
     </div>
     <header class="header">
       <a href="index.html">
