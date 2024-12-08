@@ -109,6 +109,8 @@
 
 
 
+
+
 /*Read more button*/
 
 #ch1, #ch2, #ch3 {
@@ -196,3 +198,24 @@ label {
     
     }
 }
+
+/*Responsive animal content*/
+
+@media screen and (max-width: 768px) {
+
+
+    .frill-necked-lizard img,
+    .hawksbill-turtle img,
+    .perentie img {
+        width: 300px;
+        margin-left: 12px;
+    }
+    
+    h2 {
+        text-align: center;
+    }
+    
+    p {
+        text-align: center;
+    }
+} */
