@@ -25,6 +25,12 @@ const btnElement = document.createElement('button');
 btnElement.classList.add('hero-btn');
 heroDiv.appendChild(btnElement);
 
+/* Button with link */
+
+btnElement.addEventListener ('click', function() {
+    window.open('https://en.wikipedia.org/wiki/Spaghetti_code', '_blank');
+})
+
 
 
 
