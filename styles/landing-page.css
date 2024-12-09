@@ -137,6 +137,7 @@
 }
 
 .welcome-card-text-container {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -144,8 +145,6 @@
 }
 
 .welcome-card-text-wrap {
-  max-width: 40rem;
-  max-height: 50rem;
   line-height: 1.5rem;
   padding: 2rem;
 }
@@ -206,7 +205,7 @@
 .animal-name {
   text-transform: uppercase;
   font-weight: 800;
-  font-size: xx-large;
+  font-size: 2rem;
   font-family: "Roboto", sans-serif;
   color: var(--color-darkbeige);
   text-align: center;
@@ -253,7 +252,7 @@
 }
 
 .animal-image {
-  width: 15vw;
+  width: 12vw;
   aspect-ratio: 1;
   border-radius: 50%;
   background-position: center;
@@ -346,7 +345,7 @@
   }
 
   .animal-card-inner {
-    min-height: 80%;
+    height: max-content;
   }
 
   .animal-card,
@@ -360,7 +359,7 @@
 
   .animal-food-wrapper,
   .animal-description {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .animal-group{
