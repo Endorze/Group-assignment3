@@ -2,6 +2,22 @@ html, body {
     background-color: #FAF4E8;
 }
 
+.header-logotype {
+    left: 1vw;
+  }
+
+.sidebar {
+    background-color: #DAA46D;
+    padding-top: 6rem;
+    width: 15vw;
+    z-index: 8;
+
+}
+
+footer {
+    background-color: #9D6034;
+  }
+
 .main-container {
     min-height: calc(100dvh - (383px + 96px));
 }
@@ -12,28 +28,31 @@ html, body {
     gap: 32px;
 }
 
-    .tab,
-    .tab.active {
-        margin: 0;
-        font-size: 1rem;
-        text-align: center;
+    .tab {
         color: white;
-        font-size: 1rem;
-        text-decoration: none;
         display: block;
+        font-size: 1rem;
+        font-size: 1rem;
+        margin: 0;
+        padding: 12px;
+        text-align: center;
 }   
+    .tab.active {
+        font-size: 1.5rem;
+    }
 
     .tab:hover {
-        color: #34959E;
         cursor: pointer;
-        transition: color 0.3s ease, color 0.3s ease;
+        font-size: 1.5rem;
+        transition: font-size 0.4s ease, font-size 0.3s ease;
     }
 
 .team {
+    column-gap: 2rem;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto 1fr;
-    margin: 1rem;
+    margin: 2rem 4rem 2rem 2rem;
 }
 
 .img-info__content {
@@ -42,19 +61,60 @@ html, body {
 
     .image {
         grid-row: 1 / span 2;
+        margin: 0 auto;
+        max-width: 100%; 
+        overflow: hidden;
+        position: relative;
+        z-index: 0;
     }
-    .image__child {
+    .image__child, .overlay-image {
+        display: block;
+        height: auto;
         width: 100%;
+    }
+
+    .overlay-image {
+        animation-duration: 0.1s;
+        animation-iteration-count: infinite;
+        animation-name: overlay;
+        position: absolute;
+      }
+      
+    @keyframes overlay {
+        0% {opacity: 10%}
+        50% {opacity: 7%;}
+        100% {opacity: 11%;}
     }
 
     .info {
         display: flex;
+        justify-content: space-around;
         text-align: center;
     }
 
     .info__child {
+        align-items: center;
         display: flex;
         flex-direction: column;
+        margin: 0;
+        width: 1fr;
+     }
+
+     .info__input, .info__sort {
+        margin: 0;
+     }
+
+     .info__sort {
+        font-size: 0.75rem;
+        font-weight: 300;
+        text-align: center;
+        width: min-content;
+     }
+
+     .info__input {
+        color: #262223;
+        font-size: 1.25rem;
+        font-weight: 500;
      }
 
 .text__content {
@@ -63,18 +123,50 @@ html, body {
 
     .title {
         height: min-content;
+        gap: 1rem;
+    }
+    .title__name {
+        font-size: 3rem;
+        font-weight: 600;
+        margin: 0;
+    }
+    .title__species-container {
+        align-items: start;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin: 0.5rem 0 0.5rem 0;
+    }
+    .species__text {
+        color: #978F82;
+        font-size: 0.75rem;
+        font-style: italic;
+        font-weight: 100;
+        margin: 0;
+    }
+    .species__button {
+        background-color: #34959e57;
+        border-radius: 12px;
+        border: none;
+        color: #34959E;
+        font-weight: 600;
+        height: min-content;
+        padding: 3px 18px;
     }
 
     .paragraph {
-       grid-row: 2 / span 3; 
+        grid-row: 2 / span 3; 
+        margin-right: 4rem;
     }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
     .team {
         display: flex;
         flex-direction: column; 
+        gap: 1rem;
         justify-items: center;
+        margin: 1rem;
     }
 
     .img-info__content, .text__content {
@@ -95,5 +187,27 @@ html, body {
 
         .paragraph {
             order: 3;
+            padding: 2rem;
         }
+
+    .title__species-container {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin: 1rem 0 0 0;
+    }
+        .title__name {
+            font-size: 2rem;
+        }
+
+        .paragraph {
+            margin: 0;
+        }
+
+}
+@media (max-width: 1024px) {
+.sidebar {
+    width: 250px;
+}
 }
