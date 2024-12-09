@@ -1,8 +1,9 @@
-function IntroContent(name, aboutText, tab, image, imageName, age, interest, origin, species, group, food) {
+function IntroContent(name, aboutText, tab, image, imageOverlay, imageName, age, interest, origin, species, group, food) {
     this.name = name;
     this.aboutText = aboutText;
     this.tab = tab;
     this.image = image;
+    this.imageOverlay = imageOverlay;
     this.imageName = imageName;
     this.age = age;
     this.interest = interest;
@@ -15,24 +16,26 @@ function IntroContent(name, aboutText, tab, image, imageName, age, interest, ori
 const introPage = [
     new IntroContent(
         "Team Capybara",
-        "On this page you can read more about each and one of the team members of team Capybara! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur? [33] At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+        "This is team Capybara! Together, us five frontend developer students built this website about animals. The focus of this assignment was to work on agile team work. On this page you can read more about each and one of the team members of team Capybara!",
         "The Team",
-        "assets/images/mammals/mammal-wombat.jpeg",
+        "assets/images/aboutus/aboutus-group-photo.png",
+        "assets/images/aboutus/aboutus-team-overlay.png",
         "Our team picture",
         "26+",
         ["Studying",],
         "Earth",
-        "Humans (Homo Sapiens)",
+        "Humans (Homo sapiens sapiens)",
         "Mammal",
         "Omnivore",
     ),
 ];
 
-function Person(name, aboutText, tab, image, imageName, age, interest, origin, species, group, food) {
+function Person(name, aboutText, tab, image, imageOverlay, imageName, age, interest, origin, species, group, food) {
     this.name = name;
     this.aboutText = aboutText;
     this.tab = tab;
     this.image = image;
+    this.imageOverlay = imageOverlay;
     this.imageName = imageName;
     this.age = age;
     this.interest = interest;
@@ -45,14 +48,15 @@ function Person(name, aboutText, tab, image, imageName, age, interest, origin, s
 const teamMembers = [
     new Person(
         "Emelie B. Silfverberg",
-        "Emelie is uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "A frontend developer student with an interest in problem solving, structure, and design. I get an idea, and I do my best to figure out how to make that happen.",
         "Emelie",
-        "assets/images/mammals/mammal-bilby.jpg",
+        "assets/images/aboutus/aboutus-emelie.png",
+        "assets/images/aboutus/aboutus-emelie-overlay.png",
         "Emelie picture",
         26,
-        ["Film", " Animals", " Sudoku"],
-        "Stockholm, Sweden",
-        "Human (Homo Sapien)",
+        ["Animals"],
+        "Stockholm",
+        "Human (Homo sapiens sapiens)",
         "Mammal",
         ["Sushi"],
     ),
@@ -60,12 +64,13 @@ const teamMembers = [
         "May Sunktong",
         "A frontend development student with an educational background. I want my bubble to be clean and not infested with bugs.",
         "May",
-        "assets/images/mammals/mammal-bilby.jpg",
+        "assets/images/aboutus/aboutus-may.png",
+        "assets/images/aboutus/aboutus-empty-overlay.png",
         "May picture",
         32,
-        ["Playing Games", " Reading Books",],
+        ["Games", " Books",],
         "Thailand",
-        "Human (Homo Sapien)",
+        "Human (Homo sapiens sapiens)",
         "",
         ["Noodles"],
     ),
@@ -73,38 +78,41 @@ const teamMembers = [
         "Victor Furustubbe",
         "An aspiring front-end developer with a background in graphic design. I only look for the bare necessities, the simple bare necessities.",
         "Victor",
-        "assets/images/mammals/mammal-bilby.jpg",
+        "assets/images/aboutus/aboutus-victor.png",
+        "assets/images/aboutus/aboutus-empty-overlay.png",
         "Victor picture",
         35,
         ["Marbles",],
         "Sweden",
-        "Human (Homo Sapien)",
+        "Human (Homo sapiens sapiens)",
         "",
         ["Grilled cheese off the radiator",],
     ),
     new Person(
         "Alex Jim Hallgren",
-        "about My biggest dream is to one day become a full fledged senior fullstack-developer.",
+        "My biggest dream is to one day become a full fledged senior fullstack-developer.",
         "Alex",
-        "assets/images/mammals/mammal-bilby.jpg",
+        "assets/images/aboutus/aboutus-alex.png",
+        "assets/images/aboutus/aboutus-empty-overlay.png",
         "Alex picture",
         26,
         ["Gaming", " Coding",],
         "Töreboda, Sweden",
-        "Human (Homo Sapien)",
+        "Human (Homo sapiens sapiens)",
         "",
         ["Sushi" , " Bruschetta", " Fläsk med potatis & löksås",],
     ),
     new Person(
         "Yasmine Borghol",
-        "about me text",
+        "I'm a front-end development student  and aspiring developer with a background in project-management",
         "Yasmine",
-        "assets/images/mammals/mammal-bilby.jpg",
+        "assets/images/aboutus/aboutus-yasmine.png",
+        "assets/images/aboutus/aboutus-empty-overlay.png",
         "Yasmine",
         26,
-        ["Crochet", " Reading",],
+        ["Crochet", " Books",],
         "Tunisia",
-        "Human (Homo Sapien)",
+        "Human (Homo sapiens sapiens)",
         "",
         ["Pizza"],
     ),
@@ -113,6 +121,8 @@ const teamMembers = [
 const createTabs = (teamMembers, introContent) => {
     const tabsContainer = document.querySelector(".team-tabs");
     let lastActiveTab = null;
+
+    teamMembers.sort((a, b) => a.tab.localeCompare(b.tab));
 
     teamMembers.forEach((person) => {
         const tab = document.createElement("div");
@@ -147,52 +157,58 @@ const updateTeamContent = (content) => {
 
     const teamImage = document.createElement("div");
     teamImage.classList.add("img-info__content", "image");
+
         const imageObject = document.createElement("img");
         imageObject.src = content.image || "../assets/images/default-team.jpg";
         imageObject.alt = content.imageName || "Team image";
         imageObject.classList.add("image__child");
 
+        const overlayImage = document.createElement("img");
+        overlayImage.src = content.imageOverlay;
+        overlayImage.alt = "image overlay";
+        overlayImage.classList.add("image__child", "overlay-image");
+
     const teamInfo = document.createElement("div");
     teamInfo.classList.add("img-info__content", "info");
         const interestWrapper = document.createElement("div");
         interestWrapper.classList.add("info__child");
-            const interest = document.createElement("p");
-            interest.classList.add("info__sort");
-            interest.textContent = "Interests";
-            
             const interestText = document.createElement("p");
             interestText.classList.add("info__input");
             interestText.textContent = content.interest; 
+        
+            const interest = document.createElement("p");
+            interest.classList.add("info__sort");
+            interest.textContent = "Interests";            
 
         const ageWrapper = document.createElement("div");
         ageWrapper.classList.add("info__child");
+            const age = document.createElement("p");
+            age.classList.add("info__input");
+            age.textContent = content.age;  
+
             const ageText = document.createElement("p");
             ageText.classList.add("info__sort");
             ageText.textContent = "Age";
 
-            const age = document.createElement("p");
-            age.classList.add("info__input");
-            age.textContent = content.age;
-
         const originWrapper = document.createElement("div");
         originWrapper.classList.add("info__child");
-            const originText = document.createElement("p");
-            originText.classList.add("info__sort");
-            originText.textContent = "Origin";
-
             const origin = document.createElement("p");
             origin.classList.add("info__input");
             origin.textContent = content.origin;
+            
+            const originText = document.createElement("p");
+            originText.classList.add("info__sort");
+            originText.textContent = "Origin";   
 
         const foodWrapper = document.createElement("div");
         foodWrapper.classList.add("info__child");
+            const food = document.createElement("p");
+            food.classList.add("info__input");
+            food.textContent = content.food;    
+        
             const foodText = document.createElement("p");
             foodText.classList.add("info__sort");
             foodText.textContent = "Diet";
-    
-            const food = document.createElement("p");
-            food.classList.add("info__input");
-            food.textContent = content.food;
 
     const teamTitle = document.createElement("div");
     teamTitle.classList.add("text__content", "title");
@@ -202,34 +218,41 @@ const updateTeamContent = (content) => {
 
         const speciesWrapper = document.createElement("div");
         speciesWrapper.classList.add("title__species-container");
-
             const species = document.createElement("h4");
             species.classList.add("species__text");
             species.textContent = content.species;
+            const group = document.createElement("button");
+            group.classList.add("species__button");
+            group.textContent = "mammal";
+            group.addEventListener("click", () => {
+                window.location.href = "mammals.html";
+            });
         
     const teamParagraph = document.createElement("p");
     teamParagraph.classList.add("text__content", "paragraph");
     teamParagraph.textContent = content.aboutText; 
 
     teamSection.appendChild(teamImage);
+        teamImage.appendChild(overlayImage);
         teamImage.appendChild(imageObject)
     teamSection.appendChild(teamTitle);
         teamTitle.appendChild(titleName);
         teamTitle.appendChild(speciesWrapper);
             speciesWrapper.appendChild(species);
+            speciesWrapper.appendChild(group);
     teamSection.appendChild(teamInfo);
         teamInfo.appendChild(ageWrapper);
-            ageWrapper.appendChild(ageText);
             ageWrapper.appendChild(age);
+            ageWrapper.appendChild(ageText);
         teamInfo.appendChild(interestWrapper);
-            interestWrapper.appendChild(interest);
             interestWrapper.appendChild(interestText);
+            interestWrapper.appendChild(interest);
         teamInfo.appendChild(originWrapper);
-            originWrapper.appendChild(originText);
             originWrapper.appendChild(origin);
+            originWrapper.appendChild(originText);
         teamInfo.appendChild(foodWrapper);
-            foodWrapper.appendChild(foodText);
             foodWrapper.appendChild(food);
+            foodWrapper.appendChild(foodText);
     teamSection.appendChild(teamParagraph);
 };
 
