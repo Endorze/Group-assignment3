@@ -145,6 +145,8 @@
 }
 
 .welcome-card-text-wrap {
+  max-width: 50vw;
+  maxheight: 50vh;
   line-height: 1.5rem;
   padding: 2rem;
 }
