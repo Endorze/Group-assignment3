@@ -36,26 +36,6 @@
   background-color: unset;
 }
 
-/* if approve, implement on global.css */
-/* .sidebar-toggle-label {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  background-color: var(--color-darkgreen);
-  color: var(--color-text);
-  width: 30px; 
-  height: 100px; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0 8px 8px 0;
-  cursor: pointer;
-  z-index: 1100;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-} */
-
 .menu-list {
   width: 100%;
   height: 100%;
@@ -145,10 +125,11 @@
 }
 
 .welcome-card-text-wrap {
-  max-width: 50vw;
-  maxheight: 50vh;
+  max-width: 40rem;
+  max-height: 50rem;
   line-height: 1.5rem;
   padding: 2rem;
+  border-radius: 24px;
 }
 
 .welcome-card-text-header {
@@ -328,10 +309,18 @@
     padding: 2rem;
   }
 
+  .welcome-card-text-header, .welcome-card-text-subheader{
+    font-size: 2rem;
+  }
+
+  .welcome-card-text-description {
+    font-size: 1rem;
+  }
+
   .welcome-card-text-wrap {
     text-align: center;
     background-color: var(--color-darkbeige);
-    border-radius: 36px;
+    font-size: 1rem;
   }
 
   .welcome-card-gradient-veil {
@@ -347,7 +336,7 @@
   }
 
   .animal-card-inner {
-    height: max-content;
+    height: auto;
   }
 
   .animal-card,
@@ -361,7 +350,7 @@
 
   .animal-food-wrapper,
   .animal-description {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .animal-group{
@@ -375,7 +364,7 @@
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .animal-card-inner {
-    min-height: 80%;
+    height: auto;
   }
 
   .animal-card,
