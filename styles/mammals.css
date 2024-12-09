@@ -1,20 +1,240 @@
 /* 1. Basic Layout and Colors */
-html, body { 
-    background-color: var(--color-lightbeige);
-    color: var(--color-darkblue);
+html,
+body {
+  background-color: var(--color-lightbeige);
+  color: var(--color-darkblue);
 }
 
 /* 2. Main Content Layout */
 .main-content {
-    flex: 1;
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .main-content h1 {
-    text-align: center;
-    color: var(--color-brown);
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+  text-align: center;
+  color: var(--color-brown);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
+
+/* 3. Animal Summary Cards */
+.animal-summary {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 1.5rem;
+}
+
+.animal-summary:hover {
+  transform: translateY(-5px);
+}
+
+.animal-summary img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.animal-summary h2 {
+  color: var(--color-brown);
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+.animal-summary p {
+  line-height: 1.6;
+  color: var(--color-darkblue);
+}
+
+/* 4. Read More Button */
+.read-more-btn {
+  background-color: var(--color-brown);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.read-more-btn:hover {
+  background-color: var(--color-darkgreen);
+}
+
+/* 5. Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: var(--color-lightbeige);
+  margin: 5% auto;
+  padding: 2rem;
+  width: 80%;
+  max-width: 1000px;
+  max-height: 85vh;
+  overflow-y: auto;
+  border-radius: 15px;
+  position: relative;
+}
+
+/* 6. Sidebar Styling */
+.sidebar {
+  background-color: var(--color-darkblue);
+  padding: 2rem;
+}
+
+#animalsList li {
+  cursor: pointer;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  color: var(--color-lightbeige);
+}
+
+#animalsList li:hover {
+  background-color: var(--color-brown);
+  color: white;
+}
+
+/* 7. Modal Content Styling */
+.title-area {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.title-area img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.description img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 1rem 0;
+}
+
+.details {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+}
+
+
+/* Tablet Responsiveness */
+@media screen and (max-width: 1024px) {
+    .main-content {
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  
+    .animal-summary {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  
+    .animal-summary img {
+      height: 250px;
+      width: 100%;
+    }
+  
+    .modal-content {
+      width: 90%;
+      margin: 10% auto;
+    }
+  }
+  
+  /* Mobile responsiveness */
+  @media screen and (max-width: 767px) {
+    .main-content {
+      padding: 0.5rem;
+    }
+  
+    .main-content h1 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .animal-summary {
+      padding: 1rem;
+    }
+  
+    .animal-summary h2 {
+      font-size: 1.5rem;
+    }
+  
+    .animal-summary img {
+      height: 200px;
+    }
+  
+    .modal-content {
+      width: 95%;
+      padding: 1rem;
+      margin: 5% auto;
+    }
+  
+    .title-area {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .description img {
+      max-height: 300px;
+    }
+  
+    .read-more-btn {
+      width: 100%;
+      padding: 0.6rem 1rem;
+    }
+  }
+  
+
+  /* modal handling responsiveness */
+@media screen and (max-width: 767px) {
+    .modal-content {
+      margin: 0;
+      height: 100vh;
+      width: 100%;
+      border-radius: 0;
+    }
+  
+    .close-button {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      background: var(--color-brown);
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+    }
+  }
