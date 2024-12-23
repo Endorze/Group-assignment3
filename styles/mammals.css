@@ -146,6 +146,28 @@ body {
   margin-top: 1.5rem;
 }
 
+/*welcome message*/
+.welcome-message {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+.welcome-message h2 {
+  color: var(--color-brown);
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.welcome-message p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--color-darkblue);
+}
 
 /* Tablet Responsiveness */
 @media screen and (max-width: 1024px) {

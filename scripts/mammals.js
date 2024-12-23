@@ -54,6 +54,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalContent = document.getElementById("fullSummaryContent");
   const closeButton = document.querySelector(".close-button");
 
+  
+  function showWelcomeMessage() {
+    animalSummaries.innerHTML = `
+      <div class="welcome-message">
+        <h2>Welcome to Our Mammals Section!</h2>
+        <p>Discover our amazing collection of Australian mammals. Click on any animal name from the sidebar to learn more about these fascinating creatures.</p>
+      </div>
+    `;
+  }
+
+  showWelcomeMessage();
+
   // Clear existing summaries before adding new ones
   function clearSummaries() {
     animalSummaries.innerHTML = "";
@@ -63,10 +75,20 @@ document.addEventListener("DOMContentLoaded", () => {
   for (const key in mammalsData) {
     const li = document.createElement("li");
     li.textContent = mammalsData[key].name;
-    li.addEventListener("click", () => {
-      clearSummaries();
-      showAnimalSummary(key);
+    li.dataset.animalKey = key;
+    
+    li.addEventListener("click", (e) => {
+      const clickedAnimal = e.target.dataset.animalKey;
+      const currentContent = animalSummaries.querySelector(".animal-summary");
+      
+      if (currentContent && currentContent.dataset.animalKey === clickedAnimal) {
+        showWelcomeMessage();
+      } else {
+        clearSummaries();
+        showAnimalSummary(clickedAnimal);
+      }
     });
+    
     animalsList.appendChild(li);
   }
 
@@ -79,6 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const animal = mammalsData[animalKey];
     const summaryDiv = document.createElement("div");
     summaryDiv.className = "animal-summary";
+    summaryDiv.dataset.animalKey = animalKey;
 
     const shortDescription = animal.description.substring(0, 200) + "...";
 
